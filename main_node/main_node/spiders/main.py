@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import scrapy
 from scrapy.selector import Selector
-from main_node.items import MainNodeItem
+from main_node.pipelines.mongodb import SingleMongodbPipeline
 
 class MainSpider(scrapy.Spider):
     name = 'main'
@@ -14,7 +14,7 @@ class MainSpider(scrapy.Spider):
 
     def parse(self, response):
         sel = Selector(response)
-        item = MainNodeItem()
+        item = SingleMongodbPipeline()
         item['name'] = sel.xpath('//*[@id="content"]/h1/span[1]/text()').extract()
 
         return item
