@@ -9,9 +9,7 @@
 #     https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 
-
-import user_agent
-from com_config import user_agent
+from main_node.com_config import user_agent
 
 BOT_NAME = 'main_node'
 
@@ -95,41 +93,61 @@ ITEM_PIPELINES = {
 # HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
 
 
+
+
+
+
+# #scrapy-redis配置
+# # 过滤器
+# DUPEFILTER_CLASS = "scrapy_redis.dupefilter.RFPDupeFilter"
+# # 调度器
+# SCHEDULER = "scrapy_redis.scheduler.Scheduler"
+# # 调度状态持久化
+# SCHEDULER_PERSIST = True
+# # 请求调度使用优先队列
+# SCHEDULER_QUEUE_CLASS = 'scrapy_redis.queue.SpiderPriorityQueue'
+# # redis 使用的端口和地址
+# REDIS_HOST = '127.0.0.1'
+# REDIS_PORT = 6379
+#
+# ##增加全局并发数的一些配置:
+# # 默认 Item 并发数：100
+# CONCURRENT_ITEMS = 100
+# # 默认 Request 并发数：16
+# CONCURRENT_REQUESTS = 16
+# # 默认每个域名的并发数：8
+# CONCURRENT_REQUESTS_PER_DOMAIN = 8
+# # 每个IP的最大并发数：0表示忽略
+# CONCURRENT_REQUESTS_PER_IP = 0
+#
+# ##缓存，scrapy默认已经自带了缓存，配置如下
+# # 打开缓存
+# HTTPCACHE_ENABLED = True
+# # 设置缓存过期时间（单位：秒）
+# # HTTPCACHE_EXPIRATION_SECS = 0
+# # 缓存路径(默认为：.scrapy/httpcache)
+# HTTPCACHE_DIR = 'httpcache'
+# # 忽略的状态码
+# HTTPCACHE_IGNORE_HTTP_CODES = []
+# # 缓存模式(文件缓存)
+# HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
+
+
+
+
+# 日志文件         # (最好为爬虫名称，例如：qiushi.log)
+# LOG_FILE = 'scrapy.log'
 LOG_FILE = "logs/scrapy.log"
 
+# 日志等级
+LOG_LEVEL = 'INFO'
 
+# 是否启用日志（创建日志后，不需开启，进行配置）
+LOG_ENABLED = False  # （默认为True，启用日志）
 
-##scrapy-redis配置
-# 过滤器
-DUPEFILTER_CLASS = "scrapy_redis.dupefilter.RFPDupeFilter"
-# 调度器
-SCHEDULER = "scrapy_redis.scheduler.Scheduler"
-# 调度状态持久化
-SCHEDULER_PERSIST = True
-# 请求调度使用优先队列
-SCHEDULER_QUEUE_CLASS = 'scrapy_redis.queue.SpiderPriorityQueue'
-# redis 使用的端口和地址
-REDIS_HOST = '127.0.0.1'
-REDIS_PORT = 6379
+# 日志编码
+LOG_ENCODING = 'utf-8'
 
-##增加全局并发数的一些配置:
-# 默认 Item 并发数：100
-CONCURRENT_ITEMS = 100
-# 默认 Request 并发数：16
-CONCURRENT_REQUESTS = 16
-# 默认每个域名的并发数：8
-CONCURRENT_REQUESTS_PER_DOMAIN = 8
-# 每个IP的最大并发数：0表示忽略
-CONCURRENT_REQUESTS_PER_IP = 0
-
-##缓存，scrapy默认已经自带了缓存，配置如下
-# 打开缓存
-HTTPCACHE_ENABLED = True
-# 设置缓存过期时间（单位：秒）
-# HTTPCACHE_EXPIRATION_SECS = 0
-# 缓存路径(默认为：.scrapy/httpcache)
-HTTPCACHE_DIR = 'httpcache'
-# 忽略的状态码
-HTTPCACHE_IGNORE_HTTP_CODES = []
-# 缓存模式(文件缓存)
-HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
+# 如果是True ，进程当中，所有标准输出（包括错误）将会被重定向到log中
+# 例如：在爬虫代码中的 print（）
+LOG_STDOUT = False  # (默认为False)

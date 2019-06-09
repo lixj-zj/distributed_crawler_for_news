@@ -8,4 +8,7 @@
 
 class SingleMongodbPipeline(object):
     def process_item(self, item, spider):
-        print("result...", item)
+        print("go to mongodb result...", item)
+
+
+
