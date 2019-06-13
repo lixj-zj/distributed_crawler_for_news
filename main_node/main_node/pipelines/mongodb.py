@@ -13,30 +13,29 @@ class SingleMongodbPipeline(object):
     初始化并连接MongoDB
     """
     def __init__(self):
-        self.mongodbLocalhost = "mongodb://192.168.131.24:27017"
-        self.conn = MongoClient(self.mongodbLocalhost)
+        self.mongodb_localhost = "mongodb://192.168.131.24:27017"
+        self.conn = MongoClient(self.mongodb_localhost)
         self.db = self.conn.demo  # 连接数据库demo，没有自动创建
-        self.demoJson = self.db.wallstreet  # 使用demo_json集合，没有自动创建
+        self.demo_json = self.db.scio  # 使用demo_json集合，没有自动创建
 
 
     def process_item(self, item, spider):
-        logging.info("item>>>>>>>>>",item)
-
-        logging.info("wallstreet---开始操作mongodb！")
+        logging.info("scio---开始操作mongodb！")
         try:
             # 1. 连接MongoDB
-            demoJson = SingleMongodbPipeline().demoJson
+            # demo_json = self.demo_json
 
             # 2. 插入数据
-            demoJson.insert(item)
+            self.demo_json.insert(item)
 
             # 7. 插入json文件
             # with open(self.jsonPath, "r", encoding="utf-8") as f:
             #     jsonFile = json.load(f)
             #     demo_json.insert(jsonFile)
-            logging.info("wallstreet---操作mongodb完成！")
-        except:
-            logging.error("wallstreet---操作mongodb数据库失败！")
+
+            logging.info("scio---操作mongodb完成！")
+        except Exception as e:
+            logging.error("scio---操作mongodb数据库失败！错误信息：",e)
 
 
 

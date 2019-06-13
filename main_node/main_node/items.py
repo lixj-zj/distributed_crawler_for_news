@@ -12,17 +12,12 @@ class MainNodeItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
 
+    # _id：插入mongodb时避免 KeyError: 'xxx does not support field: _id'
+    _id = scrapy.Field()
+
     title = scrapy.Field()
-    time = scrapy.Field()
-    source_name = scrapy.Field()
+    sub_title_info = scrapy.Field()
+    publish_time = scrapy.Field()
+    resource = scrapy.Field()
     content = scrapy.Field()
-    editor = scrapy.Field()
-
-
-
-
-
-
-
-
-
+    author = scrapy.Field()
