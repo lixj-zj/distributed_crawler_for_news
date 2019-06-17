@@ -135,6 +135,11 @@ ITEM_PIPELINES = {
 
 
 
+# MONGODB_URI = 'mongodb://192.168.131.24:27017'
+# MONGODB_DATABASE = 'demo'
+# MONGODB_COLLECTION = 'scio'
+
+
 # 日志文件         # (最好为爬虫名称，例如：qiushi.log)
 # LOG_FILE = 'scrapy.log'
 LOG_FILE = "logs/scrapy.log"
