@@ -64,7 +64,7 @@ def get_all_news_urls(father_url):
     try:
         # 记录所有目标新闻页面的url
         all_page_result = set()
-        for one_page_url in father_url[:10]:
+        for one_page_url in father_url[:2]:
             html = get_html_from_url(one_page_url)
             struct = etree.HTML(html)
             # 查找指定标签下的所有的a标签的href属性
@@ -78,13 +78,13 @@ def get_all_news_urls(father_url):
     except Exception as e:
         logging.error("获取目标新闻页面url错误！错误信息：{}".format(str(e)))
 
+def run():
+    first_page_url = "http://www.scio.gov.cn/37234/index.htm"
+    max_page_num = max_num_of_pages(first_page_url)
+    father_url = get_url_pages(first_page_url, max_page_num)
+    all_page_result = get_all_news_urls(father_url)
+    print(all_page_result[:5])
+    return list(all_page_result[:5])
 
 if __name__ == '__main__':
-    first_page_url = "http://www.scio.gov.cn/37234/index.htm"
-
-    max_page_num = max_num_of_pages(first_page_url)
-
-    father_url = get_url_pages(first_page_url, max_page_num)
-
-    all_page_result = get_all_news_urls(father_url)
-    print(all_page_result)
+    run()

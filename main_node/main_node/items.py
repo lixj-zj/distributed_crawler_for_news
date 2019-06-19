@@ -15,9 +15,13 @@ class MainNodeItem(scrapy.Item):
     # _id：插入mongodb时避免 KeyError: 'xxx does not support field: _id'
     _id = scrapy.Field()
 
+    # page_url = scrapy.Field()
+    page_url = scrapy.Field()
+
+    sub_title_str = scrapy.Field()
     title = scrapy.Field()
-    sub_title_info = scrapy.Field()
-    publish_time = scrapy.Field()
-    resource = scrapy.Field()
+    img = scrapy.Field()
+    video = scrapy.Field()
+    audio = scrapy.Field()
     content = scrapy.Field()
     author = scrapy.Field()

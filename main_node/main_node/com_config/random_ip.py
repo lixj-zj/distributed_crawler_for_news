@@ -14,11 +14,13 @@
 
 import requests
 from bs4 import BeautifulSoup as bs
-import user_agent
+from main_node.com_config import user_agent
+# import user_agent
 import logging
 import os
 import random
 import traceback
+import time
 
 # logging.basicConfig函数对日志的输出格式及方式做相关配置
 logging.basicConfig(level=logging.DEBUG,
@@ -60,7 +62,7 @@ class RandomIp():
             try:
                 ip = ips[i]
                 tds = ip.find_all("td")
-                temp_ip = str(tds[5].contents[0]).lower() + "://" + tds[1].contents[0] + ":" + tds[2].contents[0]
+                temp_ip = str(tds[5].contents[0]).lower() + '://' + tds[1].contents[0] + ':' + tds[2].contents[0]
                 speed = float(tds[6].div.get("title")[:-1])
                 connect_time = float(tds[7].div.get("title")[:-1])
                 #
@@ -98,18 +100,21 @@ class RandomIp():
         try:
             with open(ip_pool_path, "r", encoding="utf-8") as f:
                 content = f.read()
-            ip_pool = content[1:len(content) - 1].split(", ")
+            ip_pool = content[2:len(content) - 2].split("', '")
             reduce_num = 0
             logging.info("IP池中待验证个数：{}".format(len(ip_pool)))
-            for ip in ip_pool:
+            for ip in ip_pool[:]:
                 proxy = {ip.split("://")[0]: ip.split("://")[1]}
                 try:
-                    req = requests.get(self.TEST_URL, proxies=proxy, headers=self.headers, timeout=10)
+                    req = requests.get(self.TEST_URL, proxies=proxy, headers=self.headers, timeout=3)
                     if req.status_code != 200:
                         ip_pool.remove(ip)
                         reduce_num += 1
+                    time.sleep(1)
                 except Exception as e:
-                    logging.error("ip异常：{}".format(ip))
+                    logging.error("ip异常：{}，异常信息：{}".format(ip, str(e)))
+                    ip_pool.remove(ip)
+                    reduce_num += 1
                     continue
             logging.info("IP池中已验证个数：{}，减少个数：{}个".format(len(ip_pool), reduce_num))
             with open(ip_pool_path, "w", encoding="utf-8") as f:
@@ -161,7 +166,7 @@ class RandomIp():
             file_name = module_path + '\\' + self.IP_POOL_FILE
             with open(file_name, "r", encoding="utf-8") as f:
                 content = f.read()
-                ip_list = content[1:len(content) - 1].split(", ")
+                ip_list = content[2:len(content) - 2].split("', '")
                 random_ip = random.choice(ip_list)  # choice()获取一个
                 proxies = {"http": random_ip}
                 logging.info("proxies: %s", str(proxies))
