@@ -9,15 +9,10 @@ import scrapy
 
 
 class MainNodeItem(scrapy.Item):
-    # define the fields for your item here like:
-    # name = scrapy.Field()
-
     # _id：插入mongodb时避免 KeyError: 'xxx does not support field: _id'
     _id = scrapy.Field()
 
-    # page_url = scrapy.Field()
     page_url = scrapy.Field()
-
     sub_title_str = scrapy.Field()
     title = scrapy.Field()
     img = scrapy.Field()

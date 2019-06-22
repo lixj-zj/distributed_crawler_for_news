@@ -70,7 +70,8 @@ DOWNLOADER_MIDDLEWARES = {
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
     # 'main_node.pipelines.MainNodePipeline': 300,
-    'main_node.pipelines.mongodb.SingleMongodbPipeline': 300,
+    'main_node.pipelines.single_mongodb.SingleMongodbPipeline': 300,
+    'main_node.pipelines.scio.ScioPipeline': 100,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)

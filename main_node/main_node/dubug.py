@@ -4,12 +4,16 @@
  --------------------------------
  Description :
  --------------------------------
- @Time    : 2019/6/8 23:35
- @File    : __init__.py
+ @Time    : 2019/6/18 21:49
+ @File    : dubug.py
  @Software: PyCharm
  --------------------------------
  @Author  : lixj
  @contact : lixj_zj@163.com
 """
 
-__all__ = ['media_related.py']
+from scrapy import cmdline
+
+
+cmd = 'scrapy crawl main'
+cmdline.execute(cmd.split())
