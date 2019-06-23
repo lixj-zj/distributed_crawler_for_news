@@ -22,9 +22,8 @@ import time
 # 获取总页数
 def max_num_of_pages(first_page_url):
     try:
-        req = requests.get(first_page_url)
-        req.encoding = req.apparent_encoding
-        struct = etree.HTML(req.text)
+        html = get_html_from_url(first_page_url)
+        struct = etree.HTML(html)
         navi_last_page = struct.xpath('//*[@id="PagerOutline1_PageIndex"]/text()')
         r = re.search(r"共\d*页", navi_last_page[0])
         last_page = r.group()[1:-1]
@@ -99,7 +98,6 @@ def run():
     father_url = get_url_pages(first_page_url, max_page_num)
     all_page_result = get_all_news_urls(father_url, max_num=2)
     all_page_real_url = get_real_urls(all_page_result)
-    print(list(all_page_real_url)[:5])
     return list(all_page_real_url)[:5]
 
 if __name__ == '__main__':

@@ -261,9 +261,6 @@ def run():
     # 已有的信息与详细信息合并后，数据入库
     data2oracle(resultList)
 
-def test():
-    print("wallstreet >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
-
 if __name__ == '__main__':
     # run()
     test()

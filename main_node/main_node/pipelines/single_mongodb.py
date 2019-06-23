@@ -14,7 +14,7 @@ class SingleMongodbPipeline(object):
     初始化并连接MongoDB
     """
     def __init__(self):
-        self.mongodb_localhost = "mongodb://192.168.131.24:27017"
+        self.mongodb_localhost = "mongodb://localhost:27017"
         self.conn = MongoClient(self.mongodb_localhost)
         self.db = self.conn.demo  # 连接数据库demo，没有自动创建
         self.demo_json = self.db.scio  # 使用demo_json集合，没有自动创建

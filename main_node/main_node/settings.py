@@ -9,15 +9,16 @@
 #     https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 
-from main_node.com_config import user_agent
+from main_node.com_config.user_agent import UserAgent
 
 BOT_NAME = 'main_node'
 
 SPIDER_MODULES = ['main_node.spiders']
 NEWSPIDER_MODULE = 'main_node.spiders'
 
-# Crawl responsibly by identifying yourself (and your website) on the user-agent
-USER_AGENT = 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.6 '
+# Crawl responsibly by identifying yourself (and your website_parse) on the user-agent
+# USER_AGENT = 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.6 '
+USER_AGENT = UserAgent().get_user_agent()
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = False
@@ -25,7 +26,7 @@ ROBOTSTXT_OBEY = False
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 # CONCURRENT_REQUESTS = 32
 
-# Configure a delay for requests for the same website (default: 0)
+# Configure a delay for requests for the same website_parse (default: 0)
 # See https://doc.scrapy.org/en/latest/topics/settings.html#download-delay
 # See also autothrottle settings and docs
 DOWNLOAD_DELAY = 3
@@ -44,7 +45,7 @@ COOKIES_ENABLED = False
 #     'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
 #     'Accept-Language': 'en',
 # }
-DEFAULT_REQUEST_HEADERS = user_agent.UserAgent().get_headers()
+DEFAULT_REQUEST_HEADERS = UserAgent().get_headers()
 
 # Enable or disable spider middlewares
 # See https://doc.scrapy.org/en/latest/topics/spider-middleware.html
@@ -54,11 +55,11 @@ DEFAULT_REQUEST_HEADERS = user_agent.UserAgent().get_headers()
 
 # Enable or disable downloader middlewares
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
-DOWNLOADER_MIDDLEWARES = {
+# DOWNLOADER_MIDDLEWARES = {
    # 'main_node.middlewares.MainNodeDownloaderMiddleware': 543,
    #  'main_node.middlewares.MainNodeProxyMiddleware': 100,
     # 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware': 100,
-}
+# }
 
 # Enable or disable extensions
 # See https://doc.scrapy.org/en/latest/topics/extensions.html
@@ -143,8 +144,8 @@ ITEM_PIPELINES = {
 # MONGODB_COLLECTION = 'scio'
 
 
-# 日志文件         # (最好为爬虫名称，例如：qiushi.log)
-# LOG_FILE = 'scrapy.log'
+# 日志文件         
+# (最好为爬虫名称，例如：qiushi.log)
 LOG_FILE = "logs/scrapy.log"
 
 # 日志等级
@@ -157,5 +158,5 @@ LOG_ENABLED = False  # （默认为True，启用日志）
 LOG_ENCODING = 'utf-8'
 
 # 如果是True ，进程当中，所有标准输出（包括错误）将会被重定向到log中
-# 例如：在爬虫代码中的 print（）
+# 例如：在爬虫代码中的 print()
 LOG_STDOUT = False  # (默认为False)

@@ -9,6 +9,13 @@ import scrapy
 
 
 class MainNodeItem(scrapy.Item):
+    pass
+
+
+class ScioItem(scrapy.Item):
+    """
+    解析scio的item
+    """
     # _id：插入mongodb时避免 KeyError: 'xxx does not support field: _id'
     _id = scrapy.Field()
 
@@ -20,3 +27,21 @@ class MainNodeItem(scrapy.Item):
     audio = scrapy.Field()
     content = scrapy.Field()
     author = scrapy.Field()
+
+
+class WechatItem(scrapy.Item):
+    """
+    解析微信的item
+    """
+    # _id：插入mongodb时避免 KeyError: 'xxx does not support field: _id'
+    _id = scrapy.Field()
+
+    page_url = scrapy.Field()
+    sub_title_str = scrapy.Field()
+    title = scrapy.Field()
+    img = scrapy.Field()
+    video = scrapy.Field()
+    audio = scrapy.Field()
+    content = scrapy.Field()
+    author = scrapy.Field()
+

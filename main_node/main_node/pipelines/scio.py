@@ -49,13 +49,11 @@ class ScioPipeline(object):
         result['author'] = re.findall(author_pattern, item['author'][0])
 
         # TODO 待优化点
-        result['content'] = item['content'][0].strip().replace(u'\u3000', u' ').replace("\n","").replace("\r","")
+        result['content'] = item['content'][0].strip().replace(u'\u3000', u' ').replace("\n", "").replace("\r", "")
 
         return result
 
 
     def process_item(self, item, spider):
         result = self.pro_process(item)
-        print("scio pipline process.....>>>>>>>>>>>>>>>>>>>>>")
-        print(result)
         SingleMongodbPipeline().process_item(result, spider)

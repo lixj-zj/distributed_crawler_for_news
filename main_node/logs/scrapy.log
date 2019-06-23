@@ -6100,3 +6100,1232 @@ TypeError: process_item() missing 1 required positional argument: 'spider'
  'scheduler/enqueued/memory': 1,
  'start_time': datetime.datetime(2019, 6, 22, 14, 16, 25, 920530)}
 2019-06-22 22:16:26 [scrapy.core.engine] INFO: Spider closed (finished)
+2019-06-23 09:51:39 [scrapy.utils.log] INFO: Scrapy 1.6.0 started (bot: main_node)
+2019-06-23 09:51:39 [scrapy.utils.log] INFO: Versions: lxml 4.3.3.0, libxml2 2.9.5, cssselect 1.0.3, parsel 1.5.1, w3lib 1.20.0, Twisted 19.2.1, Python 3.6.4 (v3.6.4:d48eceb, Dec 19 2017, 06:04:45) [MSC v.1900 32 bit (Intel)], pyOpenSSL 19.0.0 (OpenSSL 1.1.1c  28 May 2019), cryptography 2.7, Platform Windows-10-10.0.17134-SP0
+2019-06-23 09:51:39 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'main_node', 'COOKIES_ENABLED': False, 'DOWNLOAD_DELAY': 3, 'LOG_ENABLED': False, 'LOG_FILE': 'logs/scrapy.log', 'LOG_LEVEL': 'INFO', 'NEWSPIDER_MODULE': 'main_node.spiders', 'SPIDER_MODULES': ['main_node.spiders'], 'USER_AGENT': 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:6.0a2) Gecko/20110622 Firefox/6.0a2'}
+2019-06-23 09:51:39 [scrapy.extensions.telnet] INFO: Telnet Password: 31b55428e4ca8a8d
+2019-06-23 09:51:39 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2019-06-23 09:51:39 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2019-06-23 09:51:39 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2019-06-23 09:51:39 [scrapy.middleware] INFO: Enabled item pipelines:
+['main_node.pipelines.scio.ScioPipeline',
+ 'main_node.pipelines.single_mongodb.SingleMongodbPipeline']
+2019-06-23 09:51:39 [scrapy.core.engine] INFO: Spider opened
+2019-06-23 09:51:39 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2019-06-23 09:51:39 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2019-06-23 09:51:40 [root] INFO: 路由 routing_method url: http://www.scio.gov.cn/37234/Document/1650333/1650333.htm
+2019-06-23 10:37:33 [scrapy.utils.log] INFO: Scrapy 1.6.0 started (bot: main_node)
+2019-06-23 10:37:33 [scrapy.utils.log] INFO: Versions: lxml 4.3.3.0, libxml2 2.9.5, cssselect 1.0.3, parsel 1.5.1, w3lib 1.20.0, Twisted 19.2.1, Python 3.6.4 (v3.6.4:d48eceb, Dec 19 2017, 06:04:45) [MSC v.1900 32 bit (Intel)], pyOpenSSL 19.0.0 (OpenSSL 1.1.1c  28 May 2019), cryptography 2.7, Platform Windows-10-10.0.17134-SP0
+2019-06-23 10:37:33 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'main_node', 'COOKIES_ENABLED': False, 'DOWNLOAD_DELAY': 3, 'LOG_ENABLED': False, 'LOG_FILE': 'logs/scrapy.log', 'LOG_LEVEL': 'INFO', 'NEWSPIDER_MODULE': 'main_node.spiders', 'SPIDER_MODULES': ['main_node.spiders'], 'USER_AGENT': 'Mozilla/5.0 (Windows; U; Win98; en-US; rv:1.4) Gecko Netscape/7.1 (ax)'}
+2019-06-23 10:37:33 [scrapy.extensions.telnet] INFO: Telnet Password: 68dee554fab629f5
+2019-06-23 10:37:33 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2019-06-23 10:37:33 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2019-06-23 10:37:33 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2019-06-23 10:37:33 [scrapy.middleware] INFO: Enabled item pipelines:
+['main_node.pipelines.scio.ScioPipeline',
+ 'main_node.pipelines.single_mongodb.SingleMongodbPipeline']
+2019-06-23 10:37:33 [scrapy.core.engine] INFO: Spider opened
+2019-06-23 10:37:33 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2019-06-23 10:37:33 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2019-06-23 10:37:34 [root] INFO: 路由 routing_method url: http://www.scio.gov.cn/37234/Document/1650333/1650333.htm
+2019-06-23 10:50:45 [scrapy.utils.log] INFO: Scrapy 1.6.0 started (bot: main_node)
+2019-06-23 10:50:45 [scrapy.utils.log] INFO: Versions: lxml 4.3.3.0, libxml2 2.9.5, cssselect 1.0.3, parsel 1.5.1, w3lib 1.20.0, Twisted 19.2.1, Python 3.6.4 (v3.6.4:d48eceb, Dec 19 2017, 06:04:45) [MSC v.1900 32 bit (Intel)], pyOpenSSL 19.0.0 (OpenSSL 1.1.1c  28 May 2019), cryptography 2.7, Platform Windows-10-10.0.17134-SP0
+2019-06-23 10:50:45 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'main_node', 'COOKIES_ENABLED': False, 'DOWNLOAD_DELAY': 3, 'LOG_ENABLED': False, 'LOG_FILE': 'logs/scrapy.log', 'LOG_LEVEL': 'INFO', 'NEWSPIDER_MODULE': 'main_node.spiders', 'SPIDER_MODULES': ['main_node.spiders'], 'USER_AGENT': 'Mozilla/5.0 (Windows NT 6.1; rv:2.0.1) Gecko/20100101 Firefox/4.0.1'}
+2019-06-23 10:50:45 [scrapy.extensions.telnet] INFO: Telnet Password: eabcf315029cbee5
+2019-06-23 10:50:45 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2019-06-23 10:50:45 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2019-06-23 10:50:45 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2019-06-23 10:50:45 [scrapy.middleware] INFO: Enabled item pipelines:
+['main_node.pipelines.scio.ScioPipeline',
+ 'main_node.pipelines.single_mongodb.SingleMongodbPipeline']
+2019-06-23 10:50:45 [scrapy.core.engine] INFO: Spider opened
+2019-06-23 10:50:45 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2019-06-23 10:50:45 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2019-06-23 10:50:46 [root] INFO: 路由 routing_method url: http://www.scio.gov.cn/37234/Document/1650333/1650333.htm
+2019-06-23 10:58:18 [root] INFO: scio_parse result: {'_id': 'c0a77200-9562-11e9-bc1e-94c6912740aa',
+ 'audio': [],
+ 'author': ['[责任编辑：焦非', '] '],
+ 'content': ['\u3000\u3000'
+             '2019年3月21日，在习近平主席对意大利进行国事访问之际，由中国国务院新闻办公室与中国驻意大利大使馆共同主办的“2019感知中国——中意友好音乐会”在罗马举行。中意两国顶级艺术家同台献艺，为观众奉上一场别开生面的音乐会。安东尼亚诺童声合唱团演唱《China '
+             "E'》《茉莉花》等曲目。战士红星艺术团表演杂技舞蹈《天鹅湖》。音乐互动环节，中意双方用传统乐器演奏对方国家的音乐代表作《梁祝》和《今夜无人入睡》。音乐互动环节，中意双方用传统乐器演奏对方国家的音乐代表作《梁祝》和《今夜无人入睡》。中意美食互动，“中华厨艺绝技表演团”展示面食绝技。中国声入人心男团成员与意大利II "
+             'VOLO美声少年团合唱《我的太阳》等曲目。(图片均由 林宏 摄）\u3000\u3000'
+             '中意两国同为历史悠久、文化灿烂的文明古国，两国人文交流源远流长，两国人民传统友谊深厚。音乐会成为中意两国文化艺术交流互鉴的又一生动写照，两国人民将通过艺术增进深层次的理解信任，加深友谊、共促发展。  '],
+ 'img': ['Image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190322221731.jpg',
+         'Image/1.jpg',
+         'Image/2%E6%9D%82%E6%8A%80.jpg',
+         'Image/3%E5%99%A8%E4%B9%90%E5%90%88%E5%A5%8F.jpg',
+         'Image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190322222102.jpg',
+         'Image/4%E4%BA%92%E5%8A%A8.jpg',
+         'Image/5%E7%BE%8E%E5%A3%B0%E4%B8%89%E9%87%8D%E5%94%B1.jpg'],
+ 'page_url': 'http://www.scio.gov.cn/37234/Document/1650333/1650333.htm',
+ 'sub_title_str': ['国务院新闻办公室网站\u3000www.scio.gov.cn\u3000\u3000 '
+                   '2019-03-22\u3000\u3000 来源：国新网 '],
+ 'title': ['“2019感知中国——中意友好音乐会”在罗马举办（组图）'],
+ 'video': []}
+2019-06-23 10:58:44 [root] INFO: scio_parse result: {'_id': 'd0625680-9562-11e9-a649-94c6912740aa',
+ 'audio': [],
+ 'author': ['[责任编辑：焦非', '] '],
+ 'content': ['\u3000\u3000'
+             '2019年3月21日，在习近平主席对意大利进行国事访问之际，由中国国务院新闻办公室与中国驻意大利大使馆共同主办的“2019感知中国——中意友好音乐会”在罗马举行。中意两国顶级艺术家同台献艺，为观众奉上一场别开生面的音乐会。安东尼亚诺童声合唱团演唱《China '
+             "E'》《茉莉花》等曲目。战士红星艺术团表演杂技舞蹈《天鹅湖》。音乐互动环节，中意双方用传统乐器演奏对方国家的音乐代表作《梁祝》和《今夜无人入睡》。音乐互动环节，中意双方用传统乐器演奏对方国家的音乐代表作《梁祝》和《今夜无人入睡》。中意美食互动，“中华厨艺绝技表演团”展示面食绝技。中国声入人心男团成员与意大利II "
+             'VOLO美声少年团合唱《我的太阳》等曲目。(图片均由 林宏 摄）\u3000\u3000'
+             '中意两国同为历史悠久、文化灿烂的文明古国，两国人文交流源远流长，两国人民传统友谊深厚。音乐会成为中意两国文化艺术交流互鉴的又一生动写照，两国人民将通过艺术增进深层次的理解信任，加深友谊、共促发展。  '],
+ 'img': ['Image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190322221731.jpg',
+         'Image/1.jpg',
+         'Image/2%E6%9D%82%E6%8A%80.jpg',
+         'Image/3%E5%99%A8%E4%B9%90%E5%90%88%E5%A5%8F.jpg',
+         'Image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190322222102.jpg',
+         'Image/4%E4%BA%92%E5%8A%A8.jpg',
+         'Image/5%E7%BE%8E%E5%A3%B0%E4%B8%89%E9%87%8D%E5%94%B1.jpg'],
+ 'page_url': 'http://www.scio.gov.cn/37234/Document/1650333/1650333.htm',
+ 'sub_title_str': ['国务院新闻办公室网站\u3000www.scio.gov.cn\u3000\u3000 '
+                   '2019-03-22\u3000\u3000 来源：国新网 '],
+ 'title': ['“2019感知中国——中意友好音乐会”在罗马举办（组图）'],
+ 'video': []}
+2019-06-23 11:00:46 [scrapy.utils.log] INFO: Scrapy 1.6.0 started (bot: main_node)
+2019-06-23 11:00:46 [scrapy.utils.log] INFO: Versions: lxml 4.3.3.0, libxml2 2.9.5, cssselect 1.0.3, parsel 1.5.1, w3lib 1.20.0, Twisted 19.2.1, Python 3.6.4 (v3.6.4:d48eceb, Dec 19 2017, 06:04:45) [MSC v.1900 32 bit (Intel)], pyOpenSSL 19.0.0 (OpenSSL 1.1.1c  28 May 2019), cryptography 2.7, Platform Windows-10-10.0.17134-SP0
+2019-06-23 11:00:46 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'main_node', 'COOKIES_ENABLED': False, 'DOWNLOAD_DELAY': 3, 'LOG_ENABLED': False, 'LOG_FILE': 'logs/scrapy.log', 'LOG_LEVEL': 'INFO', 'NEWSPIDER_MODULE': 'main_node.spiders', 'SPIDER_MODULES': ['main_node.spiders'], 'USER_AGENT': 'Mozilla/5.0 (Windows; U; Windows NT 5.2; en-US) AppleWebKit/532.9 (KHTML, like Gecko) Chrome/5.0.310.0 Safari/532.9'}
+2019-06-23 11:00:46 [scrapy.extensions.telnet] INFO: Telnet Password: 6326fc838f0e76c0
+2019-06-23 11:00:46 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2019-06-23 11:00:46 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2019-06-23 11:00:46 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2019-06-23 11:00:46 [scrapy.middleware] INFO: Enabled item pipelines:
+['main_node.pipelines.scio.ScioPipeline',
+ 'main_node.pipelines.single_mongodb.SingleMongodbPipeline']
+2019-06-23 11:00:46 [scrapy.core.engine] INFO: Spider opened
+2019-06-23 11:00:46 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2019-06-23 11:00:46 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2019-06-23 11:00:46 [root] INFO: 路由 routing_method url: http://www.scio.gov.cn/37234/Document/1650333/1650333.htm
+2019-06-23 11:04:58 [scrapy.utils.log] INFO: Scrapy 1.6.0 started (bot: main_node)
+2019-06-23 11:04:58 [scrapy.utils.log] INFO: Versions: lxml 4.3.3.0, libxml2 2.9.5, cssselect 1.0.3, parsel 1.5.1, w3lib 1.20.0, Twisted 19.2.1, Python 3.6.4 (v3.6.4:d48eceb, Dec 19 2017, 06:04:45) [MSC v.1900 32 bit (Intel)], pyOpenSSL 19.0.0 (OpenSSL 1.1.1c  28 May 2019), cryptography 2.7, Platform Windows-10-10.0.17134-SP0
+2019-06-23 11:04:58 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'main_node', 'COOKIES_ENABLED': False, 'DOWNLOAD_DELAY': 3, 'LOG_ENABLED': False, 'LOG_FILE': 'logs/scrapy.log', 'LOG_LEVEL': 'INFO', 'NEWSPIDER_MODULE': 'main_node.spiders', 'SPIDER_MODULES': ['main_node.spiders'], 'USER_AGENT': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1062.0 Safari/536.3'}
+2019-06-23 11:04:58 [scrapy.extensions.telnet] INFO: Telnet Password: 82c47ec78393857a
+2019-06-23 11:04:58 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2019-06-23 11:04:58 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2019-06-23 11:04:58 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2019-06-23 11:04:58 [scrapy.middleware] INFO: Enabled item pipelines:
+['main_node.pipelines.scio.ScioPipeline',
+ 'main_node.pipelines.single_mongodb.SingleMongodbPipeline']
+2019-06-23 11:04:58 [scrapy.core.engine] INFO: Spider opened
+2019-06-23 11:04:58 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2019-06-23 11:04:58 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2019-06-23 11:04:58 [root] INFO: 路由 routing_method url: http://www.scio.gov.cn/37234/Document/1650333/1650333.htm
+2019-06-23 11:04:58 [root] INFO: scio_parse result: {'_id': 'af6395d2-9563-11e9-a86e-94c6912740aa',
+ 'audio': [],
+ 'author': ['[责任编辑：焦非', '] '],
+ 'content': ['\u3000\u3000'
+             '2019年3月21日，在习近平主席对意大利进行国事访问之际，由中国国务院新闻办公室与中国驻意大利大使馆共同主办的“2019感知中国——中意友好音乐会”在罗马举行。中意两国顶级艺术家同台献艺，为观众奉上一场别开生面的音乐会。安东尼亚诺童声合唱团演唱《China '
+             "E'》《茉莉花》等曲目。战士红星艺术团表演杂技舞蹈《天鹅湖》。音乐互动环节，中意双方用传统乐器演奏对方国家的音乐代表作《梁祝》和《今夜无人入睡》。音乐互动环节，中意双方用传统乐器演奏对方国家的音乐代表作《梁祝》和《今夜无人入睡》。中意美食互动，“中华厨艺绝技表演团”展示面食绝技。中国声入人心男团成员与意大利II "
+             'VOLO美声少年团合唱《我的太阳》等曲目。(图片均由 林宏 摄）\u3000\u3000'
+             '中意两国同为历史悠久、文化灿烂的文明古国，两国人文交流源远流长，两国人民传统友谊深厚。音乐会成为中意两国文化艺术交流互鉴的又一生动写照，两国人民将通过艺术增进深层次的理解信任，加深友谊、共促发展。  '],
+ 'img': ['Image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190322221731.jpg',
+         'Image/1.jpg',
+         'Image/2%E6%9D%82%E6%8A%80.jpg',
+         'Image/3%E5%99%A8%E4%B9%90%E5%90%88%E5%A5%8F.jpg',
+         'Image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190322222102.jpg',
+         'Image/4%E4%BA%92%E5%8A%A8.jpg',
+         'Image/5%E7%BE%8E%E5%A3%B0%E4%B8%89%E9%87%8D%E5%94%B1.jpg'],
+ 'page_url': 'http://www.scio.gov.cn/37234/Document/1650333/1650333.htm',
+ 'sub_title_str': ['国务院新闻办公室网站\u3000www.scio.gov.cn\u3000\u3000 '
+                   '2019-03-22\u3000\u3000 来源：国新网 '],
+ 'title': ['“2019感知中国——中意友好音乐会”在罗马举办（组图）'],
+ 'video': []}
+2019-06-23 11:04:58 [root] INFO: scio_parse result: {'_id': 'af65f7ee-9563-11e9-8a6b-94c6912740aa',
+ 'audio': [],
+ 'author': ['[责任编辑：焦非', '] '],
+ 'content': ['\u3000\u3000'
+             '2019年3月21日，在习近平主席对意大利进行国事访问之际，由中国国务院新闻办公室与中国驻意大利大使馆共同主办的“2019感知中国——中意友好音乐会”在罗马举行。中意两国顶级艺术家同台献艺，为观众奉上一场别开生面的音乐会。安东尼亚诺童声合唱团演唱《China '
+             "E'》《茉莉花》等曲目。战士红星艺术团表演杂技舞蹈《天鹅湖》。音乐互动环节，中意双方用传统乐器演奏对方国家的音乐代表作《梁祝》和《今夜无人入睡》。音乐互动环节，中意双方用传统乐器演奏对方国家的音乐代表作《梁祝》和《今夜无人入睡》。中意美食互动，“中华厨艺绝技表演团”展示面食绝技。中国声入人心男团成员与意大利II "
+             'VOLO美声少年团合唱《我的太阳》等曲目。(图片均由 林宏 摄）\u3000\u3000'
+             '中意两国同为历史悠久、文化灿烂的文明古国，两国人文交流源远流长，两国人民传统友谊深厚。音乐会成为中意两国文化艺术交流互鉴的又一生动写照，两国人民将通过艺术增进深层次的理解信任，加深友谊、共促发展。  '],
+ 'img': ['Image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190322221731.jpg',
+         'Image/1.jpg',
+         'Image/2%E6%9D%82%E6%8A%80.jpg',
+         'Image/3%E5%99%A8%E4%B9%90%E5%90%88%E5%A5%8F.jpg',
+         'Image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190322222102.jpg',
+         'Image/4%E4%BA%92%E5%8A%A8.jpg',
+         'Image/5%E7%BE%8E%E5%A3%B0%E4%B8%89%E9%87%8D%E5%94%B1.jpg'],
+ 'page_url': 'http://www.scio.gov.cn/37234/Document/1650333/1650333.htm',
+ 'sub_title_str': ['国务院新闻办公室网站\u3000www.scio.gov.cn\u3000\u3000 '
+                   '2019-03-22\u3000\u3000 来源：国新网 '],
+ 'title': ['“2019感知中国——中意友好音乐会”在罗马举办（组图）'],
+ 'video': []}
+2019-06-23 11:06:07 [root] INFO: scio_parse result: {'_id': 'd8772b24-9563-11e9-93b9-94c6912740aa',
+ 'audio': [],
+ 'author': ['[责任编辑：焦非', '] '],
+ 'content': ['\u3000\u3000'
+             '2019年3月21日，在习近平主席对意大利进行国事访问之际，由中国国务院新闻办公室与中国驻意大利大使馆共同主办的“2019感知中国——中意友好音乐会”在罗马举行。中意两国顶级艺术家同台献艺，为观众奉上一场别开生面的音乐会。安东尼亚诺童声合唱团演唱《China '
+             "E'》《茉莉花》等曲目。战士红星艺术团表演杂技舞蹈《天鹅湖》。音乐互动环节，中意双方用传统乐器演奏对方国家的音乐代表作《梁祝》和《今夜无人入睡》。音乐互动环节，中意双方用传统乐器演奏对方国家的音乐代表作《梁祝》和《今夜无人入睡》。中意美食互动，“中华厨艺绝技表演团”展示面食绝技。中国声入人心男团成员与意大利II "
+             'VOLO美声少年团合唱《我的太阳》等曲目。(图片均由 林宏 摄）\u3000\u3000'
+             '中意两国同为历史悠久、文化灿烂的文明古国，两国人文交流源远流长，两国人民传统友谊深厚。音乐会成为中意两国文化艺术交流互鉴的又一生动写照，两国人民将通过艺术增进深层次的理解信任，加深友谊、共促发展。  '],
+ 'img': ['Image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190322221731.jpg',
+         'Image/1.jpg',
+         'Image/2%E6%9D%82%E6%8A%80.jpg',
+         'Image/3%E5%99%A8%E4%B9%90%E5%90%88%E5%A5%8F.jpg',
+         'Image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190322222102.jpg',
+         'Image/4%E4%BA%92%E5%8A%A8.jpg',
+         'Image/5%E7%BE%8E%E5%A3%B0%E4%B8%89%E9%87%8D%E5%94%B1.jpg'],
+ 'page_url': 'http://www.scio.gov.cn/37234/Document/1650333/1650333.htm',
+ 'sub_title_str': ['国务院新闻办公室网站\u3000www.scio.gov.cn\u3000\u3000 '
+                   '2019-03-22\u3000\u3000 来源：国新网 '],
+ 'title': ['“2019感知中国——中意友好音乐会”在罗马举办（组图）'],
+ 'video': []}
+2019-06-23 11:06:37 [root] INFO: scio_parse result: {'_id': 'ea13e674-9563-11e9-b5bc-94c6912740aa',
+ 'audio': [],
+ 'author': ['[责任编辑：焦非', '] '],
+ 'content': ['\u3000\u3000'
+             '2019年3月21日，在习近平主席对意大利进行国事访问之际，由中国国务院新闻办公室与中国驻意大利大使馆共同主办的“2019感知中国——中意友好音乐会”在罗马举行。中意两国顶级艺术家同台献艺，为观众奉上一场别开生面的音乐会。安东尼亚诺童声合唱团演唱《China '
+             "E'》《茉莉花》等曲目。战士红星艺术团表演杂技舞蹈《天鹅湖》。音乐互动环节，中意双方用传统乐器演奏对方国家的音乐代表作《梁祝》和《今夜无人入睡》。音乐互动环节，中意双方用传统乐器演奏对方国家的音乐代表作《梁祝》和《今夜无人入睡》。中意美食互动，“中华厨艺绝技表演团”展示面食绝技。中国声入人心男团成员与意大利II "
+             'VOLO美声少年团合唱《我的太阳》等曲目。(图片均由 林宏 摄）\u3000\u3000'
+             '中意两国同为历史悠久、文化灿烂的文明古国，两国人文交流源远流长，两国人民传统友谊深厚。音乐会成为中意两国文化艺术交流互鉴的又一生动写照，两国人民将通过艺术增进深层次的理解信任，加深友谊、共促发展。  '],
+ 'img': ['Image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190322221731.jpg',
+         'Image/1.jpg',
+         'Image/2%E6%9D%82%E6%8A%80.jpg',
+         'Image/3%E5%99%A8%E4%B9%90%E5%90%88%E5%A5%8F.jpg',
+         'Image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190322222102.jpg',
+         'Image/4%E4%BA%92%E5%8A%A8.jpg',
+         'Image/5%E7%BE%8E%E5%A3%B0%E4%B8%89%E9%87%8D%E5%94%B1.jpg'],
+ 'page_url': 'http://www.scio.gov.cn/37234/Document/1650333/1650333.htm',
+ 'sub_title_str': ['国务院新闻办公室网站\u3000www.scio.gov.cn\u3000\u3000 '
+                   '2019-03-22\u3000\u3000 来源：国新网 '],
+ 'title': ['“2019感知中国——中意友好音乐会”在罗马举办（组图）'],
+ 'video': []}
+2019-06-23 11:08:00 [root] INFO: scio_parse result: {'_id': '1beec952-9564-11e9-820b-94c6912740aa',
+ 'audio': [],
+ 'author': ['[责任编辑：焦非', '] '],
+ 'content': ['\u3000\u3000'
+             '2019年3月21日，在习近平主席对意大利进行国事访问之际，由中国国务院新闻办公室与中国驻意大利大使馆共同主办的“2019感知中国——中意友好音乐会”在罗马举行。中意两国顶级艺术家同台献艺，为观众奉上一场别开生面的音乐会。安东尼亚诺童声合唱团演唱《China '
+             "E'》《茉莉花》等曲目。战士红星艺术团表演杂技舞蹈《天鹅湖》。音乐互动环节，中意双方用传统乐器演奏对方国家的音乐代表作《梁祝》和《今夜无人入睡》。音乐互动环节，中意双方用传统乐器演奏对方国家的音乐代表作《梁祝》和《今夜无人入睡》。中意美食互动，“中华厨艺绝技表演团”展示面食绝技。中国声入人心男团成员与意大利II "
+             'VOLO美声少年团合唱《我的太阳》等曲目。(图片均由 林宏 摄）\u3000\u3000'
+             '中意两国同为历史悠久、文化灿烂的文明古国，两国人文交流源远流长，两国人民传统友谊深厚。音乐会成为中意两国文化艺术交流互鉴的又一生动写照，两国人民将通过艺术增进深层次的理解信任，加深友谊、共促发展。  '],
+ 'img': ['Image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190322221731.jpg',
+         'Image/1.jpg',
+         'Image/2%E6%9D%82%E6%8A%80.jpg',
+         'Image/3%E5%99%A8%E4%B9%90%E5%90%88%E5%A5%8F.jpg',
+         'Image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190322222102.jpg',
+         'Image/4%E4%BA%92%E5%8A%A8.jpg',
+         'Image/5%E7%BE%8E%E5%A3%B0%E4%B8%89%E9%87%8D%E5%94%B1.jpg'],
+ 'page_url': 'http://www.scio.gov.cn/37234/Document/1650333/1650333.htm',
+ 'sub_title_str': ['国务院新闻办公室网站\u3000www.scio.gov.cn\u3000\u3000 '
+                   '2019-03-22\u3000\u3000 来源：国新网 '],
+ 'title': ['“2019感知中国——中意友好音乐会”在罗马举办（组图）'],
+ 'video': []}
+2019-06-23 11:13:44 [scrapy.utils.log] INFO: Scrapy 1.6.0 started (bot: main_node)
+2019-06-23 11:13:44 [scrapy.utils.log] INFO: Versions: lxml 4.3.3.0, libxml2 2.9.5, cssselect 1.0.3, parsel 1.5.1, w3lib 1.20.0, Twisted 19.2.1, Python 3.6.4 (v3.6.4:d48eceb, Dec 19 2017, 06:04:45) [MSC v.1900 32 bit (Intel)], pyOpenSSL 19.0.0 (OpenSSL 1.1.1c  28 May 2019), cryptography 2.7, Platform Windows-10-10.0.17134-SP0
+2019-06-23 11:13:44 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'main_node', 'COOKIES_ENABLED': False, 'DOWNLOAD_DELAY': 3, 'LOG_ENABLED': False, 'LOG_FILE': 'logs/scrapy.log', 'LOG_LEVEL': 'INFO', 'NEWSPIDER_MODULE': 'main_node.spiders', 'SPIDER_MODULES': ['main_node.spiders'], 'USER_AGENT': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_0) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1063.0 Safari/536.3'}
+2019-06-23 11:13:44 [scrapy.extensions.telnet] INFO: Telnet Password: 9c613f2d0ab13e1c
+2019-06-23 11:13:44 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2019-06-23 11:13:44 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2019-06-23 11:13:44 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2019-06-23 11:13:44 [scrapy.middleware] INFO: Enabled item pipelines:
+['main_node.pipelines.scio.ScioPipeline',
+ 'main_node.pipelines.single_mongodb.SingleMongodbPipeline']
+2019-06-23 11:13:44 [scrapy.core.engine] INFO: Spider opened
+2019-06-23 11:13:44 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2019-06-23 11:13:44 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2019-06-23 11:13:45 [root] INFO: 路由 routing_method url: http://www.scio.gov.cn/37234/Document/1650333/1650333.htm
+2019-06-23 11:13:45 [root] INFO: scio_parse result: {'_id': 'e91a772e-9564-11e9-adef-94c6912740aa',
+ 'audio': [],
+ 'author': ['[责任编辑：焦非', '] '],
+ 'content': ['\u3000\u3000'
+             '2019年3月21日，在习近平主席对意大利进行国事访问之际，由中国国务院新闻办公室与中国驻意大利大使馆共同主办的“2019感知中国——中意友好音乐会”在罗马举行。中意两国顶级艺术家同台献艺，为观众奉上一场别开生面的音乐会。安东尼亚诺童声合唱团演唱《China '
+             "E'》《茉莉花》等曲目。战士红星艺术团表演杂技舞蹈《天鹅湖》。音乐互动环节，中意双方用传统乐器演奏对方国家的音乐代表作《梁祝》和《今夜无人入睡》。音乐互动环节，中意双方用传统乐器演奏对方国家的音乐代表作《梁祝》和《今夜无人入睡》。中意美食互动，“中华厨艺绝技表演团”展示面食绝技。中国声入人心男团成员与意大利II "
+             'VOLO美声少年团合唱《我的太阳》等曲目。(图片均由 林宏 摄）\u3000\u3000'
+             '中意两国同为历史悠久、文化灿烂的文明古国，两国人文交流源远流长，两国人民传统友谊深厚。音乐会成为中意两国文化艺术交流互鉴的又一生动写照，两国人民将通过艺术增进深层次的理解信任，加深友谊、共促发展。  '],
+ 'img': ['Image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190322221731.jpg',
+         'Image/1.jpg',
+         'Image/2%E6%9D%82%E6%8A%80.jpg',
+         'Image/3%E5%99%A8%E4%B9%90%E5%90%88%E5%A5%8F.jpg',
+         'Image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190322222102.jpg',
+         'Image/4%E4%BA%92%E5%8A%A8.jpg',
+         'Image/5%E7%BE%8E%E5%A3%B0%E4%B8%89%E9%87%8D%E5%94%B1.jpg'],
+ 'page_url': 'http://www.scio.gov.cn/37234/Document/1650333/1650333.htm',
+ 'sub_title_str': ['国务院新闻办公室网站\u3000www.scio.gov.cn\u3000\u3000 '
+                   '2019-03-22\u3000\u3000 来源：国新网 '],
+ 'title': ['“2019感知中国——中意友好音乐会”在罗马举办（组图）'],
+ 'video': []}
+2019-06-23 11:13:45 [root] INFO: scio_parse result: {'_id': 'e91a772f-9564-11e9-8638-94c6912740aa',
+ 'audio': [],
+ 'author': ['[责任编辑：焦非', '] '],
+ 'content': ['\u3000\u3000'
+             '2019年3月21日，在习近平主席对意大利进行国事访问之际，由中国国务院新闻办公室与中国驻意大利大使馆共同主办的“2019感知中国——中意友好音乐会”在罗马举行。中意两国顶级艺术家同台献艺，为观众奉上一场别开生面的音乐会。安东尼亚诺童声合唱团演唱《China '
+             "E'》《茉莉花》等曲目。战士红星艺术团表演杂技舞蹈《天鹅湖》。音乐互动环节，中意双方用传统乐器演奏对方国家的音乐代表作《梁祝》和《今夜无人入睡》。音乐互动环节，中意双方用传统乐器演奏对方国家的音乐代表作《梁祝》和《今夜无人入睡》。中意美食互动，“中华厨艺绝技表演团”展示面食绝技。中国声入人心男团成员与意大利II "
+             'VOLO美声少年团合唱《我的太阳》等曲目。(图片均由 林宏 摄）\u3000\u3000'
+             '中意两国同为历史悠久、文化灿烂的文明古国，两国人文交流源远流长，两国人民传统友谊深厚。音乐会成为中意两国文化艺术交流互鉴的又一生动写照，两国人民将通过艺术增进深层次的理解信任，加深友谊、共促发展。  '],
+ 'img': ['Image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190322221731.jpg',
+         'Image/1.jpg',
+         'Image/2%E6%9D%82%E6%8A%80.jpg',
+         'Image/3%E5%99%A8%E4%B9%90%E5%90%88%E5%A5%8F.jpg',
+         'Image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190322222102.jpg',
+         'Image/4%E4%BA%92%E5%8A%A8.jpg',
+         'Image/5%E7%BE%8E%E5%A3%B0%E4%B8%89%E9%87%8D%E5%94%B1.jpg'],
+ 'page_url': 'http://www.scio.gov.cn/37234/Document/1650333/1650333.htm',
+ 'sub_title_str': ['国务院新闻办公室网站\u3000www.scio.gov.cn\u3000\u3000 '
+                   '2019-03-22\u3000\u3000 来源：国新网 '],
+ 'title': ['“2019感知中国——中意友好音乐会”在罗马举办（组图）'],
+ 'video': []}
+2019-06-23 11:13:45 [root] INFO: scio_parse result: {'_id': 'e9219e52-9564-11e9-a62a-94c6912740aa',
+ 'audio': [],
+ 'author': ['[责任编辑：焦非', '] '],
+ 'content': ['\u3000\u3000'
+             '2019年3月21日，在习近平主席对意大利进行国事访问之际，由中国国务院新闻办公室与中国驻意大利大使馆共同主办的“2019感知中国——中意友好音乐会”在罗马举行。中意两国顶级艺术家同台献艺，为观众奉上一场别开生面的音乐会。安东尼亚诺童声合唱团演唱《China '
+             "E'》《茉莉花》等曲目。战士红星艺术团表演杂技舞蹈《天鹅湖》。音乐互动环节，中意双方用传统乐器演奏对方国家的音乐代表作《梁祝》和《今夜无人入睡》。音乐互动环节，中意双方用传统乐器演奏对方国家的音乐代表作《梁祝》和《今夜无人入睡》。中意美食互动，“中华厨艺绝技表演团”展示面食绝技。中国声入人心男团成员与意大利II "
+             'VOLO美声少年团合唱《我的太阳》等曲目。(图片均由 林宏 摄）\u3000\u3000'
+             '中意两国同为历史悠久、文化灿烂的文明古国，两国人文交流源远流长，两国人民传统友谊深厚。音乐会成为中意两国文化艺术交流互鉴的又一生动写照，两国人民将通过艺术增进深层次的理解信任，加深友谊、共促发展。  '],
+ 'img': ['Image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190322221731.jpg',
+         'Image/1.jpg',
+         'Image/2%E6%9D%82%E6%8A%80.jpg',
+         'Image/3%E5%99%A8%E4%B9%90%E5%90%88%E5%A5%8F.jpg',
+         'Image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190322222102.jpg',
+         'Image/4%E4%BA%92%E5%8A%A8.jpg',
+         'Image/5%E7%BE%8E%E5%A3%B0%E4%B8%89%E9%87%8D%E5%94%B1.jpg'],
+ 'page_url': 'http://www.scio.gov.cn/37234/Document/1650333/1650333.htm',
+ 'sub_title_str': ['国务院新闻办公室网站\u3000www.scio.gov.cn\u3000\u3000 '
+                   '2019-03-22\u3000\u3000 来源：国新网 '],
+ 'title': ['“2019感知中国——中意友好音乐会”在罗马举办（组图）'],
+ 'video': []}
+2019-06-23 11:13:45 [root] INFO: scio_parse result: {'_id': 'e9219e53-9564-11e9-817e-94c6912740aa',
+ 'audio': [],
+ 'author': ['[责任编辑：焦非', '] '],
+ 'content': ['\u3000\u3000'
+             '2019年3月21日，在习近平主席对意大利进行国事访问之际，由中国国务院新闻办公室与中国驻意大利大使馆共同主办的“2019感知中国——中意友好音乐会”在罗马举行。中意两国顶级艺术家同台献艺，为观众奉上一场别开生面的音乐会。安东尼亚诺童声合唱团演唱《China '
+             "E'》《茉莉花》等曲目。战士红星艺术团表演杂技舞蹈《天鹅湖》。音乐互动环节，中意双方用传统乐器演奏对方国家的音乐代表作《梁祝》和《今夜无人入睡》。音乐互动环节，中意双方用传统乐器演奏对方国家的音乐代表作《梁祝》和《今夜无人入睡》。中意美食互动，“中华厨艺绝技表演团”展示面食绝技。中国声入人心男团成员与意大利II "
+             'VOLO美声少年团合唱《我的太阳》等曲目。(图片均由 林宏 摄）\u3000\u3000'
+             '中意两国同为历史悠久、文化灿烂的文明古国，两国人文交流源远流长，两国人民传统友谊深厚。音乐会成为中意两国文化艺术交流互鉴的又一生动写照，两国人民将通过艺术增进深层次的理解信任，加深友谊、共促发展。  '],
+ 'img': ['Image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190322221731.jpg',
+         'Image/1.jpg',
+         'Image/2%E6%9D%82%E6%8A%80.jpg',
+         'Image/3%E5%99%A8%E4%B9%90%E5%90%88%E5%A5%8F.jpg',
+         'Image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190322222102.jpg',
+         'Image/4%E4%BA%92%E5%8A%A8.jpg',
+         'Image/5%E7%BE%8E%E5%A3%B0%E4%B8%89%E9%87%8D%E5%94%B1.jpg'],
+ 'page_url': 'http://www.scio.gov.cn/37234/Document/1650333/1650333.htm',
+ 'sub_title_str': ['国务院新闻办公室网站\u3000www.scio.gov.cn\u3000\u3000 '
+                   '2019-03-22\u3000\u3000 来源：国新网 '],
+ 'title': ['“2019感知中国——中意友好音乐会”在罗马举办（组图）'],
+ 'video': []}
+2019-06-23 11:20:12 [scrapy.utils.log] INFO: Scrapy 1.6.0 started (bot: main_node)
+2019-06-23 11:20:12 [scrapy.utils.log] INFO: Versions: lxml 4.3.3.0, libxml2 2.9.5, cssselect 1.0.3, parsel 1.5.1, w3lib 1.20.0, Twisted 19.2.1, Python 3.6.4 (v3.6.4:d48eceb, Dec 19 2017, 06:04:45) [MSC v.1900 32 bit (Intel)], pyOpenSSL 19.0.0 (OpenSSL 1.1.1c  28 May 2019), cryptography 2.7, Platform Windows-10-10.0.17134-SP0
+2019-06-23 11:20:12 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'main_node', 'COOKIES_ENABLED': False, 'DOWNLOAD_DELAY': 3, 'LOG_ENABLED': False, 'LOG_FILE': 'logs/scrapy.log', 'LOG_LEVEL': 'INFO', 'NEWSPIDER_MODULE': 'main_node.spiders', 'SPIDER_MODULES': ['main_node.spiders'], 'USER_AGENT': 'Mozilla/2.02E (Win95; U)'}
+2019-06-23 11:20:12 [scrapy.extensions.telnet] INFO: Telnet Password: ec5ac29cd0379fb4
+2019-06-23 11:20:12 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2019-06-23 11:20:12 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2019-06-23 11:20:12 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2019-06-23 11:20:12 [scrapy.middleware] INFO: Enabled item pipelines:
+['main_node.pipelines.scio.ScioPipeline',
+ 'main_node.pipelines.single_mongodb.SingleMongodbPipeline']
+2019-06-23 11:20:12 [scrapy.core.engine] INFO: Spider opened
+2019-06-23 11:20:12 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2019-06-23 11:20:12 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2019-06-23 11:20:13 [root] INFO: 路由 routing_method url: http://www.scio.gov.cn/37234/Document/1650333/1650333.htm
+2019-06-23 11:20:13 [root] INFO: scio_parse result: {'_id': 'd05a4e8c-9565-11e9-b5c6-94c6912740aa',
+ 'audio': [],
+ 'author': ['[责任编辑：焦非', '] '],
+ 'content': ['\u3000\u3000'
+             '2019年3月21日，在习近平主席对意大利进行国事访问之际，由中国国务院新闻办公室与中国驻意大利大使馆共同主办的“2019感知中国——中意友好音乐会”在罗马举行。中意两国顶级艺术家同台献艺，为观众奉上一场别开生面的音乐会。安东尼亚诺童声合唱团演唱《China '
+             "E'》《茉莉花》等曲目。战士红星艺术团表演杂技舞蹈《天鹅湖》。音乐互动环节，中意双方用传统乐器演奏对方国家的音乐代表作《梁祝》和《今夜无人入睡》。音乐互动环节，中意双方用传统乐器演奏对方国家的音乐代表作《梁祝》和《今夜无人入睡》。中意美食互动，“中华厨艺绝技表演团”展示面食绝技。中国声入人心男团成员与意大利II "
+             'VOLO美声少年团合唱《我的太阳》等曲目。(图片均由 林宏 摄）\u3000\u3000'
+             '中意两国同为历史悠久、文化灿烂的文明古国，两国人文交流源远流长，两国人民传统友谊深厚。音乐会成为中意两国文化艺术交流互鉴的又一生动写照，两国人民将通过艺术增进深层次的理解信任，加深友谊、共促发展。  '],
+ 'img': ['Image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190322221731.jpg',
+         'Image/1.jpg',
+         'Image/2%E6%9D%82%E6%8A%80.jpg',
+         'Image/3%E5%99%A8%E4%B9%90%E5%90%88%E5%A5%8F.jpg',
+         'Image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190322222102.jpg',
+         'Image/4%E4%BA%92%E5%8A%A8.jpg',
+         'Image/5%E7%BE%8E%E5%A3%B0%E4%B8%89%E9%87%8D%E5%94%B1.jpg'],
+ 'page_url': 'http://www.scio.gov.cn/37234/Document/1650333/1650333.htm',
+ 'sub_title_str': ['国务院新闻办公室网站\u3000www.scio.gov.cn\u3000\u3000 '
+                   '2019-03-22\u3000\u3000 来源：国新网 '],
+ 'title': ['“2019感知中国——中意友好音乐会”在罗马举办（组图）'],
+ 'video': []}
+2019-06-23 11:20:13 [root] INFO: scio_parse result: {'_id': 'd05a4e8d-9565-11e9-a8eb-94c6912740aa',
+ 'audio': [],
+ 'author': ['[责任编辑：焦非', '] '],
+ 'content': ['\u3000\u3000'
+             '2019年3月21日，在习近平主席对意大利进行国事访问之际，由中国国务院新闻办公室与中国驻意大利大使馆共同主办的“2019感知中国——中意友好音乐会”在罗马举行。中意两国顶级艺术家同台献艺，为观众奉上一场别开生面的音乐会。安东尼亚诺童声合唱团演唱《China '
+             "E'》《茉莉花》等曲目。战士红星艺术团表演杂技舞蹈《天鹅湖》。音乐互动环节，中意双方用传统乐器演奏对方国家的音乐代表作《梁祝》和《今夜无人入睡》。音乐互动环节，中意双方用传统乐器演奏对方国家的音乐代表作《梁祝》和《今夜无人入睡》。中意美食互动，“中华厨艺绝技表演团”展示面食绝技。中国声入人心男团成员与意大利II "
+             'VOLO美声少年团合唱《我的太阳》等曲目。(图片均由 林宏 摄）\u3000\u3000'
+             '中意两国同为历史悠久、文化灿烂的文明古国，两国人文交流源远流长，两国人民传统友谊深厚。音乐会成为中意两国文化艺术交流互鉴的又一生动写照，两国人民将通过艺术增进深层次的理解信任，加深友谊、共促发展。  '],
+ 'img': ['Image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190322221731.jpg',
+         'Image/1.jpg',
+         'Image/2%E6%9D%82%E6%8A%80.jpg',
+         'Image/3%E5%99%A8%E4%B9%90%E5%90%88%E5%A5%8F.jpg',
+         'Image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190322222102.jpg',
+         'Image/4%E4%BA%92%E5%8A%A8.jpg',
+         'Image/5%E7%BE%8E%E5%A3%B0%E4%B8%89%E9%87%8D%E5%94%B1.jpg'],
+ 'page_url': 'http://www.scio.gov.cn/37234/Document/1650333/1650333.htm',
+ 'sub_title_str': ['国务院新闻办公室网站\u3000www.scio.gov.cn\u3000\u3000 '
+                   '2019-03-22\u3000\u3000 来源：国新网 '],
+ 'title': ['“2019感知中国——中意友好音乐会”在罗马举办（组图）'],
+ 'video': []}
+2019-06-23 11:20:13 [root] INFO: scio_parse result: {'_id': 'd063d762-9565-11e9-8082-94c6912740aa',
+ 'audio': [],
+ 'author': ['[责任编辑：焦非', '] '],
+ 'content': ['\u3000\u3000'
+             '2019年3月21日，在习近平主席对意大利进行国事访问之际，由中国国务院新闻办公室与中国驻意大利大使馆共同主办的“2019感知中国——中意友好音乐会”在罗马举行。中意两国顶级艺术家同台献艺，为观众奉上一场别开生面的音乐会。安东尼亚诺童声合唱团演唱《China '
+             "E'》《茉莉花》等曲目。战士红星艺术团表演杂技舞蹈《天鹅湖》。音乐互动环节，中意双方用传统乐器演奏对方国家的音乐代表作《梁祝》和《今夜无人入睡》。音乐互动环节，中意双方用传统乐器演奏对方国家的音乐代表作《梁祝》和《今夜无人入睡》。中意美食互动，“中华厨艺绝技表演团”展示面食绝技。中国声入人心男团成员与意大利II "
+             'VOLO美声少年团合唱《我的太阳》等曲目。(图片均由 林宏 摄）\u3000\u3000'
+             '中意两国同为历史悠久、文化灿烂的文明古国，两国人文交流源远流长，两国人民传统友谊深厚。音乐会成为中意两国文化艺术交流互鉴的又一生动写照，两国人民将通过艺术增进深层次的理解信任，加深友谊、共促发展。  '],
+ 'img': ['Image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190322221731.jpg',
+         'Image/1.jpg',
+         'Image/2%E6%9D%82%E6%8A%80.jpg',
+         'Image/3%E5%99%A8%E4%B9%90%E5%90%88%E5%A5%8F.jpg',
+         'Image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190322222102.jpg',
+         'Image/4%E4%BA%92%E5%8A%A8.jpg',
+         'Image/5%E7%BE%8E%E5%A3%B0%E4%B8%89%E9%87%8D%E5%94%B1.jpg'],
+ 'page_url': 'http://www.scio.gov.cn/37234/Document/1650333/1650333.htm',
+ 'sub_title_str': ['国务院新闻办公室网站\u3000www.scio.gov.cn\u3000\u3000 '
+                   '2019-03-22\u3000\u3000 来源：国新网 '],
+ 'title': ['“2019感知中国——中意友好音乐会”在罗马举办（组图）'],
+ 'video': []}
+2019-06-23 11:20:13 [root] INFO: scio_parse result: {'_id': 'd063d763-9565-11e9-b24e-94c6912740aa',
+ 'audio': [],
+ 'author': ['[责任编辑：焦非', '] '],
+ 'content': ['\u3000\u3000'
+             '2019年3月21日，在习近平主席对意大利进行国事访问之际，由中国国务院新闻办公室与中国驻意大利大使馆共同主办的“2019感知中国——中意友好音乐会”在罗马举行。中意两国顶级艺术家同台献艺，为观众奉上一场别开生面的音乐会。安东尼亚诺童声合唱团演唱《China '
+             "E'》《茉莉花》等曲目。战士红星艺术团表演杂技舞蹈《天鹅湖》。音乐互动环节，中意双方用传统乐器演奏对方国家的音乐代表作《梁祝》和《今夜无人入睡》。音乐互动环节，中意双方用传统乐器演奏对方国家的音乐代表作《梁祝》和《今夜无人入睡》。中意美食互动，“中华厨艺绝技表演团”展示面食绝技。中国声入人心男团成员与意大利II "
+             'VOLO美声少年团合唱《我的太阳》等曲目。(图片均由 林宏 摄）\u3000\u3000'
+             '中意两国同为历史悠久、文化灿烂的文明古国，两国人文交流源远流长，两国人民传统友谊深厚。音乐会成为中意两国文化艺术交流互鉴的又一生动写照，两国人民将通过艺术增进深层次的理解信任，加深友谊、共促发展。  '],
+ 'img': ['Image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190322221731.jpg',
+         'Image/1.jpg',
+         'Image/2%E6%9D%82%E6%8A%80.jpg',
+         'Image/3%E5%99%A8%E4%B9%90%E5%90%88%E5%A5%8F.jpg',
+         'Image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190322222102.jpg',
+         'Image/4%E4%BA%92%E5%8A%A8.jpg',
+         'Image/5%E7%BE%8E%E5%A3%B0%E4%B8%89%E9%87%8D%E5%94%B1.jpg'],
+ 'page_url': 'http://www.scio.gov.cn/37234/Document/1650333/1650333.htm',
+ 'sub_title_str': ['国务院新闻办公室网站\u3000www.scio.gov.cn\u3000\u3000 '
+                   '2019-03-22\u3000\u3000 来源：国新网 '],
+ 'title': ['“2019感知中国——中意友好音乐会”在罗马举办（组图）'],
+ 'video': []}
+2019-06-23 11:22:11 [scrapy.utils.log] INFO: Scrapy 1.6.0 started (bot: main_node)
+2019-06-23 11:22:11 [scrapy.utils.log] INFO: Versions: lxml 4.3.3.0, libxml2 2.9.5, cssselect 1.0.3, parsel 1.5.1, w3lib 1.20.0, Twisted 19.2.1, Python 3.6.4 (v3.6.4:d48eceb, Dec 19 2017, 06:04:45) [MSC v.1900 32 bit (Intel)], pyOpenSSL 19.0.0 (OpenSSL 1.1.1c  28 May 2019), cryptography 2.7, Platform Windows-10-10.0.17134-SP0
+2019-06-23 11:22:11 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'main_node', 'COOKIES_ENABLED': False, 'DOWNLOAD_DELAY': 3, 'LOG_ENABLED': False, 'LOG_FILE': 'logs/scrapy.log', 'LOG_LEVEL': 'INFO', 'NEWSPIDER_MODULE': 'main_node.spiders', 'SPIDER_MODULES': ['main_node.spiders'], 'USER_AGENT': 'Mozilla/4.0 (compatible; MSIE 5.5; Windows 98; Win 9x 4.90)'}
+2019-06-23 11:22:11 [scrapy.extensions.telnet] INFO: Telnet Password: 44df8bf2f6d6c975
+2019-06-23 11:22:11 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2019-06-23 11:22:11 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2019-06-23 11:22:11 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2019-06-23 11:22:11 [scrapy.middleware] INFO: Enabled item pipelines:
+['main_node.pipelines.scio.ScioPipeline',
+ 'main_node.pipelines.single_mongodb.SingleMongodbPipeline']
+2019-06-23 11:22:11 [scrapy.core.engine] INFO: Spider opened
+2019-06-23 11:22:11 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2019-06-23 11:22:11 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2019-06-23 11:22:11 [root] INFO: 路由 routing_method url: http://www.scio.gov.cn/37234/Document/1650333/1650333.htm
+2019-06-23 11:26:20 [scrapy.utils.log] INFO: Scrapy 1.6.0 started (bot: main_node)
+2019-06-23 11:26:20 [scrapy.utils.log] INFO: Versions: lxml 4.3.3.0, libxml2 2.9.5, cssselect 1.0.3, parsel 1.5.1, w3lib 1.20.0, Twisted 19.2.1, Python 3.6.4 (v3.6.4:d48eceb, Dec 19 2017, 06:04:45) [MSC v.1900 32 bit (Intel)], pyOpenSSL 19.0.0 (OpenSSL 1.1.1c  28 May 2019), cryptography 2.7, Platform Windows-10-10.0.17134-SP0
+2019-06-23 11:26:20 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'main_node', 'COOKIES_ENABLED': False, 'DOWNLOAD_DELAY': 3, 'LOG_ENABLED': False, 'LOG_FILE': 'logs/scrapy.log', 'LOG_LEVEL': 'INFO', 'NEWSPIDER_MODULE': 'main_node.spiders', 'SPIDER_MODULES': ['main_node.spiders'], 'USER_AGENT': 'Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1061.0 Safari/536.3'}
+2019-06-23 11:26:20 [scrapy.extensions.telnet] INFO: Telnet Password: 31afa7357c9947a2
+2019-06-23 11:26:20 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2019-06-23 11:26:20 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2019-06-23 11:26:20 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2019-06-23 11:26:20 [scrapy.middleware] INFO: Enabled item pipelines:
+['main_node.pipelines.scio.ScioPipeline',
+ 'main_node.pipelines.single_mongodb.SingleMongodbPipeline']
+2019-06-23 11:26:20 [scrapy.core.engine] INFO: Spider opened
+2019-06-23 11:26:20 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2019-06-23 11:26:20 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2019-06-23 11:26:20 [root] INFO: 路由 routing_method url: http://www.scio.gov.cn/37234/Document/1650333/1650333.htm
+2019-06-23 11:27:02 [scrapy.utils.log] INFO: Scrapy 1.6.0 started (bot: main_node)
+2019-06-23 11:27:02 [scrapy.utils.log] INFO: Versions: lxml 4.3.3.0, libxml2 2.9.5, cssselect 1.0.3, parsel 1.5.1, w3lib 1.20.0, Twisted 19.2.1, Python 3.6.4 (v3.6.4:d48eceb, Dec 19 2017, 06:04:45) [MSC v.1900 32 bit (Intel)], pyOpenSSL 19.0.0 (OpenSSL 1.1.1c  28 May 2019), cryptography 2.7, Platform Windows-10-10.0.17134-SP0
+2019-06-23 11:27:02 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'main_node', 'COOKIES_ENABLED': False, 'DOWNLOAD_DELAY': 3, 'LOG_ENABLED': False, 'LOG_FILE': 'logs/scrapy.log', 'LOG_LEVEL': 'INFO', 'NEWSPIDER_MODULE': 'main_node.spiders', 'SPIDER_MODULES': ['main_node.spiders'], 'USER_AGENT': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/22.0.1207.1 Safari/537.1'}
+2019-06-23 11:27:02 [scrapy.extensions.telnet] INFO: Telnet Password: 82c83a995a5fa569
+2019-06-23 11:27:02 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2019-06-23 11:27:02 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2019-06-23 11:27:02 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2019-06-23 11:27:02 [scrapy.middleware] INFO: Enabled item pipelines:
+['main_node.pipelines.scio.ScioPipeline',
+ 'main_node.pipelines.single_mongodb.SingleMongodbPipeline']
+2019-06-23 11:27:02 [scrapy.core.engine] INFO: Spider opened
+2019-06-23 11:27:02 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2019-06-23 11:27:02 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2019-06-23 11:27:02 [root] INFO: 路由 routing_method url: http://www.scio.gov.cn/37234/Document/1650333/1650333.htm
+2019-06-23 11:27:48 [scrapy.utils.log] INFO: Scrapy 1.6.0 started (bot: main_node)
+2019-06-23 11:27:48 [scrapy.utils.log] INFO: Versions: lxml 4.3.3.0, libxml2 2.9.5, cssselect 1.0.3, parsel 1.5.1, w3lib 1.20.0, Twisted 19.2.1, Python 3.6.4 (v3.6.4:d48eceb, Dec 19 2017, 06:04:45) [MSC v.1900 32 bit (Intel)], pyOpenSSL 19.0.0 (OpenSSL 1.1.1c  28 May 2019), cryptography 2.7, Platform Windows-10-10.0.17134-SP0
+2019-06-23 11:27:48 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'main_node', 'COOKIES_ENABLED': False, 'DOWNLOAD_DELAY': 3, 'LOG_ENABLED': False, 'LOG_FILE': 'logs/scrapy.log', 'LOG_LEVEL': 'INFO', 'NEWSPIDER_MODULE': 'main_node.spiders', 'SPIDER_MODULES': ['main_node.spiders'], 'USER_AGENT': 'Mozilla/5.0 (X11; CrOS i686 2268.111.0) AppleWebKit/536.11 (KHTML, like Gecko) Chrome/20.0.1132.57 Safari/536.11'}
+2019-06-23 11:27:48 [scrapy.extensions.telnet] INFO: Telnet Password: fe466c325594961f
+2019-06-23 11:27:48 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2019-06-23 11:27:48 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2019-06-23 11:27:48 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2019-06-23 11:27:48 [scrapy.middleware] INFO: Enabled item pipelines:
+['main_node.pipelines.scio.ScioPipeline',
+ 'main_node.pipelines.single_mongodb.SingleMongodbPipeline']
+2019-06-23 11:27:48 [scrapy.core.engine] INFO: Spider opened
+2019-06-23 11:27:48 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2019-06-23 11:27:48 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2019-06-23 11:27:49 [root] INFO: 路由 routing_method url: http://www.scio.gov.cn/37234/Document/1650333/1650333.htm
+2019-06-23 11:27:49 [root] INFO: scio_parse result: {'_id': 'e042b57e-9566-11e9-91ec-94c6912740aa',
+ 'audio': [],
+ 'author': ['[责任编辑：焦非', '] '],
+ 'content': ['\u3000\u3000'
+             '2019年3月21日，在习近平主席对意大利进行国事访问之际，由中国国务院新闻办公室与中国驻意大利大使馆共同主办的“2019感知中国——中意友好音乐会”在罗马举行。中意两国顶级艺术家同台献艺，为观众奉上一场别开生面的音乐会。安东尼亚诺童声合唱团演唱《China '
+             "E'》《茉莉花》等曲目。战士红星艺术团表演杂技舞蹈《天鹅湖》。音乐互动环节，中意双方用传统乐器演奏对方国家的音乐代表作《梁祝》和《今夜无人入睡》。音乐互动环节，中意双方用传统乐器演奏对方国家的音乐代表作《梁祝》和《今夜无人入睡》。中意美食互动，“中华厨艺绝技表演团”展示面食绝技。中国声入人心男团成员与意大利II "
+             'VOLO美声少年团合唱《我的太阳》等曲目。(图片均由 林宏 摄）\u3000\u3000'
+             '中意两国同为历史悠久、文化灿烂的文明古国，两国人文交流源远流长，两国人民传统友谊深厚。音乐会成为中意两国文化艺术交流互鉴的又一生动写照，两国人民将通过艺术增进深层次的理解信任，加深友谊、共促发展。  '],
+ 'img': ['Image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190322221731.jpg',
+         'Image/1.jpg',
+         'Image/2%E6%9D%82%E6%8A%80.jpg',
+         'Image/3%E5%99%A8%E4%B9%90%E5%90%88%E5%A5%8F.jpg',
+         'Image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190322222102.jpg',
+         'Image/4%E4%BA%92%E5%8A%A8.jpg',
+         'Image/5%E7%BE%8E%E5%A3%B0%E4%B8%89%E9%87%8D%E5%94%B1.jpg'],
+ 'page_url': 'http://www.scio.gov.cn/37234/Document/1650333/1650333.htm',
+ 'sub_title_str': ['国务院新闻办公室网站\u3000www.scio.gov.cn\u3000\u3000 '
+                   '2019-03-22\u3000\u3000 来源：国新网 '],
+ 'title': ['“2019感知中国——中意友好音乐会”在罗马举办（组图）'],
+ 'video': []}
+2019-06-23 11:27:49 [root] INFO: scio_parse result: {'_id': 'e04517be-9566-11e9-b9f7-94c6912740aa',
+ 'audio': [],
+ 'author': ['[责任编辑：焦非', '] '],
+ 'content': ['\u3000\u3000'
+             '2019年3月21日，在习近平主席对意大利进行国事访问之际，由中国国务院新闻办公室与中国驻意大利大使馆共同主办的“2019感知中国——中意友好音乐会”在罗马举行。中意两国顶级艺术家同台献艺，为观众奉上一场别开生面的音乐会。安东尼亚诺童声合唱团演唱《China '
+             "E'》《茉莉花》等曲目。战士红星艺术团表演杂技舞蹈《天鹅湖》。音乐互动环节，中意双方用传统乐器演奏对方国家的音乐代表作《梁祝》和《今夜无人入睡》。音乐互动环节，中意双方用传统乐器演奏对方国家的音乐代表作《梁祝》和《今夜无人入睡》。中意美食互动，“中华厨艺绝技表演团”展示面食绝技。中国声入人心男团成员与意大利II "
+             'VOLO美声少年团合唱《我的太阳》等曲目。(图片均由 林宏 摄）\u3000\u3000'
+             '中意两国同为历史悠久、文化灿烂的文明古国，两国人文交流源远流长，两国人民传统友谊深厚。音乐会成为中意两国文化艺术交流互鉴的又一生动写照，两国人民将通过艺术增进深层次的理解信任，加深友谊、共促发展。  '],
+ 'img': ['Image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190322221731.jpg',
+         'Image/1.jpg',
+         'Image/2%E6%9D%82%E6%8A%80.jpg',
+         'Image/3%E5%99%A8%E4%B9%90%E5%90%88%E5%A5%8F.jpg',
+         'Image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190322222102.jpg',
+         'Image/4%E4%BA%92%E5%8A%A8.jpg',
+         'Image/5%E7%BE%8E%E5%A3%B0%E4%B8%89%E9%87%8D%E5%94%B1.jpg'],
+ 'page_url': 'http://www.scio.gov.cn/37234/Document/1650333/1650333.htm',
+ 'sub_title_str': ['国务院新闻办公室网站\u3000www.scio.gov.cn\u3000\u3000 '
+                   '2019-03-22\u3000\u3000 来源：国新网 '],
+ 'title': ['“2019感知中国——中意友好音乐会”在罗马举办（组图）'],
+ 'video': []}
+2019-06-23 11:27:49 [root] INFO: scio_parse result: {'_id': 'e0477a74-9566-11e9-8ba2-94c6912740aa',
+ 'audio': [],
+ 'author': ['[责任编辑：焦非', '] '],
+ 'content': ['\u3000\u3000'
+             '2019年3月21日，在习近平主席对意大利进行国事访问之际，由中国国务院新闻办公室与中国驻意大利大使馆共同主办的“2019感知中国——中意友好音乐会”在罗马举行。中意两国顶级艺术家同台献艺，为观众奉上一场别开生面的音乐会。安东尼亚诺童声合唱团演唱《China '
+             "E'》《茉莉花》等曲目。战士红星艺术团表演杂技舞蹈《天鹅湖》。音乐互动环节，中意双方用传统乐器演奏对方国家的音乐代表作《梁祝》和《今夜无人入睡》。音乐互动环节，中意双方用传统乐器演奏对方国家的音乐代表作《梁祝》和《今夜无人入睡》。中意美食互动，“中华厨艺绝技表演团”展示面食绝技。中国声入人心男团成员与意大利II "
+             'VOLO美声少年团合唱《我的太阳》等曲目。(图片均由 林宏 摄）\u3000\u3000'
+             '中意两国同为历史悠久、文化灿烂的文明古国，两国人文交流源远流长，两国人民传统友谊深厚。音乐会成为中意两国文化艺术交流互鉴的又一生动写照，两国人民将通过艺术增进深层次的理解信任，加深友谊、共促发展。  '],
+ 'img': ['Image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190322221731.jpg',
+         'Image/1.jpg',
+         'Image/2%E6%9D%82%E6%8A%80.jpg',
+         'Image/3%E5%99%A8%E4%B9%90%E5%90%88%E5%A5%8F.jpg',
+         'Image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190322222102.jpg',
+         'Image/4%E4%BA%92%E5%8A%A8.jpg',
+         'Image/5%E7%BE%8E%E5%A3%B0%E4%B8%89%E9%87%8D%E5%94%B1.jpg'],
+ 'page_url': 'http://www.scio.gov.cn/37234/Document/1650333/1650333.htm',
+ 'sub_title_str': ['国务院新闻办公室网站\u3000www.scio.gov.cn\u3000\u3000 '
+                   '2019-03-22\u3000\u3000 来源：国新网 '],
+ 'title': ['“2019感知中国——中意友好音乐会”在罗马举办（组图）'],
+ 'video': []}
+2019-06-23 11:27:49 [root] INFO: scio_parse result: {'_id': 'e049dc24-9566-11e9-b8a9-94c6912740aa',
+ 'audio': [],
+ 'author': ['[责任编辑：焦非', '] '],
+ 'content': ['\u3000\u3000'
+             '2019年3月21日，在习近平主席对意大利进行国事访问之际，由中国国务院新闻办公室与中国驻意大利大使馆共同主办的“2019感知中国——中意友好音乐会”在罗马举行。中意两国顶级艺术家同台献艺，为观众奉上一场别开生面的音乐会。安东尼亚诺童声合唱团演唱《China '
+             "E'》《茉莉花》等曲目。战士红星艺术团表演杂技舞蹈《天鹅湖》。音乐互动环节，中意双方用传统乐器演奏对方国家的音乐代表作《梁祝》和《今夜无人入睡》。音乐互动环节，中意双方用传统乐器演奏对方国家的音乐代表作《梁祝》和《今夜无人入睡》。中意美食互动，“中华厨艺绝技表演团”展示面食绝技。中国声入人心男团成员与意大利II "
+             'VOLO美声少年团合唱《我的太阳》等曲目。(图片均由 林宏 摄）\u3000\u3000'
+             '中意两国同为历史悠久、文化灿烂的文明古国，两国人文交流源远流长，两国人民传统友谊深厚。音乐会成为中意两国文化艺术交流互鉴的又一生动写照，两国人民将通过艺术增进深层次的理解信任，加深友谊、共促发展。  '],
+ 'img': ['Image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190322221731.jpg',
+         'Image/1.jpg',
+         'Image/2%E6%9D%82%E6%8A%80.jpg',
+         'Image/3%E5%99%A8%E4%B9%90%E5%90%88%E5%A5%8F.jpg',
+         'Image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190322222102.jpg',
+         'Image/4%E4%BA%92%E5%8A%A8.jpg',
+         'Image/5%E7%BE%8E%E5%A3%B0%E4%B8%89%E9%87%8D%E5%94%B1.jpg'],
+ 'page_url': 'http://www.scio.gov.cn/37234/Document/1650333/1650333.htm',
+ 'sub_title_str': ['国务院新闻办公室网站\u3000www.scio.gov.cn\u3000\u3000 '
+                   '2019-03-22\u3000\u3000 来源：国新网 '],
+ 'title': ['“2019感知中国——中意友好音乐会”在罗马举办（组图）'],
+ 'video': []}
+2019-06-23 11:28:28 [root] INFO: scio_parse result: {'_id': 'f78d723a-9566-11e9-9ed4-94c6912740aa',
+ 'audio': [],
+ 'author': ['[责任编辑：焦非', '] '],
+ 'content': ['\u3000\u3000'
+             '2019年3月21日，在习近平主席对意大利进行国事访问之际，由中国国务院新闻办公室与中国驻意大利大使馆共同主办的“2019感知中国——中意友好音乐会”在罗马举行。中意两国顶级艺术家同台献艺，为观众奉上一场别开生面的音乐会。安东尼亚诺童声合唱团演唱《China '
+             "E'》《茉莉花》等曲目。战士红星艺术团表演杂技舞蹈《天鹅湖》。音乐互动环节，中意双方用传统乐器演奏对方国家的音乐代表作《梁祝》和《今夜无人入睡》。音乐互动环节，中意双方用传统乐器演奏对方国家的音乐代表作《梁祝》和《今夜无人入睡》。中意美食互动，“中华厨艺绝技表演团”展示面食绝技。中国声入人心男团成员与意大利II "
+             'VOLO美声少年团合唱《我的太阳》等曲目。(图片均由 林宏 摄）\u3000\u3000'
+             '中意两国同为历史悠久、文化灿烂的文明古国，两国人文交流源远流长，两国人民传统友谊深厚。音乐会成为中意两国文化艺术交流互鉴的又一生动写照，两国人民将通过艺术增进深层次的理解信任，加深友谊、共促发展。  '],
+ 'img': ['Image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190322221731.jpg',
+         'Image/1.jpg',
+         'Image/2%E6%9D%82%E6%8A%80.jpg',
+         'Image/3%E5%99%A8%E4%B9%90%E5%90%88%E5%A5%8F.jpg',
+         'Image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190322222102.jpg',
+         'Image/4%E4%BA%92%E5%8A%A8.jpg',
+         'Image/5%E7%BE%8E%E5%A3%B0%E4%B8%89%E9%87%8D%E5%94%B1.jpg'],
+ 'page_url': 'http://www.scio.gov.cn/37234/Document/1650333/1650333.htm',
+ 'sub_title_str': ['国务院新闻办公室网站\u3000www.scio.gov.cn\u3000\u3000 '
+                   '2019-03-22\u3000\u3000 来源：国新网 '],
+ 'title': ['“2019感知中国——中意友好音乐会”在罗马举办（组图）'],
+ 'video': []}
+2019-06-23 11:53:25 [scrapy.utils.log] INFO: Scrapy 1.6.0 started (bot: main_node)
+2019-06-23 11:53:25 [scrapy.utils.log] INFO: Versions: lxml 4.3.3.0, libxml2 2.9.5, cssselect 1.0.3, parsel 1.5.1, w3lib 1.20.0, Twisted 19.2.1, Python 3.6.4 (v3.6.4:d48eceb, Dec 19 2017, 06:04:45) [MSC v.1900 32 bit (Intel)], pyOpenSSL 19.0.0 (OpenSSL 1.1.1c  28 May 2019), cryptography 2.7, Platform Windows-10-10.0.17134-SP0
+2019-06-23 11:53:25 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'main_node', 'COOKIES_ENABLED': False, 'DOWNLOAD_DELAY': 3, 'LOG_ENABLED': False, 'LOG_FILE': 'logs/scrapy.log', 'LOG_LEVEL': 'INFO', 'NEWSPIDER_MODULE': 'main_node.spiders', 'SPIDER_MODULES': ['main_node.spiders'], 'USER_AGENT': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1063.0 Safari/536.3'}
+2019-06-23 11:53:25 [scrapy.extensions.telnet] INFO: Telnet Password: 25770db94a692dce
+2019-06-23 11:53:25 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2019-06-23 11:53:25 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2019-06-23 11:53:25 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2019-06-23 11:53:25 [scrapy.middleware] INFO: Enabled item pipelines:
+['main_node.pipelines.scio.ScioPipeline',
+ 'main_node.pipelines.single_mongodb.SingleMongodbPipeline']
+2019-06-23 11:53:25 [scrapy.core.engine] INFO: Spider opened
+2019-06-23 11:53:25 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2019-06-23 11:53:25 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2019-06-23 11:53:25 [root] INFO: 路由 routing_method url: http://www.scio.gov.cn/37234/Document/1650333/1650333.htm
+2019-06-23 11:53:25 [root] INFO: scio_parse result: {'_id': '73fb8f0a-956a-11e9-a603-94c6912740aa',
+ 'audio': [],
+ 'author': ['[责任编辑：焦非', '] '],
+ 'content': ['\u3000\u3000'
+             '2019年3月21日，在习近平主席对意大利进行国事访问之际，由中国国务院新闻办公室与中国驻意大利大使馆共同主办的“2019感知中国——中意友好音乐会”在罗马举行。中意两国顶级艺术家同台献艺，为观众奉上一场别开生面的音乐会。安东尼亚诺童声合唱团演唱《China '
+             "E'》《茉莉花》等曲目。战士红星艺术团表演杂技舞蹈《天鹅湖》。音乐互动环节，中意双方用传统乐器演奏对方国家的音乐代表作《梁祝》和《今夜无人入睡》。音乐互动环节，中意双方用传统乐器演奏对方国家的音乐代表作《梁祝》和《今夜无人入睡》。中意美食互动，“中华厨艺绝技表演团”展示面食绝技。中国声入人心男团成员与意大利II "
+             'VOLO美声少年团合唱《我的太阳》等曲目。(图片均由 林宏 摄）\u3000\u3000'
+             '中意两国同为历史悠久、文化灿烂的文明古国，两国人文交流源远流长，两国人民传统友谊深厚。音乐会成为中意两国文化艺术交流互鉴的又一生动写照，两国人民将通过艺术增进深层次的理解信任，加深友谊、共促发展。  '],
+ 'img': ['Image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190322221731.jpg',
+         'Image/1.jpg',
+         'Image/2%E6%9D%82%E6%8A%80.jpg',
+         'Image/3%E5%99%A8%E4%B9%90%E5%90%88%E5%A5%8F.jpg',
+         'Image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190322222102.jpg',
+         'Image/4%E4%BA%92%E5%8A%A8.jpg',
+         'Image/5%E7%BE%8E%E5%A3%B0%E4%B8%89%E9%87%8D%E5%94%B1.jpg'],
+ 'page_url': 'http://www.scio.gov.cn/37234/Document/1650333/1650333.htm',
+ 'sub_title_str': ['国务院新闻办公室网站\u3000www.scio.gov.cn\u3000\u3000 '
+                   '2019-03-22\u3000\u3000 来源：国新网 '],
+ 'title': ['“2019感知中国——中意友好音乐会”在罗马举办（组图）'],
+ 'video': []}
+2019-06-23 11:53:25 [root] INFO: scio_parse result: {'_id': '73fb8f0b-956a-11e9-a826-94c6912740aa',
+ 'audio': [],
+ 'author': ['[责任编辑：焦非', '] '],
+ 'content': ['\u3000\u3000'
+             '2019年3月21日，在习近平主席对意大利进行国事访问之际，由中国国务院新闻办公室与中国驻意大利大使馆共同主办的“2019感知中国——中意友好音乐会”在罗马举行。中意两国顶级艺术家同台献艺，为观众奉上一场别开生面的音乐会。安东尼亚诺童声合唱团演唱《China '
+             "E'》《茉莉花》等曲目。战士红星艺术团表演杂技舞蹈《天鹅湖》。音乐互动环节，中意双方用传统乐器演奏对方国家的音乐代表作《梁祝》和《今夜无人入睡》。音乐互动环节，中意双方用传统乐器演奏对方国家的音乐代表作《梁祝》和《今夜无人入睡》。中意美食互动，“中华厨艺绝技表演团”展示面食绝技。中国声入人心男团成员与意大利II "
+             'VOLO美声少年团合唱《我的太阳》等曲目。(图片均由 林宏 摄）\u3000\u3000'
+             '中意两国同为历史悠久、文化灿烂的文明古国，两国人文交流源远流长，两国人民传统友谊深厚。音乐会成为中意两国文化艺术交流互鉴的又一生动写照，两国人民将通过艺术增进深层次的理解信任，加深友谊、共促发展。  '],
+ 'img': ['Image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190322221731.jpg',
+         'Image/1.jpg',
+         'Image/2%E6%9D%82%E6%8A%80.jpg',
+         'Image/3%E5%99%A8%E4%B9%90%E5%90%88%E5%A5%8F.jpg',
+         'Image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190322222102.jpg',
+         'Image/4%E4%BA%92%E5%8A%A8.jpg',
+         'Image/5%E7%BE%8E%E5%A3%B0%E4%B8%89%E9%87%8D%E5%94%B1.jpg'],
+ 'page_url': 'http://www.scio.gov.cn/37234/Document/1650333/1650333.htm',
+ 'sub_title_str': ['国务院新闻办公室网站\u3000www.scio.gov.cn\u3000\u3000 '
+                   '2019-03-22\u3000\u3000 来源：国新网 '],
+ 'title': ['“2019感知中国——中意友好音乐会”在罗马举办（组图）'],
+ 'video': []}
+2019-06-23 11:53:25 [root] INFO: scio_parse result: {'_id': '74005374-956a-11e9-9f8b-94c6912740aa',
+ 'audio': [],
+ 'author': ['[责任编辑：焦非', '] '],
+ 'content': ['\u3000\u3000'
+             '2019年3月21日，在习近平主席对意大利进行国事访问之际，由中国国务院新闻办公室与中国驻意大利大使馆共同主办的“2019感知中国——中意友好音乐会”在罗马举行。中意两国顶级艺术家同台献艺，为观众奉上一场别开生面的音乐会。安东尼亚诺童声合唱团演唱《China '
+             "E'》《茉莉花》等曲目。战士红星艺术团表演杂技舞蹈《天鹅湖》。音乐互动环节，中意双方用传统乐器演奏对方国家的音乐代表作《梁祝》和《今夜无人入睡》。音乐互动环节，中意双方用传统乐器演奏对方国家的音乐代表作《梁祝》和《今夜无人入睡》。中意美食互动，“中华厨艺绝技表演团”展示面食绝技。中国声入人心男团成员与意大利II "
+             'VOLO美声少年团合唱《我的太阳》等曲目。(图片均由 林宏 摄）\u3000\u3000'
+             '中意两国同为历史悠久、文化灿烂的文明古国，两国人文交流源远流长，两国人民传统友谊深厚。音乐会成为中意两国文化艺术交流互鉴的又一生动写照，两国人民将通过艺术增进深层次的理解信任，加深友谊、共促发展。  '],
+ 'img': ['Image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190322221731.jpg',
+         'Image/1.jpg',
+         'Image/2%E6%9D%82%E6%8A%80.jpg',
+         'Image/3%E5%99%A8%E4%B9%90%E5%90%88%E5%A5%8F.jpg',
+         'Image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190322222102.jpg',
+         'Image/4%E4%BA%92%E5%8A%A8.jpg',
+         'Image/5%E7%BE%8E%E5%A3%B0%E4%B8%89%E9%87%8D%E5%94%B1.jpg'],
+ 'page_url': 'http://www.scio.gov.cn/37234/Document/1650333/1650333.htm',
+ 'sub_title_str': ['国务院新闻办公室网站\u3000www.scio.gov.cn\u3000\u3000 '
+                   '2019-03-22\u3000\u3000 来源：国新网 '],
+ 'title': ['“2019感知中国——中意友好音乐会”在罗马举办（组图）'],
+ 'video': []}
+2019-06-23 11:53:25 [root] INFO: scio_parse result: {'_id': '7402b5a6-956a-11e9-b85f-94c6912740aa',
+ 'audio': [],
+ 'author': ['[责任编辑：焦非', '] '],
+ 'content': ['\u3000\u3000'
+             '2019年3月21日，在习近平主席对意大利进行国事访问之际，由中国国务院新闻办公室与中国驻意大利大使馆共同主办的“2019感知中国——中意友好音乐会”在罗马举行。中意两国顶级艺术家同台献艺，为观众奉上一场别开生面的音乐会。安东尼亚诺童声合唱团演唱《China '
+             "E'》《茉莉花》等曲目。战士红星艺术团表演杂技舞蹈《天鹅湖》。音乐互动环节，中意双方用传统乐器演奏对方国家的音乐代表作《梁祝》和《今夜无人入睡》。音乐互动环节，中意双方用传统乐器演奏对方国家的音乐代表作《梁祝》和《今夜无人入睡》。中意美食互动，“中华厨艺绝技表演团”展示面食绝技。中国声入人心男团成员与意大利II "
+             'VOLO美声少年团合唱《我的太阳》等曲目。(图片均由 林宏 摄）\u3000\u3000'
+             '中意两国同为历史悠久、文化灿烂的文明古国，两国人文交流源远流长，两国人民传统友谊深厚。音乐会成为中意两国文化艺术交流互鉴的又一生动写照，两国人民将通过艺术增进深层次的理解信任，加深友谊、共促发展。  '],
+ 'img': ['Image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190322221731.jpg',
+         'Image/1.jpg',
+         'Image/2%E6%9D%82%E6%8A%80.jpg',
+         'Image/3%E5%99%A8%E4%B9%90%E5%90%88%E5%A5%8F.jpg',
+         'Image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190322222102.jpg',
+         'Image/4%E4%BA%92%E5%8A%A8.jpg',
+         'Image/5%E7%BE%8E%E5%A3%B0%E4%B8%89%E9%87%8D%E5%94%B1.jpg'],
+ 'page_url': 'http://www.scio.gov.cn/37234/Document/1650333/1650333.htm',
+ 'sub_title_str': ['国务院新闻办公室网站\u3000www.scio.gov.cn\u3000\u3000 '
+                   '2019-03-22\u3000\u3000 来源：国新网 '],
+ 'title': ['“2019感知中国——中意友好音乐会”在罗马举办（组图）'],
+ 'video': []}
+2019-06-23 11:53:25 [root] INFO: scio_parse result: {'_id': '740517e4-956a-11e9-b61e-94c6912740aa',
+ 'audio': [],
+ 'author': ['[责任编辑：焦非', '] '],
+ 'content': ['\u3000\u3000'
+             '2019年3月21日，在习近平主席对意大利进行国事访问之际，由中国国务院新闻办公室与中国驻意大利大使馆共同主办的“2019感知中国——中意友好音乐会”在罗马举行。中意两国顶级艺术家同台献艺，为观众奉上一场别开生面的音乐会。安东尼亚诺童声合唱团演唱《China '
+             "E'》《茉莉花》等曲目。战士红星艺术团表演杂技舞蹈《天鹅湖》。音乐互动环节，中意双方用传统乐器演奏对方国家的音乐代表作《梁祝》和《今夜无人入睡》。音乐互动环节，中意双方用传统乐器演奏对方国家的音乐代表作《梁祝》和《今夜无人入睡》。中意美食互动，“中华厨艺绝技表演团”展示面食绝技。中国声入人心男团成员与意大利II "
+             'VOLO美声少年团合唱《我的太阳》等曲目。(图片均由 林宏 摄）\u3000\u3000'
+             '中意两国同为历史悠久、文化灿烂的文明古国，两国人文交流源远流长，两国人民传统友谊深厚。音乐会成为中意两国文化艺术交流互鉴的又一生动写照，两国人民将通过艺术增进深层次的理解信任，加深友谊、共促发展。  '],
+ 'img': ['Image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190322221731.jpg',
+         'Image/1.jpg',
+         'Image/2%E6%9D%82%E6%8A%80.jpg',
+         'Image/3%E5%99%A8%E4%B9%90%E5%90%88%E5%A5%8F.jpg',
+         'Image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190322222102.jpg',
+         'Image/4%E4%BA%92%E5%8A%A8.jpg',
+         'Image/5%E7%BE%8E%E5%A3%B0%E4%B8%89%E9%87%8D%E5%94%B1.jpg'],
+ 'page_url': 'http://www.scio.gov.cn/37234/Document/1650333/1650333.htm',
+ 'sub_title_str': ['国务院新闻办公室网站\u3000www.scio.gov.cn\u3000\u3000 '
+                   '2019-03-22\u3000\u3000 来源：国新网 '],
+ 'title': ['“2019感知中国——中意友好音乐会”在罗马举办（组图）'],
+ 'video': []}
+2019-06-23 11:53:25 [root] INFO: scio_parse result: {'_id': '740517e5-956a-11e9-860a-94c6912740aa',
+ 'audio': [],
+ 'author': ['[责任编辑：焦非', '] '],
+ 'content': ['\u3000\u3000'
+             '2019年3月21日，在习近平主席对意大利进行国事访问之际，由中国国务院新闻办公室与中国驻意大利大使馆共同主办的“2019感知中国——中意友好音乐会”在罗马举行。中意两国顶级艺术家同台献艺，为观众奉上一场别开生面的音乐会。安东尼亚诺童声合唱团演唱《China '
+             "E'》《茉莉花》等曲目。战士红星艺术团表演杂技舞蹈《天鹅湖》。音乐互动环节，中意双方用传统乐器演奏对方国家的音乐代表作《梁祝》和《今夜无人入睡》。音乐互动环节，中意双方用传统乐器演奏对方国家的音乐代表作《梁祝》和《今夜无人入睡》。中意美食互动，“中华厨艺绝技表演团”展示面食绝技。中国声入人心男团成员与意大利II "
+             'VOLO美声少年团合唱《我的太阳》等曲目。(图片均由 林宏 摄）\u3000\u3000'
+             '中意两国同为历史悠久、文化灿烂的文明古国，两国人文交流源远流长，两国人民传统友谊深厚。音乐会成为中意两国文化艺术交流互鉴的又一生动写照，两国人民将通过艺术增进深层次的理解信任，加深友谊、共促发展。  '],
+ 'img': ['Image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190322221731.jpg',
+         'Image/1.jpg',
+         'Image/2%E6%9D%82%E6%8A%80.jpg',
+         'Image/3%E5%99%A8%E4%B9%90%E5%90%88%E5%A5%8F.jpg',
+         'Image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190322222102.jpg',
+         'Image/4%E4%BA%92%E5%8A%A8.jpg',
+         'Image/5%E7%BE%8E%E5%A3%B0%E4%B8%89%E9%87%8D%E5%94%B1.jpg'],
+ 'page_url': 'http://www.scio.gov.cn/37234/Document/1650333/1650333.htm',
+ 'sub_title_str': ['国务院新闻办公室网站\u3000www.scio.gov.cn\u3000\u3000 '
+                   '2019-03-22\u3000\u3000 来源：国新网 '],
+ 'title': ['“2019感知中国——中意友好音乐会”在罗马举办（组图）'],
+ 'video': []}
+2019-06-23 11:53:27 [root] INFO: scio_parse result: {'_id': '75552f64-956a-11e9-b3ce-94c6912740aa',
+ 'audio': [],
+ 'author': ['[责任编辑：焦非', '] '],
+ 'content': ['\u3000\u3000'
+             '2019年3月21日，在习近平主席对意大利进行国事访问之际，由中国国务院新闻办公室与中国驻意大利大使馆共同主办的“2019感知中国——中意友好音乐会”在罗马举行。中意两国顶级艺术家同台献艺，为观众奉上一场别开生面的音乐会。安东尼亚诺童声合唱团演唱《China '
+             "E'》《茉莉花》等曲目。战士红星艺术团表演杂技舞蹈《天鹅湖》。音乐互动环节，中意双方用传统乐器演奏对方国家的音乐代表作《梁祝》和《今夜无人入睡》。音乐互动环节，中意双方用传统乐器演奏对方国家的音乐代表作《梁祝》和《今夜无人入睡》。中意美食互动，“中华厨艺绝技表演团”展示面食绝技。中国声入人心男团成员与意大利II "
+             'VOLO美声少年团合唱《我的太阳》等曲目。(图片均由 林宏 摄）\u3000\u3000'
+             '中意两国同为历史悠久、文化灿烂的文明古国，两国人文交流源远流长，两国人民传统友谊深厚。音乐会成为中意两国文化艺术交流互鉴的又一生动写照，两国人民将通过艺术增进深层次的理解信任，加深友谊、共促发展。  '],
+ 'img': ['Image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190322221731.jpg',
+         'Image/1.jpg',
+         'Image/2%E6%9D%82%E6%8A%80.jpg',
+         'Image/3%E5%99%A8%E4%B9%90%E5%90%88%E5%A5%8F.jpg',
+         'Image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190322222102.jpg',
+         'Image/4%E4%BA%92%E5%8A%A8.jpg',
+         'Image/5%E7%BE%8E%E5%A3%B0%E4%B8%89%E9%87%8D%E5%94%B1.jpg'],
+ 'page_url': 'http://www.scio.gov.cn/37234/Document/1650333/1650333.htm',
+ 'sub_title_str': ['国务院新闻办公室网站\u3000www.scio.gov.cn\u3000\u3000 '
+                   '2019-03-22\u3000\u3000 来源：国新网 '],
+ 'title': ['“2019感知中国——中意友好音乐会”在罗马举办（组图）'],
+ 'video': []}
+2019-06-23 11:53:27 [root] INFO: scio_parse result: {'_id': '75579198-956a-11e9-be19-94c6912740aa',
+ 'audio': [],
+ 'author': ['[责任编辑：焦非', '] '],
+ 'content': ['\u3000\u3000'
+             '2019年3月21日，在习近平主席对意大利进行国事访问之际，由中国国务院新闻办公室与中国驻意大利大使馆共同主办的“2019感知中国——中意友好音乐会”在罗马举行。中意两国顶级艺术家同台献艺，为观众奉上一场别开生面的音乐会。安东尼亚诺童声合唱团演唱《China '
+             "E'》《茉莉花》等曲目。战士红星艺术团表演杂技舞蹈《天鹅湖》。音乐互动环节，中意双方用传统乐器演奏对方国家的音乐代表作《梁祝》和《今夜无人入睡》。音乐互动环节，中意双方用传统乐器演奏对方国家的音乐代表作《梁祝》和《今夜无人入睡》。中意美食互动，“中华厨艺绝技表演团”展示面食绝技。中国声入人心男团成员与意大利II "
+             'VOLO美声少年团合唱《我的太阳》等曲目。(图片均由 林宏 摄）\u3000\u3000'
+             '中意两国同为历史悠久、文化灿烂的文明古国，两国人文交流源远流长，两国人民传统友谊深厚。音乐会成为中意两国文化艺术交流互鉴的又一生动写照，两国人民将通过艺术增进深层次的理解信任，加深友谊、共促发展。  '],
+ 'img': ['Image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190322221731.jpg',
+         'Image/1.jpg',
+         'Image/2%E6%9D%82%E6%8A%80.jpg',
+         'Image/3%E5%99%A8%E4%B9%90%E5%90%88%E5%A5%8F.jpg',
+         'Image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190322222102.jpg',
+         'Image/4%E4%BA%92%E5%8A%A8.jpg',
+         'Image/5%E7%BE%8E%E5%A3%B0%E4%B8%89%E9%87%8D%E5%94%B1.jpg'],
+ 'page_url': 'http://www.scio.gov.cn/37234/Document/1650333/1650333.htm',
+ 'sub_title_str': ['国务院新闻办公室网站\u3000www.scio.gov.cn\u3000\u3000 '
+                   '2019-03-22\u3000\u3000 来源：国新网 '],
+ 'title': ['“2019感知中国——中意友好音乐会”在罗马举办（组图）'],
+ 'video': []}
+2019-06-23 11:53:27 [root] INFO: scio_parse result: {'_id': '75579199-956a-11e9-bed6-94c6912740aa',
+ 'audio': [],
+ 'author': ['[责任编辑：焦非', '] '],
+ 'content': ['\u3000\u3000'
+             '2019年3月21日，在习近平主席对意大利进行国事访问之际，由中国国务院新闻办公室与中国驻意大利大使馆共同主办的“2019感知中国——中意友好音乐会”在罗马举行。中意两国顶级艺术家同台献艺，为观众奉上一场别开生面的音乐会。安东尼亚诺童声合唱团演唱《China '
+             "E'》《茉莉花》等曲目。战士红星艺术团表演杂技舞蹈《天鹅湖》。音乐互动环节，中意双方用传统乐器演奏对方国家的音乐代表作《梁祝》和《今夜无人入睡》。音乐互动环节，中意双方用传统乐器演奏对方国家的音乐代表作《梁祝》和《今夜无人入睡》。中意美食互动，“中华厨艺绝技表演团”展示面食绝技。中国声入人心男团成员与意大利II "
+             'VOLO美声少年团合唱《我的太阳》等曲目。(图片均由 林宏 摄）\u3000\u3000'
+             '中意两国同为历史悠久、文化灿烂的文明古国，两国人文交流源远流长，两国人民传统友谊深厚。音乐会成为中意两国文化艺术交流互鉴的又一生动写照，两国人民将通过艺术增进深层次的理解信任，加深友谊、共促发展。  '],
+ 'img': ['Image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190322221731.jpg',
+         'Image/1.jpg',
+         'Image/2%E6%9D%82%E6%8A%80.jpg',
+         'Image/3%E5%99%A8%E4%B9%90%E5%90%88%E5%A5%8F.jpg',
+         'Image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190322222102.jpg',
+         'Image/4%E4%BA%92%E5%8A%A8.jpg',
+         'Image/5%E7%BE%8E%E5%A3%B0%E4%B8%89%E9%87%8D%E5%94%B1.jpg'],
+ 'page_url': 'http://www.scio.gov.cn/37234/Document/1650333/1650333.htm',
+ 'sub_title_str': ['国务院新闻办公室网站\u3000www.scio.gov.cn\u3000\u3000 '
+                   '2019-03-22\u3000\u3000 来源：国新网 '],
+ 'title': ['“2019感知中国——中意友好音乐会”在罗马举办（组图）'],
+ 'video': []}
+2019-06-23 11:53:27 [root] INFO: scio_parse result: {'_id': '7559fc12-956a-11e9-afd2-94c6912740aa',
+ 'audio': [],
+ 'author': ['[责任编辑：焦非', '] '],
+ 'content': ['\u3000\u3000'
+             '2019年3月21日，在习近平主席对意大利进行国事访问之际，由中国国务院新闻办公室与中国驻意大利大使馆共同主办的“2019感知中国——中意友好音乐会”在罗马举行。中意两国顶级艺术家同台献艺，为观众奉上一场别开生面的音乐会。安东尼亚诺童声合唱团演唱《China '
+             "E'》《茉莉花》等曲目。战士红星艺术团表演杂技舞蹈《天鹅湖》。音乐互动环节，中意双方用传统乐器演奏对方国家的音乐代表作《梁祝》和《今夜无人入睡》。音乐互动环节，中意双方用传统乐器演奏对方国家的音乐代表作《梁祝》和《今夜无人入睡》。中意美食互动，“中华厨艺绝技表演团”展示面食绝技。中国声入人心男团成员与意大利II "
+             'VOLO美声少年团合唱《我的太阳》等曲目。(图片均由 林宏 摄）\u3000\u3000'
+             '中意两国同为历史悠久、文化灿烂的文明古国，两国人文交流源远流长，两国人民传统友谊深厚。音乐会成为中意两国文化艺术交流互鉴的又一生动写照，两国人民将通过艺术增进深层次的理解信任，加深友谊、共促发展。  '],
+ 'img': ['Image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190322221731.jpg',
+         'Image/1.jpg',
+         'Image/2%E6%9D%82%E6%8A%80.jpg',
+         'Image/3%E5%99%A8%E4%B9%90%E5%90%88%E5%A5%8F.jpg',
+         'Image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190322222102.jpg',
+         'Image/4%E4%BA%92%E5%8A%A8.jpg',
+         'Image/5%E7%BE%8E%E5%A3%B0%E4%B8%89%E9%87%8D%E5%94%B1.jpg'],
+ 'page_url': 'http://www.scio.gov.cn/37234/Document/1650333/1650333.htm',
+ 'sub_title_str': ['国务院新闻办公室网站\u3000www.scio.gov.cn\u3000\u3000 '
+                   '2019-03-22\u3000\u3000 来源：国新网 '],
+ 'title': ['“2019感知中国——中意友好音乐会”在罗马举办（组图）'],
+ 'video': []}
+2019-06-23 11:53:27 [root] INFO: scio_parse result: {'_id': '7559fc13-956a-11e9-83ad-94c6912740aa',
+ 'audio': [],
+ 'author': ['[责任编辑：焦非', '] '],
+ 'content': ['\u3000\u3000'
+             '2019年3月21日，在习近平主席对意大利进行国事访问之际，由中国国务院新闻办公室与中国驻意大利大使馆共同主办的“2019感知中国——中意友好音乐会”在罗马举行。中意两国顶级艺术家同台献艺，为观众奉上一场别开生面的音乐会。安东尼亚诺童声合唱团演唱《China '
+             "E'》《茉莉花》等曲目。战士红星艺术团表演杂技舞蹈《天鹅湖》。音乐互动环节，中意双方用传统乐器演奏对方国家的音乐代表作《梁祝》和《今夜无人入睡》。音乐互动环节，中意双方用传统乐器演奏对方国家的音乐代表作《梁祝》和《今夜无人入睡》。中意美食互动，“中华厨艺绝技表演团”展示面食绝技。中国声入人心男团成员与意大利II "
+             'VOLO美声少年团合唱《我的太阳》等曲目。(图片均由 林宏 摄）\u3000\u3000'
+             '中意两国同为历史悠久、文化灿烂的文明古国，两国人文交流源远流长，两国人民传统友谊深厚。音乐会成为中意两国文化艺术交流互鉴的又一生动写照，两国人民将通过艺术增进深层次的理解信任，加深友谊、共促发展。  '],
+ 'img': ['Image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190322221731.jpg',
+         'Image/1.jpg',
+         'Image/2%E6%9D%82%E6%8A%80.jpg',
+         'Image/3%E5%99%A8%E4%B9%90%E5%90%88%E5%A5%8F.jpg',
+         'Image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190322222102.jpg',
+         'Image/4%E4%BA%92%E5%8A%A8.jpg',
+         'Image/5%E7%BE%8E%E5%A3%B0%E4%B8%89%E9%87%8D%E5%94%B1.jpg'],
+ 'page_url': 'http://www.scio.gov.cn/37234/Document/1650333/1650333.htm',
+ 'sub_title_str': ['国务院新闻办公室网站\u3000www.scio.gov.cn\u3000\u3000 '
+                   '2019-03-22\u3000\u3000 来源：国新网 '],
+ 'title': ['“2019感知中国——中意友好音乐会”在罗马举办（组图）'],
+ 'video': []}
+2019-06-23 11:53:27 [root] INFO: scio_parse result: {'_id': '755c5606-956a-11e9-8779-94c6912740aa',
+ 'audio': [],
+ 'author': ['[责任编辑：焦非', '] '],
+ 'content': ['\u3000\u3000'
+             '2019年3月21日，在习近平主席对意大利进行国事访问之际，由中国国务院新闻办公室与中国驻意大利大使馆共同主办的“2019感知中国——中意友好音乐会”在罗马举行。中意两国顶级艺术家同台献艺，为观众奉上一场别开生面的音乐会。安东尼亚诺童声合唱团演唱《China '
+             "E'》《茉莉花》等曲目。战士红星艺术团表演杂技舞蹈《天鹅湖》。音乐互动环节，中意双方用传统乐器演奏对方国家的音乐代表作《梁祝》和《今夜无人入睡》。音乐互动环节，中意双方用传统乐器演奏对方国家的音乐代表作《梁祝》和《今夜无人入睡》。中意美食互动，“中华厨艺绝技表演团”展示面食绝技。中国声入人心男团成员与意大利II "
+             'VOLO美声少年团合唱《我的太阳》等曲目。(图片均由 林宏 摄）\u3000\u3000'
+             '中意两国同为历史悠久、文化灿烂的文明古国，两国人文交流源远流长，两国人民传统友谊深厚。音乐会成为中意两国文化艺术交流互鉴的又一生动写照，两国人民将通过艺术增进深层次的理解信任，加深友谊、共促发展。  '],
+ 'img': ['Image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190322221731.jpg',
+         'Image/1.jpg',
+         'Image/2%E6%9D%82%E6%8A%80.jpg',
+         'Image/3%E5%99%A8%E4%B9%90%E5%90%88%E5%A5%8F.jpg',
+         'Image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190322222102.jpg',
+         'Image/4%E4%BA%92%E5%8A%A8.jpg',
+         'Image/5%E7%BE%8E%E5%A3%B0%E4%B8%89%E9%87%8D%E5%94%B1.jpg'],
+ 'page_url': 'http://www.scio.gov.cn/37234/Document/1650333/1650333.htm',
+ 'sub_title_str': ['国务院新闻办公室网站\u3000www.scio.gov.cn\u3000\u3000 '
+                   '2019-03-22\u3000\u3000 来源：国新网 '],
+ 'title': ['“2019感知中国——中意友好音乐会”在罗马举办（组图）'],
+ 'video': []}
+2019-06-23 11:53:38 [root] INFO: scio_parse result: {'_id': '7b9499be-956a-11e9-9f6e-94c6912740aa',
+ 'audio': [],
+ 'author': ['[责任编辑：焦非', '] '],
+ 'content': ['\u3000\u3000'
+             '2019年3月21日，在习近平主席对意大利进行国事访问之际，由中国国务院新闻办公室与中国驻意大利大使馆共同主办的“2019感知中国——中意友好音乐会”在罗马举行。中意两国顶级艺术家同台献艺，为观众奉上一场别开生面的音乐会。安东尼亚诺童声合唱团演唱《China '
+             "E'》《茉莉花》等曲目。战士红星艺术团表演杂技舞蹈《天鹅湖》。音乐互动环节，中意双方用传统乐器演奏对方国家的音乐代表作《梁祝》和《今夜无人入睡》。音乐互动环节，中意双方用传统乐器演奏对方国家的音乐代表作《梁祝》和《今夜无人入睡》。中意美食互动，“中华厨艺绝技表演团”展示面食绝技。中国声入人心男团成员与意大利II "
+             'VOLO美声少年团合唱《我的太阳》等曲目。(图片均由 林宏 摄）\u3000\u3000'
+             '中意两国同为历史悠久、文化灿烂的文明古国，两国人文交流源远流长，两国人民传统友谊深厚。音乐会成为中意两国文化艺术交流互鉴的又一生动写照，两国人民将通过艺术增进深层次的理解信任，加深友谊、共促发展。  '],
+ 'img': ['Image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190322221731.jpg',
+         'Image/1.jpg',
+         'Image/2%E6%9D%82%E6%8A%80.jpg',
+         'Image/3%E5%99%A8%E4%B9%90%E5%90%88%E5%A5%8F.jpg',
+         'Image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190322222102.jpg',
+         'Image/4%E4%BA%92%E5%8A%A8.jpg',
+         'Image/5%E7%BE%8E%E5%A3%B0%E4%B8%89%E9%87%8D%E5%94%B1.jpg'],
+ 'page_url': 'http://www.scio.gov.cn/37234/Document/1650333/1650333.htm',
+ 'sub_title_str': ['国务院新闻办公室网站\u3000www.scio.gov.cn\u3000\u3000 '
+                   '2019-03-22\u3000\u3000 来源：国新网 '],
+ 'title': ['“2019感知中国——中意友好音乐会”在罗马举办（组图）'],
+ 'video': []}
+2019-06-23 11:53:43 [root] INFO: scio_parse result: {'_id': '7e7b20b8-956a-11e9-a90a-94c6912740aa',
+ 'audio': [],
+ 'author': ['[责任编辑：焦非', '] '],
+ 'content': ['\u3000\u3000'
+             '2019年3月21日，在习近平主席对意大利进行国事访问之际，由中国国务院新闻办公室与中国驻意大利大使馆共同主办的“2019感知中国——中意友好音乐会”在罗马举行。中意两国顶级艺术家同台献艺，为观众奉上一场别开生面的音乐会。安东尼亚诺童声合唱团演唱《China '
+             "E'》《茉莉花》等曲目。战士红星艺术团表演杂技舞蹈《天鹅湖》。音乐互动环节，中意双方用传统乐器演奏对方国家的音乐代表作《梁祝》和《今夜无人入睡》。音乐互动环节，中意双方用传统乐器演奏对方国家的音乐代表作《梁祝》和《今夜无人入睡》。中意美食互动，“中华厨艺绝技表演团”展示面食绝技。中国声入人心男团成员与意大利II "
+             'VOLO美声少年团合唱《我的太阳》等曲目。(图片均由 林宏 摄）\u3000\u3000'
+             '中意两国同为历史悠久、文化灿烂的文明古国，两国人文交流源远流长，两国人民传统友谊深厚。音乐会成为中意两国文化艺术交流互鉴的又一生动写照，两国人民将通过艺术增进深层次的理解信任，加深友谊、共促发展。  '],
+ 'img': ['Image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190322221731.jpg',
+         'Image/1.jpg',
+         'Image/2%E6%9D%82%E6%8A%80.jpg',
+         'Image/3%E5%99%A8%E4%B9%90%E5%90%88%E5%A5%8F.jpg',
+         'Image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190322222102.jpg',
+         'Image/4%E4%BA%92%E5%8A%A8.jpg',
+         'Image/5%E7%BE%8E%E5%A3%B0%E4%B8%89%E9%87%8D%E5%94%B1.jpg'],
+ 'page_url': 'http://www.scio.gov.cn/37234/Document/1650333/1650333.htm',
+ 'sub_title_str': ['国务院新闻办公室网站\u3000www.scio.gov.cn\u3000\u3000 '
+                   '2019-03-22\u3000\u3000 来源：国新网 '],
+ 'title': ['“2019感知中国——中意友好音乐会”在罗马举办（组图）'],
+ 'video': []}
+2019-06-23 11:53:43 [root] INFO: scio_parse result: {'_id': '7e7fdbe4-956a-11e9-90f4-94c6912740aa',
+ 'audio': [],
+ 'author': ['[责任编辑：焦非', '] '],
+ 'content': ['\u3000\u3000'
+             '2019年3月21日，在习近平主席对意大利进行国事访问之际，由中国国务院新闻办公室与中国驻意大利大使馆共同主办的“2019感知中国——中意友好音乐会”在罗马举行。中意两国顶级艺术家同台献艺，为观众奉上一场别开生面的音乐会。安东尼亚诺童声合唱团演唱《China '
+             "E'》《茉莉花》等曲目。战士红星艺术团表演杂技舞蹈《天鹅湖》。音乐互动环节，中意双方用传统乐器演奏对方国家的音乐代表作《梁祝》和《今夜无人入睡》。音乐互动环节，中意双方用传统乐器演奏对方国家的音乐代表作《梁祝》和《今夜无人入睡》。中意美食互动，“中华厨艺绝技表演团”展示面食绝技。中国声入人心男团成员与意大利II "
+             'VOLO美声少年团合唱《我的太阳》等曲目。(图片均由 林宏 摄）\u3000\u3000'
+             '中意两国同为历史悠久、文化灿烂的文明古国，两国人文交流源远流长，两国人民传统友谊深厚。音乐会成为中意两国文化艺术交流互鉴的又一生动写照，两国人民将通过艺术增进深层次的理解信任，加深友谊、共促发展。  '],
+ 'img': ['Image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190322221731.jpg',
+         'Image/1.jpg',
+         'Image/2%E6%9D%82%E6%8A%80.jpg',
+         'Image/3%E5%99%A8%E4%B9%90%E5%90%88%E5%A5%8F.jpg',
+         'Image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190322222102.jpg',
+         'Image/4%E4%BA%92%E5%8A%A8.jpg',
+         'Image/5%E7%BE%8E%E5%A3%B0%E4%B8%89%E9%87%8D%E5%94%B1.jpg'],
+ 'page_url': 'http://www.scio.gov.cn/37234/Document/1650333/1650333.htm',
+ 'sub_title_str': ['国务院新闻办公室网站\u3000www.scio.gov.cn\u3000\u3000 '
+                   '2019-03-22\u3000\u3000 来源：国新网 '],
+ 'title': ['“2019感知中国——中意友好音乐会”在罗马举办（组图）'],
+ 'video': []}
+2019-06-23 11:53:43 [root] INFO: scio_parse result: {'_id': '7e7fdbe5-956a-11e9-b8a4-94c6912740aa',
+ 'audio': [],
+ 'author': ['[责任编辑：焦非', '] '],
+ 'content': ['\u3000\u3000'
+             '2019年3月21日，在习近平主席对意大利进行国事访问之际，由中国国务院新闻办公室与中国驻意大利大使馆共同主办的“2019感知中国——中意友好音乐会”在罗马举行。中意两国顶级艺术家同台献艺，为观众奉上一场别开生面的音乐会。安东尼亚诺童声合唱团演唱《China '
+             "E'》《茉莉花》等曲目。战士红星艺术团表演杂技舞蹈《天鹅湖》。音乐互动环节，中意双方用传统乐器演奏对方国家的音乐代表作《梁祝》和《今夜无人入睡》。音乐互动环节，中意双方用传统乐器演奏对方国家的音乐代表作《梁祝》和《今夜无人入睡》。中意美食互动，“中华厨艺绝技表演团”展示面食绝技。中国声入人心男团成员与意大利II "
+             'VOLO美声少年团合唱《我的太阳》等曲目。(图片均由 林宏 摄）\u3000\u3000'
+             '中意两国同为历史悠久、文化灿烂的文明古国，两国人文交流源远流长，两国人民传统友谊深厚。音乐会成为中意两国文化艺术交流互鉴的又一生动写照，两国人民将通过艺术增进深层次的理解信任，加深友谊、共促发展。  '],
+ 'img': ['Image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190322221731.jpg',
+         'Image/1.jpg',
+         'Image/2%E6%9D%82%E6%8A%80.jpg',
+         'Image/3%E5%99%A8%E4%B9%90%E5%90%88%E5%A5%8F.jpg',
+         'Image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190322222102.jpg',
+         'Image/4%E4%BA%92%E5%8A%A8.jpg',
+         'Image/5%E7%BE%8E%E5%A3%B0%E4%B8%89%E9%87%8D%E5%94%B1.jpg'],
+ 'page_url': 'http://www.scio.gov.cn/37234/Document/1650333/1650333.htm',
+ 'sub_title_str': ['国务院新闻办公室网站\u3000www.scio.gov.cn\u3000\u3000 '
+                   '2019-03-22\u3000\u3000 来源：国新网 '],
+ 'title': ['“2019感知中国——中意友好音乐会”在罗马举办（组图）'],
+ 'video': []}
+2019-06-23 11:53:43 [root] INFO: scio_parse result: {'_id': '7e823e12-956a-11e9-995e-94c6912740aa',
+ 'audio': [],
+ 'author': ['[责任编辑：焦非', '] '],
+ 'content': ['\u3000\u3000'
+             '2019年3月21日，在习近平主席对意大利进行国事访问之际，由中国国务院新闻办公室与中国驻意大利大使馆共同主办的“2019感知中国——中意友好音乐会”在罗马举行。中意两国顶级艺术家同台献艺，为观众奉上一场别开生面的音乐会。安东尼亚诺童声合唱团演唱《China '
+             "E'》《茉莉花》等曲目。战士红星艺术团表演杂技舞蹈《天鹅湖》。音乐互动环节，中意双方用传统乐器演奏对方国家的音乐代表作《梁祝》和《今夜无人入睡》。音乐互动环节，中意双方用传统乐器演奏对方国家的音乐代表作《梁祝》和《今夜无人入睡》。中意美食互动，“中华厨艺绝技表演团”展示面食绝技。中国声入人心男团成员与意大利II "
+             'VOLO美声少年团合唱《我的太阳》等曲目。(图片均由 林宏 摄）\u3000\u3000'
+             '中意两国同为历史悠久、文化灿烂的文明古国，两国人文交流源远流长，两国人民传统友谊深厚。音乐会成为中意两国文化艺术交流互鉴的又一生动写照，两国人民将通过艺术增进深层次的理解信任，加深友谊、共促发展。  '],
+ 'img': ['Image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190322221731.jpg',
+         'Image/1.jpg',
+         'Image/2%E6%9D%82%E6%8A%80.jpg',
+         'Image/3%E5%99%A8%E4%B9%90%E5%90%88%E5%A5%8F.jpg',
+         'Image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190322222102.jpg',
+         'Image/4%E4%BA%92%E5%8A%A8.jpg',
+         'Image/5%E7%BE%8E%E5%A3%B0%E4%B8%89%E9%87%8D%E5%94%B1.jpg'],
+ 'page_url': 'http://www.scio.gov.cn/37234/Document/1650333/1650333.htm',
+ 'sub_title_str': ['国务院新闻办公室网站\u3000www.scio.gov.cn\u3000\u3000 '
+                   '2019-03-22\u3000\u3000 来源：国新网 '],
+ 'title': ['“2019感知中国——中意友好音乐会”在罗马举办（组图）'],
+ 'video': []}
+2019-06-23 11:53:43 [root] INFO: scio_parse result: {'_id': '7e823e13-956a-11e9-8a44-94c6912740aa',
+ 'audio': [],
+ 'author': ['[责任编辑：焦非', '] '],
+ 'content': ['\u3000\u3000'
+             '2019年3月21日，在习近平主席对意大利进行国事访问之际，由中国国务院新闻办公室与中国驻意大利大使馆共同主办的“2019感知中国——中意友好音乐会”在罗马举行。中意两国顶级艺术家同台献艺，为观众奉上一场别开生面的音乐会。安东尼亚诺童声合唱团演唱《China '
+             "E'》《茉莉花》等曲目。战士红星艺术团表演杂技舞蹈《天鹅湖》。音乐互动环节，中意双方用传统乐器演奏对方国家的音乐代表作《梁祝》和《今夜无人入睡》。音乐互动环节，中意双方用传统乐器演奏对方国家的音乐代表作《梁祝》和《今夜无人入睡》。中意美食互动，“中华厨艺绝技表演团”展示面食绝技。中国声入人心男团成员与意大利II "
+             'VOLO美声少年团合唱《我的太阳》等曲目。(图片均由 林宏 摄）\u3000\u3000'
+             '中意两国同为历史悠久、文化灿烂的文明古国，两国人文交流源远流长，两国人民传统友谊深厚。音乐会成为中意两国文化艺术交流互鉴的又一生动写照，两国人民将通过艺术增进深层次的理解信任，加深友谊、共促发展。  '],
+ 'img': ['Image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190322221731.jpg',
+         'Image/1.jpg',
+         'Image/2%E6%9D%82%E6%8A%80.jpg',
+         'Image/3%E5%99%A8%E4%B9%90%E5%90%88%E5%A5%8F.jpg',
+         'Image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190322222102.jpg',
+         'Image/4%E4%BA%92%E5%8A%A8.jpg',
+         'Image/5%E7%BE%8E%E5%A3%B0%E4%B8%89%E9%87%8D%E5%94%B1.jpg'],
+ 'page_url': 'http://www.scio.gov.cn/37234/Document/1650333/1650333.htm',
+ 'sub_title_str': ['国务院新闻办公室网站\u3000www.scio.gov.cn\u3000\u3000 '
+                   '2019-03-22\u3000\u3000 来源：国新网 '],
+ 'title': ['“2019感知中国——中意友好音乐会”在罗马举办（组图）'],
+ 'video': []}
+2019-06-23 11:53:43 [root] INFO: scio_parse result: {'_id': '7e84a048-956a-11e9-b40c-94c6912740aa',
+ 'audio': [],
+ 'author': ['[责任编辑：焦非', '] '],
+ 'content': ['\u3000\u3000'
+             '2019年3月21日，在习近平主席对意大利进行国事访问之际，由中国国务院新闻办公室与中国驻意大利大使馆共同主办的“2019感知中国——中意友好音乐会”在罗马举行。中意两国顶级艺术家同台献艺，为观众奉上一场别开生面的音乐会。安东尼亚诺童声合唱团演唱《China '
+             "E'》《茉莉花》等曲目。战士红星艺术团表演杂技舞蹈《天鹅湖》。音乐互动环节，中意双方用传统乐器演奏对方国家的音乐代表作《梁祝》和《今夜无人入睡》。音乐互动环节，中意双方用传统乐器演奏对方国家的音乐代表作《梁祝》和《今夜无人入睡》。中意美食互动，“中华厨艺绝技表演团”展示面食绝技。中国声入人心男团成员与意大利II "
+             'VOLO美声少年团合唱《我的太阳》等曲目。(图片均由 林宏 摄）\u3000\u3000'
+             '中意两国同为历史悠久、文化灿烂的文明古国，两国人文交流源远流长，两国人民传统友谊深厚。音乐会成为中意两国文化艺术交流互鉴的又一生动写照，两国人民将通过艺术增进深层次的理解信任，加深友谊、共促发展。  '],
+ 'img': ['Image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190322221731.jpg',
+         'Image/1.jpg',
+         'Image/2%E6%9D%82%E6%8A%80.jpg',
+         'Image/3%E5%99%A8%E4%B9%90%E5%90%88%E5%A5%8F.jpg',
+         'Image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190322222102.jpg',
+         'Image/4%E4%BA%92%E5%8A%A8.jpg',
+         'Image/5%E7%BE%8E%E5%A3%B0%E4%B8%89%E9%87%8D%E5%94%B1.jpg'],
+ 'page_url': 'http://www.scio.gov.cn/37234/Document/1650333/1650333.htm',
+ 'sub_title_str': ['国务院新闻办公室网站\u3000www.scio.gov.cn\u3000\u3000 '
+                   '2019-03-22\u3000\u3000 来源：国新网 '],
+ 'title': ['“2019感知中国——中意友好音乐会”在罗马举办（组图）'],
+ 'video': []}
+2019-06-23 11:53:43 [root] INFO: scio_parse result: {'_id': '7e84a049-956a-11e9-be34-94c6912740aa',
+ 'audio': [],
+ 'author': ['[责任编辑：焦非', '] '],
+ 'content': ['\u3000\u3000'
+             '2019年3月21日，在习近平主席对意大利进行国事访问之际，由中国国务院新闻办公室与中国驻意大利大使馆共同主办的“2019感知中国——中意友好音乐会”在罗马举行。中意两国顶级艺术家同台献艺，为观众奉上一场别开生面的音乐会。安东尼亚诺童声合唱团演唱《China '
+             "E'》《茉莉花》等曲目。战士红星艺术团表演杂技舞蹈《天鹅湖》。音乐互动环节，中意双方用传统乐器演奏对方国家的音乐代表作《梁祝》和《今夜无人入睡》。音乐互动环节，中意双方用传统乐器演奏对方国家的音乐代表作《梁祝》和《今夜无人入睡》。中意美食互动，“中华厨艺绝技表演团”展示面食绝技。中国声入人心男团成员与意大利II "
+             'VOLO美声少年团合唱《我的太阳》等曲目。(图片均由 林宏 摄）\u3000\u3000'
+             '中意两国同为历史悠久、文化灿烂的文明古国，两国人文交流源远流长，两国人民传统友谊深厚。音乐会成为中意两国文化艺术交流互鉴的又一生动写照，两国人民将通过艺术增进深层次的理解信任，加深友谊、共促发展。  '],
+ 'img': ['Image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190322221731.jpg',
+         'Image/1.jpg',
+         'Image/2%E6%9D%82%E6%8A%80.jpg',
+         'Image/3%E5%99%A8%E4%B9%90%E5%90%88%E5%A5%8F.jpg',
+         'Image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190322222102.jpg',
+         'Image/4%E4%BA%92%E5%8A%A8.jpg',
+         'Image/5%E7%BE%8E%E5%A3%B0%E4%B8%89%E9%87%8D%E5%94%B1.jpg'],
+ 'page_url': 'http://www.scio.gov.cn/37234/Document/1650333/1650333.htm',
+ 'sub_title_str': ['国务院新闻办公室网站\u3000www.scio.gov.cn\u3000\u3000 '
+                   '2019-03-22\u3000\u3000 来源：国新网 '],
+ 'title': ['“2019感知中国——中意友好音乐会”在罗马举办（组图）'],
+ 'video': []}
+2019-06-23 11:53:43 [root] INFO: scio_parse result: {'_id': '7e87027a-956a-11e9-94f0-94c6912740aa',
+ 'audio': [],
+ 'author': ['[责任编辑：焦非', '] '],
+ 'content': ['\u3000\u3000'
+             '2019年3月21日，在习近平主席对意大利进行国事访问之际，由中国国务院新闻办公室与中国驻意大利大使馆共同主办的“2019感知中国——中意友好音乐会”在罗马举行。中意两国顶级艺术家同台献艺，为观众奉上一场别开生面的音乐会。安东尼亚诺童声合唱团演唱《China '
+             "E'》《茉莉花》等曲目。战士红星艺术团表演杂技舞蹈《天鹅湖》。音乐互动环节，中意双方用传统乐器演奏对方国家的音乐代表作《梁祝》和《今夜无人入睡》。音乐互动环节，中意双方用传统乐器演奏对方国家的音乐代表作《梁祝》和《今夜无人入睡》。中意美食互动，“中华厨艺绝技表演团”展示面食绝技。中国声入人心男团成员与意大利II "
+             'VOLO美声少年团合唱《我的太阳》等曲目。(图片均由 林宏 摄）\u3000\u3000'
+             '中意两国同为历史悠久、文化灿烂的文明古国，两国人文交流源远流长，两国人民传统友谊深厚。音乐会成为中意两国文化艺术交流互鉴的又一生动写照，两国人民将通过艺术增进深层次的理解信任，加深友谊、共促发展。  '],
+ 'img': ['Image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190322221731.jpg',
+         'Image/1.jpg',
+         'Image/2%E6%9D%82%E6%8A%80.jpg',
+         'Image/3%E5%99%A8%E4%B9%90%E5%90%88%E5%A5%8F.jpg',
+         'Image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190322222102.jpg',
+         'Image/4%E4%BA%92%E5%8A%A8.jpg',
+         'Image/5%E7%BE%8E%E5%A3%B0%E4%B8%89%E9%87%8D%E5%94%B1.jpg'],
+ 'page_url': 'http://www.scio.gov.cn/37234/Document/1650333/1650333.htm',
+ 'sub_title_str': ['国务院新闻办公室网站\u3000www.scio.gov.cn\u3000\u3000 '
+                   '2019-03-22\u3000\u3000 来源：国新网 '],
+ 'title': ['“2019感知中国——中意友好音乐会”在罗马举办（组图）'],
+ 'video': []}
+2019-06-23 11:53:43 [root] INFO: scio_parse result: {'_id': '7e87027b-956a-11e9-9294-94c6912740aa',
+ 'audio': [],
+ 'author': ['[责任编辑：焦非', '] '],
+ 'content': ['\u3000\u3000'
+             '2019年3月21日，在习近平主席对意大利进行国事访问之际，由中国国务院新闻办公室与中国驻意大利大使馆共同主办的“2019感知中国——中意友好音乐会”在罗马举行。中意两国顶级艺术家同台献艺，为观众奉上一场别开生面的音乐会。安东尼亚诺童声合唱团演唱《China '
+             "E'》《茉莉花》等曲目。战士红星艺术团表演杂技舞蹈《天鹅湖》。音乐互动环节，中意双方用传统乐器演奏对方国家的音乐代表作《梁祝》和《今夜无人入睡》。音乐互动环节，中意双方用传统乐器演奏对方国家的音乐代表作《梁祝》和《今夜无人入睡》。中意美食互动，“中华厨艺绝技表演团”展示面食绝技。中国声入人心男团成员与意大利II "
+             'VOLO美声少年团合唱《我的太阳》等曲目。(图片均由 林宏 摄）\u3000\u3000'
+             '中意两国同为历史悠久、文化灿烂的文明古国，两国人文交流源远流长，两国人民传统友谊深厚。音乐会成为中意两国文化艺术交流互鉴的又一生动写照，两国人民将通过艺术增进深层次的理解信任，加深友谊、共促发展。  '],
+ 'img': ['Image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190322221731.jpg',
+         'Image/1.jpg',
+         'Image/2%E6%9D%82%E6%8A%80.jpg',
+         'Image/3%E5%99%A8%E4%B9%90%E5%90%88%E5%A5%8F.jpg',
+         'Image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190322222102.jpg',
+         'Image/4%E4%BA%92%E5%8A%A8.jpg',
+         'Image/5%E7%BE%8E%E5%A3%B0%E4%B8%89%E9%87%8D%E5%94%B1.jpg'],
+ 'page_url': 'http://www.scio.gov.cn/37234/Document/1650333/1650333.htm',
+ 'sub_title_str': ['国务院新闻办公室网站\u3000www.scio.gov.cn\u3000\u3000 '
+                   '2019-03-22\u3000\u3000 来源：国新网 '],
+ 'title': ['“2019感知中国——中意友好音乐会”在罗马举办（组图）'],
+ 'video': []}
+2019-06-23 11:54:20 [root] INFO: page_url:http://www.scio.gov.cn/37234/Document/1650333/1650333.htm, img_urls:['Image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190322221731.jpg', 'Image/1.jpg', 'Image/2%E6%9D%82%E6%8A%80.jpg', 'Image/3%E5%99%A8%E4%B9%90%E5%90%88%E5%A5%8F.jpg', 'Image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190322222102.jpg', 'Image/4%E4%BA%92%E5%8A%A8.jpg', 'Image/5%E7%BE%8E%E5%A3%B0%E4%B8%89%E9%87%8D%E5%94%B1.jpg']
+2019-06-23 11:54:20 [root] INFO: page_url:http://www.scio.gov.cn/37234/Document/1650333/1650333.htm, img_urls:['Image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190322221731.jpg', 'Image/1.jpg', 'Image/2%E6%9D%82%E6%8A%80.jpg', 'Image/3%E5%99%A8%E4%B9%90%E5%90%88%E5%A5%8F.jpg', 'Image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190322222102.jpg', 'Image/4%E4%BA%92%E5%8A%A8.jpg', 'Image/5%E7%BE%8E%E5%A3%B0%E4%B8%89%E9%87%8D%E5%94%B1.jpg']
+2019-06-23 11:54:20 [root] INFO: page_url:http://www.scio.gov.cn/37234/Document/1650333/1650333.htm, img_urls:[]
+2019-06-23 11:54:20 [root] INFO: page_url:http://www.scio.gov.cn/37234/Document/1650333/1650333.htm, img_urls:[]
+2019-06-23 11:54:20 [root] INFO: >>>>>>开始操作mongodb！

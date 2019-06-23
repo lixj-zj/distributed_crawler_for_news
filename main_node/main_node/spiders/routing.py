@@ -12,26 +12,28 @@
  @contact : lixj_zj@163.com
 """
 
-from scrapy.selector import Selector
-from main_node.items import MainNodeItem
-import random
-import uuid
 import re
 import logging
+from main_node.website_parse.wechat import Scio
+from main_node.website_parse.wechat import Wechat
 
 
 class Routing():
     def __init__(self):
-        # 记录跳转路由方法
+        # 构造字符串映射到函数的字典，记录对应跳转路由的方法
+        # 注意此中的value为函数名称，非字符串！
         self.routing_dict = \
             {
                 # scio
-                'www.scio.gov.cn/37234/Document/1650333': 'scio_parse',
+                'www.scio.gov.cn': Scio().scio_parse,
+
+                # 微信链接
+                'mp.weixin.qq.com': Wechat().wechat_parse,
 
                 # 华尔街见闻
-                'awtmt.com/articles': 'getDetailInfoFromAwtmt',
-                'wallstreetcn.com/articles': 'getDetailInfoFromWallstreet',
-                'api.wallstreetcn.com/redirect': 'getDetailInfoFromApi'
+                'awtmt.com': 'get_detail_info_from_awtmt',
+                'wallstreetcn.com': 'get_detail_info_from_wallstreet',
+                'api.wallstreetcn.com': 'get_detail_info_from_api'
             }
 
     def routing_method(self, response):
@@ -43,47 +45,24 @@ class Routing():
         try:
             url = response.url
             logging.info("路由 routing_method url: {}".format(url))
-            # 分析 url 是否是外部链接（微信文章），选择不同的正则匹配
-            pattern = r'//(.*)/' if url.find('?') == -1 else r'//(.*)/?'
-            web_site = re.findall(pattern, url[:url.find('?')])[0]
+            # 惰性匹配网址
+            pattern = r'//(.*?)/'
+            web_site = re.findall(pattern, url)[0]
 
             # TODO 正则匹配修改
             if web_site in self.routing_dict.keys():
-                # globals()[func]() 以字典的方式访问局部（locals()[func]()）和全局变量
-                # detail_info = locals()[self.routing_dict.get(web_site)](response)
-                detail_info = self.scio_parse(response)
-                logging.info("detail_info :{}".format(detail_info))
+                # 字符串映射到函数的字典。
+                # 这种技术的主要优点是字符串不需要匹配函数的名称。
+                detail_info = self.routing_dict[web_site](response)
                 return detail_info
             else:
                 # 不阻断后续url分析，记录无法解析的url
                 logging.info("url: {} ，暂无解析方法！".format(url))
                 # TODO 分离写文件。接口参数：文件路径、写入内容
-                with open("../problems/url_problem.txt","w+",encoding="utf-8") as f:
+                with open("../problems/url_problem.txt", "w+", encoding="utf-8") as f:
                     f.write(logging.info("url: {} ，暂无解析方法！".format(url)))
         except Exception as e:
             logging.error("routing_method 解析异常！异常信息：{}".format(str(e)))
-
-
-    def scio_parse(self, response):
-        sel = Selector(response)
-        item = MainNodeItem()
-
-        # TODO 随机数问题: random() -> uuid
-        # 插入mongodb时避免 KeyError: 'xxx does not support field: _id'
-        item['_id'] = str(uuid.uuid1())
-
-        # real_url 经过跳转之后的url
-        item['page_url'] = response.url
-        item['title'] = sel.xpath('//*[@class="tc A_title"]/text()').extract()
-        item['sub_title_str'] = sel.xpath('//*[@class="tc A_t1 f12 pr"]/div[1]/text()').extract()
-        item['img'] = sel.xpath('//*[@id="content"]//img/@src').extract()
-        item['video'] = sel.xpath('//*[@id="content"]//video/@src').extract()
-        item['audio'] = sel.xpath('//*[@id="content"]//audio/@src').extract()
-        item['content'] = sel.xpath('//*[@id="content"]').xpath('string(.)').extract()
-        item['author'] = sel.xpath('//*[@class="tr A_t1 f12"]/text()').extract()
-
-        logging.info("scio_parse result: {}".format(str(item)))
-        return item
 
 
 if __name__ == '__main__':

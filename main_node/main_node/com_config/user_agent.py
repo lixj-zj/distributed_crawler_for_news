@@ -75,7 +75,7 @@ class UserAgent(object):
     def get_user_agent(self):
         user_agent = random.choice(self.user_agent_list)
         # 显示当前使用的useragent
-        logging.info("Current UserAgent: {}".format(user_agent))
+        logging.info("*********Current UserAgent: {}".format(user_agent))
         return user_agent
 
     def get_headers(self):
@@ -83,9 +83,9 @@ class UserAgent(object):
             'Connection': 'Keep-Alive',
             'Accept': 'text/html, application/xhtml+xml, */*',
             'Accept-Language': 'en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3',
-            'User-Agent': self.get_user_agent()
+            'User-Agent': random.choice(self.user_agent_list)
         }
-        logging.info("Current Headers: {}".format(headers))
+        logging.info("*********Current Headers: {}".format(headers))
         return headers
 
 
