@@ -28,8 +28,10 @@ from pymongo import MongoClient
 # import GZH
 import logging
 import requests
-from main_node.com_config import user_agent as ua
+from node_one.com_config import user_agent as ua
 import json
+
+
 
 # logging.basicConfig函数对日志的输出格式及方式做相关配置
 logging.basicConfig(level=logging.DEBUG,
@@ -259,6 +261,6 @@ def run():
     # 已有的信息与详细信息合并后，数据入库
     data2oracle(resultList)
 
-
 if __name__ == '__main__':
-    run()
+    # run()
+    test()

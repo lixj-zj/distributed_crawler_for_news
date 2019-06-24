@@ -14,16 +14,17 @@
 
 import requests
 from bs4 import BeautifulSoup as bs
-from main_node.com_config.user_agent import UserAgent
+from main_node.com_config import user_agent
+# import user_agent
 import logging
 import os
 import random
 import traceback
 import time
 
-# # logging.basicConfig函数对日志的输出格式及方式做相关配置
-# logging.basicConfig(level=logging.DEBUG,
-#                     format='%(asctime)s - %(filename)s[line:%(lineno)d] - %(levelname)s: %(message)s')
+# logging.basicConfig函数对日志的输出格式及方式做相关配置
+logging.basicConfig(level=logging.DEBUG,
+                    format='%(asctime)s - %(filename)s[line:%(lineno)d] - %(levelname)s: %(message)s')
 
 
 class RandomIp():
@@ -34,7 +35,7 @@ class RandomIp():
         self.MAX_PAGE_OF_XICI = 3614  # 西刺网站总页数
         self.NUM_OF_PAGES = 3  # 爬取的目标页数
         # 获取随机的headers
-        self.headers = UserAgent().get_headers()  # userAgent.UserAgent() 类实例化()括号就相当于self参数
+        self.headers = user_agent.UserAgent().get_headers()  # userAgent.UserAgent() 类实例化()括号就相当于self参数
 
     def get_target_pages(self, page):
         """

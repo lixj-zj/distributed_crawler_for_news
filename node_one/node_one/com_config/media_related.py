@@ -18,11 +18,6 @@ import os
 from urllib.parse import unquote
 
 class MediaFile():
-    """
-    处理多媒体文件相关的类。
-    包含：图片、视频、音频等。
-    """
-
     def __init__(self):
         pass
 
