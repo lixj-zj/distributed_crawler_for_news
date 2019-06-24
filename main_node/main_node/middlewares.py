@@ -6,7 +6,7 @@
 # https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 
 from scrapy import signals
-from main_node.com_config import random_ip
+# from main_node.com_config import random_ip
 import logging
 
 
@@ -106,9 +106,9 @@ class MainNodeDownloaderMiddleware(object):
 
 
 
-class MainNodeProxyMiddleware(object):
-    def process_request(self, request, spider):
-        proxy = random_ip.RandomIp().get_one_proxies()
-        logging.info("Set random proxy is:{}".format(proxy))
-        request.meta['proxy'] = proxy.get('http')
+# class MainNodeProxyMiddleware(object):
+#     def process_request(self, request, spider):
+#         proxy = random_ip.RandomIp().get_one_proxies()
+#         logging.info("Set random proxy is:{}".format(proxy))
+#         request.meta['proxy'] = proxy.get('http')
 

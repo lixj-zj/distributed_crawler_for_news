@@ -71,7 +71,7 @@ DEFAULT_REQUEST_HEADERS = UserAgent().get_headers()
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
     # 'main_node.pipelines.MainNodePipeline': 300,
-    'main_node.pipelines.single_mongodb.SingleMongodbPipeline': 300,
+    # 'main_node.pipelines.single_mongodb.SingleMongodbPipeline': 300,
     'main_node.pipelines.scio.ScioPipeline': 100,
 }
 
@@ -139,9 +139,9 @@ ITEM_PIPELINES = {
 
 
 
-# MONGODB_URI = 'mongodb://192.168.131.24:27017'
-# MONGODB_DATABASE = 'demo'
-# MONGODB_COLLECTION = 'scio'
+MONGODB_URI = 'mongodb://192.168.131.24:27017'
+MONGODB_DATABASE = 'demo'
+MONGODB_COLLECTION = 'scio'
 
 
 # 日志文件         

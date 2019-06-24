@@ -7329,3 +7329,158 @@ TypeError: process_item() missing 1 required positional argument: 'spider'
 2019-06-23 11:54:20 [root] INFO: page_url:http://www.scio.gov.cn/37234/Document/1650333/1650333.htm, img_urls:[]
 2019-06-23 11:54:20 [root] INFO: page_url:http://www.scio.gov.cn/37234/Document/1650333/1650333.htm, img_urls:[]
 2019-06-23 11:54:20 [root] INFO: >>>>>>开始操作mongodb！
+2019-06-24 22:17:33 [scrapy.utils.log] INFO: Scrapy 1.6.0 started (bot: main_node)
+2019-06-24 22:17:33 [scrapy.utils.log] INFO: Versions: lxml 4.3.3.0, libxml2 2.9.5, cssselect 1.0.3, parsel 1.5.1, w3lib 1.20.0, Twisted 19.2.1, Python 3.6.4 (v3.6.4:d48eceb, Dec 19 2017, 06:04:45) [MSC v.1900 32 bit (Intel)], pyOpenSSL 19.0.0 (OpenSSL 1.1.1c  28 May 2019), cryptography 2.7, Platform Windows-10-10.0.17134-SP0
+2019-06-24 22:17:33 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'main_node', 'COOKIES_ENABLED': False, 'DOWNLOAD_DELAY': 3, 'LOG_ENABLED': False, 'LOG_FILE': 'logs/scrapy.log', 'LOG_LEVEL': 'INFO', 'NEWSPIDER_MODULE': 'main_node.spiders', 'SPIDER_MODULES': ['main_node.spiders'], 'USER_AGENT': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.6 (KHTML, like Gecko) Chrome/20.0.1092.0 Safari/536.6'}
+2019-06-24 22:17:33 [scrapy.extensions.telnet] INFO: Telnet Password: 58b4f48a4a6739fb
+2019-06-24 22:17:33 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2019-06-24 22:17:34 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2019-06-24 22:17:34 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2019-06-24 22:17:34 [scrapy.middleware] INFO: Enabled item pipelines:
+['main_node.pipelines.scio.ScioPipeline',
+ 'main_node.pipelines.single_mongodb.SingleMongodbPipeline']
+2019-06-24 22:17:34 [scrapy.core.engine] INFO: Spider opened
+2019-06-24 22:17:34 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2019-06-24 22:17:34 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2019-06-24 22:17:35 [root] INFO: 路由 routing_method url: http://www.scio.gov.cn/37234/Document/1650333/1650333.htm
+2019-06-24 22:17:35 [root] INFO: scio_parse result: {'_id': 'd00b664a-968a-11e9-a2e6-94c6912740aa',
+ 'audio': [],
+ 'author': ['[责任编辑：焦非', '] '],
+ 'content': ['\u3000\u3000'
+             '2019年3月21日，在习近平主席对意大利进行国事访问之际，由中国国务院新闻办公室与中国驻意大利大使馆共同主办的“2019感知中国——中意友好音乐会”在罗马举行。中意两国顶级艺术家同台献艺，为观众奉上一场别开生面的音乐会。安东尼亚诺童声合唱团演唱《China '
+             "E'》《茉莉花》等曲目。战士红星艺术团表演杂技舞蹈《天鹅湖》。音乐互动环节，中意双方用传统乐器演奏对方国家的音乐代表作《梁祝》和《今夜无人入睡》。音乐互动环节，中意双方用传统乐器演奏对方国家的音乐代表作《梁祝》和《今夜无人入睡》。中意美食互动，“中华厨艺绝技表演团”展示面食绝技。中国声入人心男团成员与意大利II "
+             'VOLO美声少年团合唱《我的太阳》等曲目。(图片均由 林宏 摄）\u3000\u3000'
+             '中意两国同为历史悠久、文化灿烂的文明古国，两国人文交流源远流长，两国人民传统友谊深厚。音乐会成为中意两国文化艺术交流互鉴的又一生动写照，两国人民将通过艺术增进深层次的理解信任，加深友谊、共促发展。  '],
+ 'img': ['Image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190322221731.jpg',
+         'Image/1.jpg',
+         'Image/2%E6%9D%82%E6%8A%80.jpg',
+         'Image/3%E5%99%A8%E4%B9%90%E5%90%88%E5%A5%8F.jpg',
+         'Image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190322222102.jpg',
+         'Image/4%E4%BA%92%E5%8A%A8.jpg',
+         'Image/5%E7%BE%8E%E5%A3%B0%E4%B8%89%E9%87%8D%E5%94%B1.jpg'],
+ 'page_url': 'http://www.scio.gov.cn/37234/Document/1650333/1650333.htm',
+ 'sub_title_str': ['国务院新闻办公室网站\u3000www.scio.gov.cn\u3000\u3000 '
+                   '2019-03-22\u3000\u3000 来源：国新网 '],
+ 'title': ['“2019感知中国——中意友好音乐会”在罗马举办（组图）'],
+ 'video': []}
+2019-06-24 22:17:35 [root] INFO: page_url:http://www.scio.gov.cn/37234/Document/1650333/1650333.htm, img_urls:['Image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190322221731.jpg', 'Image/1.jpg', 'Image/2%E6%9D%82%E6%8A%80.jpg', 'Image/3%E5%99%A8%E4%B9%90%E5%90%88%E5%A5%8F.jpg', 'Image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190322222102.jpg', 'Image/4%E4%BA%92%E5%8A%A8.jpg', 'Image/5%E7%BE%8E%E5%A3%B0%E4%B8%89%E9%87%8D%E5%94%B1.jpg']
+2019-06-24 22:17:35 [root] INFO: page_url:http://www.scio.gov.cn/37234/Document/1650333/1650333.htm, img_urls:['Image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190322221731.jpg', 'Image/1.jpg', 'Image/2%E6%9D%82%E6%8A%80.jpg', 'Image/3%E5%99%A8%E4%B9%90%E5%90%88%E5%A5%8F.jpg', 'Image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190322222102.jpg', 'Image/4%E4%BA%92%E5%8A%A8.jpg', 'Image/5%E7%BE%8E%E5%A3%B0%E4%B8%89%E9%87%8D%E5%94%B1.jpg']
+2019-06-24 22:17:35 [root] INFO: page_url:http://www.scio.gov.cn/37234/Document/1650333/1650333.htm, img_urls:[]
+2019-06-24 22:17:35 [root] INFO: page_url:http://www.scio.gov.cn/37234/Document/1650333/1650333.htm, img_urls:[]
+2019-06-24 22:17:35 [root] INFO: >>>>>>开始操作mongodb！
+2019-06-24 22:17:35 [root] INFO: item is :--- {'_id': 'd00b664a-968a-11e9-a2e6-94c6912740aa', 'page_url': 'http://www.scio.gov.cn/37234/Document/1650333/1650333.htm', 'title': '“2019感知中国——中意友好音乐会”在罗马举办（组图）', 'sub_title_info': '国务院新闻办公室网站 www.scio.gov.cn', 'publish_time': '2019-03-22', 'resource': '国新网', 'img': ['http://www.scio.gov.cn/37234/Document/1650333/Image/微信图片_20190322221731.jpg', 'http://www.scio.gov.cn/37234/Document/1650333/Image/1.jpg', 'http://www.scio.gov.cn/37234/Document/1650333/Image/2杂技.jpg', 'http://www.scio.gov.cn/37234/Document/1650333/Image/3器乐合奏.jpg', 'http://www.scio.gov.cn/37234/Document/1650333/Image/微信图片_20190322222102.jpg', 'http://www.scio.gov.cn/37234/Document/1650333/Image/4互动.jpg', 'http://www.scio.gov.cn/37234/Document/1650333/Image/5美声三重唱.jpg'], 'video': [], 'audio': [], 'author': ['焦非'], 'content': "2019年3月21日，在习近平主席对意大利进行国事访问之际，由中国国务院新闻办公室与中国驻意大利大使馆共同主办的“2019感知中国——中意友好音乐会”在罗马举行。中意两国顶级艺术家同台献艺，为观众奉上一场别开生面的音乐会。安东尼亚诺童声合唱团演唱《China E'》《茉莉花》等曲目。战士红星艺术团表演杂技舞蹈《天鹅湖》。音乐互动环节，中意双方用传统乐器演奏对方国家的音乐代表作《梁祝》和《今夜无人入睡》。音乐互动环节，中意双方用传统乐器演奏对方国家的音乐代表作《梁祝》和《今夜无人入睡》。中意美食互动，“中华厨艺绝技表演团”展示面食绝技。中国声入人心男团成员与意大利II VOLO美声少年团合唱《我的太阳》等曲目。(图片均由 林宏 摄）  中意两国同为历史悠久、文化灿烂的文明古国，两国人文交流源远流长，两国人民传统友谊深厚。音乐会成为中意两国文化艺术交流互鉴的又一生动写照，两国人民将通过艺术增进深层次的理解信任，加深友谊、共促发展。"}
+2019-06-24 22:17:35 [root] INFO: >>>>>>开始操作mongodb！
+2019-06-24 22:17:35 [root] INFO: item is :--- None
+2019-06-24 22:17:35 [scrapy.core.engine] INFO: Closing spider (finished)
+2019-06-24 22:17:35 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 282,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 14536,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2019, 6, 24, 14, 17, 35, 172849),
+ 'item_scraped_count': 1,
+ 'log_count/INFO': 19,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2019, 6, 24, 14, 17, 34, 360511)}
+2019-06-24 22:17:35 [scrapy.core.engine] INFO: Spider closed (finished)
+2019-06-24 22:19:21 [scrapy.utils.log] INFO: Scrapy 1.6.0 started (bot: main_node)
+2019-06-24 22:19:21 [scrapy.utils.log] INFO: Versions: lxml 4.3.3.0, libxml2 2.9.5, cssselect 1.0.3, parsel 1.5.1, w3lib 1.20.0, Twisted 19.2.1, Python 3.6.4 (v3.6.4:d48eceb, Dec 19 2017, 06:04:45) [MSC v.1900 32 bit (Intel)], pyOpenSSL 19.0.0 (OpenSSL 1.1.1c  28 May 2019), cryptography 2.7, Platform Windows-10-10.0.17134-SP0
+2019-06-24 22:19:21 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'main_node', 'COOKIES_ENABLED': False, 'DOWNLOAD_DELAY': 3, 'LOG_ENABLED': False, 'LOG_FILE': 'logs/scrapy.log', 'LOG_LEVEL': 'INFO', 'NEWSPIDER_MODULE': 'main_node.spiders', 'SPIDER_MODULES': ['main_node.spiders'], 'USER_AGENT': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:2.0.1) Gecko/20100101 Firefox/4.0.1'}
+2019-06-24 22:19:21 [scrapy.extensions.telnet] INFO: Telnet Password: 3057e6e9ba7c1b3b
+2019-06-24 22:19:21 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2019-06-24 22:19:21 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2019-06-24 22:19:21 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2019-06-24 22:19:21 [scrapy.middleware] INFO: Enabled item pipelines:
+['main_node.pipelines.scio.ScioPipeline']
+2019-06-24 22:19:21 [scrapy.core.engine] INFO: Spider opened
+2019-06-24 22:19:21 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2019-06-24 22:19:21 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2019-06-24 22:19:22 [root] INFO: 路由 routing_method url: http://www.scio.gov.cn/37234/Document/1650333/1650333.htm
+2019-06-24 22:19:22 [root] INFO: scio_parse result: {'_id': '101d2798-968b-11e9-9e2d-94c6912740aa',
+ 'audio': [],
+ 'author': ['[责任编辑：焦非', '] '],
+ 'content': ['\u3000\u3000'
+             '2019年3月21日，在习近平主席对意大利进行国事访问之际，由中国国务院新闻办公室与中国驻意大利大使馆共同主办的“2019感知中国——中意友好音乐会”在罗马举行。中意两国顶级艺术家同台献艺，为观众奉上一场别开生面的音乐会。安东尼亚诺童声合唱团演唱《China '
+             "E'》《茉莉花》等曲目。战士红星艺术团表演杂技舞蹈《天鹅湖》。音乐互动环节，中意双方用传统乐器演奏对方国家的音乐代表作《梁祝》和《今夜无人入睡》。音乐互动环节，中意双方用传统乐器演奏对方国家的音乐代表作《梁祝》和《今夜无人入睡》。中意美食互动，“中华厨艺绝技表演团”展示面食绝技。中国声入人心男团成员与意大利II "
+             'VOLO美声少年团合唱《我的太阳》等曲目。(图片均由 林宏 摄）\u3000\u3000'
+             '中意两国同为历史悠久、文化灿烂的文明古国，两国人文交流源远流长，两国人民传统友谊深厚。音乐会成为中意两国文化艺术交流互鉴的又一生动写照，两国人民将通过艺术增进深层次的理解信任，加深友谊、共促发展。  '],
+ 'img': ['Image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190322221731.jpg',
+         'Image/1.jpg',
+         'Image/2%E6%9D%82%E6%8A%80.jpg',
+         'Image/3%E5%99%A8%E4%B9%90%E5%90%88%E5%A5%8F.jpg',
+         'Image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190322222102.jpg',
+         'Image/4%E4%BA%92%E5%8A%A8.jpg',
+         'Image/5%E7%BE%8E%E5%A3%B0%E4%B8%89%E9%87%8D%E5%94%B1.jpg'],
+ 'page_url': 'http://www.scio.gov.cn/37234/Document/1650333/1650333.htm',
+ 'sub_title_str': ['国务院新闻办公室网站\u3000www.scio.gov.cn\u3000\u3000 '
+                   '2019-03-22\u3000\u3000 来源：国新网 '],
+ 'title': ['“2019感知中国——中意友好音乐会”在罗马举办（组图）'],
+ 'video': []}
+2019-06-24 22:19:22 [root] INFO: page_url:http://www.scio.gov.cn/37234/Document/1650333/1650333.htm, img_urls:['Image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190322221731.jpg', 'Image/1.jpg', 'Image/2%E6%9D%82%E6%8A%80.jpg', 'Image/3%E5%99%A8%E4%B9%90%E5%90%88%E5%A5%8F.jpg', 'Image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190322222102.jpg', 'Image/4%E4%BA%92%E5%8A%A8.jpg', 'Image/5%E7%BE%8E%E5%A3%B0%E4%B8%89%E9%87%8D%E5%94%B1.jpg']
+2019-06-24 22:19:22 [root] INFO: page_url:http://www.scio.gov.cn/37234/Document/1650333/1650333.htm, img_urls:['Image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190322221731.jpg', 'Image/1.jpg', 'Image/2%E6%9D%82%E6%8A%80.jpg', 'Image/3%E5%99%A8%E4%B9%90%E5%90%88%E5%A5%8F.jpg', 'Image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190322222102.jpg', 'Image/4%E4%BA%92%E5%8A%A8.jpg', 'Image/5%E7%BE%8E%E5%A3%B0%E4%B8%89%E9%87%8D%E5%94%B1.jpg']
+2019-06-24 22:19:22 [root] INFO: page_url:http://www.scio.gov.cn/37234/Document/1650333/1650333.htm, img_urls:[]
+2019-06-24 22:19:22 [root] INFO: page_url:http://www.scio.gov.cn/37234/Document/1650333/1650333.htm, img_urls:[]
+2019-06-24 22:19:22 [root] INFO: >>>>>>开始操作mongodb！
+2019-06-24 22:19:22 [root] INFO: item is :--- {'_id': '101d2798-968b-11e9-9e2d-94c6912740aa', 'page_url': 'http://www.scio.gov.cn/37234/Document/1650333/1650333.htm', 'title': '“2019感知中国——中意友好音乐会”在罗马举办（组图）', 'sub_title_info': '国务院新闻办公室网站 www.scio.gov.cn', 'publish_time': '2019-03-22', 'resource': '国新网', 'img': ['http://www.scio.gov.cn/37234/Document/1650333/Image/微信图片_20190322221731.jpg', 'http://www.scio.gov.cn/37234/Document/1650333/Image/1.jpg', 'http://www.scio.gov.cn/37234/Document/1650333/Image/2杂技.jpg', 'http://www.scio.gov.cn/37234/Document/1650333/Image/3器乐合奏.jpg', 'http://www.scio.gov.cn/37234/Document/1650333/Image/微信图片_20190322222102.jpg', 'http://www.scio.gov.cn/37234/Document/1650333/Image/4互动.jpg', 'http://www.scio.gov.cn/37234/Document/1650333/Image/5美声三重唱.jpg'], 'video': [], 'audio': [], 'author': ['焦非'], 'content': "2019年3月21日，在习近平主席对意大利进行国事访问之际，由中国国务院新闻办公室与中国驻意大利大使馆共同主办的“2019感知中国——中意友好音乐会”在罗马举行。中意两国顶级艺术家同台献艺，为观众奉上一场别开生面的音乐会。安东尼亚诺童声合唱团演唱《China E'》《茉莉花》等曲目。战士红星艺术团表演杂技舞蹈《天鹅湖》。音乐互动环节，中意双方用传统乐器演奏对方国家的音乐代表作《梁祝》和《今夜无人入睡》。音乐互动环节，中意双方用传统乐器演奏对方国家的音乐代表作《梁祝》和《今夜无人入睡》。中意美食互动，“中华厨艺绝技表演团”展示面食绝技。中国声入人心男团成员与意大利II VOLO美声少年团合唱《我的太阳》等曲目。(图片均由 林宏 摄）  中意两国同为历史悠久、文化灿烂的文明古国，两国人文交流源远流长，两国人民传统友谊深厚。音乐会成为中意两国文化艺术交流互鉴的又一生动写照，两国人民将通过艺术增进深层次的理解信任，加深友谊、共促发展。"}
+2019-06-24 22:19:22 [scrapy.core.engine] INFO: Closing spider (finished)
+2019-06-24 22:19:22 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 398,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 14536,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2019, 6, 24, 14, 19, 22, 647746),
+ 'item_scraped_count': 1,
+ 'log_count/INFO': 17,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2019, 6, 24, 14, 19, 21, 866508)}
+2019-06-24 22:19:22 [scrapy.core.engine] INFO: Spider closed (finished)

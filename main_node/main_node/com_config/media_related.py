@@ -72,7 +72,6 @@ class MediaFile():
         :param img_urls: 图片列表
         :return: 完整的图片下载地址
         """
-        logging.info("page_url:{}, img_urls:{}".format(page_url, img_urls))
         try:
             download_urls = []
             if len(img_urls) is not 0:
