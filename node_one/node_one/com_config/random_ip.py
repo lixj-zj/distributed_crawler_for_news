@@ -14,7 +14,7 @@
 
 import requests
 from bs4 import BeautifulSoup as bs
-from main_node.com_config import user_agent
+from node_one.com_config import user_agent
 # import user_agent
 import logging
 import os
@@ -196,4 +196,10 @@ class RandomIp():
 
 
 if __name__ == '__main__':
-    RandomIp().write_ip_to_file()
+    # 获取ip
+    # RandomIp().write_ip_to_file()
+
+    # RandomIp().review_ip_pool()
+
+    #
+    RandomIp().get_one_proxies()

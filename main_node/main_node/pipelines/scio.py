@@ -42,8 +42,8 @@ class ScioPipeline(object):
 
         # 多媒体文件
         result['img'] = MediaFile().get_image_urls(item['page_url'], item['img'])
-        result['video'] = MediaFile().get_image_urls(item['page_url'], item['video'])
-        result['audio'] = MediaFile().get_image_urls(item['page_url'], item['audio'])
+        result['video'] = MediaFile().get_video_urls(item['page_url'], item['video'])
+        result['audio'] = MediaFile().get_audio_urls(item['page_url'], item['audio'])
 
         # 正则匹配author
         author_pattern = r'责任编辑：(.*)'

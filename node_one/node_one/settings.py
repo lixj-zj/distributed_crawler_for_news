@@ -10,22 +10,27 @@
 #     https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 
 from node_one.com_config.user_agent import UserAgent
+from node_one.com_config.random_ip import RandomIp
 
 BOT_NAME = 'node_one'
 
 SPIDER_MODULES = ['node_one.spiders']
 NEWSPIDER_MODULE = 'node_one.spiders'
 
+DOWNLOAD_DELAY = 1
+CONCURRENT_ITEMS = 100
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'node_one (+http://www.yourdomain.com)'
 USER_AGENT = UserAgent().get_user_agent()
 
+PROXIES = RandomIp().get_one_proxies()
+
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = False
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
-#CONCURRENT_REQUESTS = 32
+CONCURRENT_REQUESTS = 32
 
 # Configure a delay for requests for the same website (default: 0)
 # See https://doc.scrapy.org/en/latest/topics/settings.html#download-delay
@@ -56,9 +61,14 @@ DEFAULT_REQUEST_HEADERS = UserAgent().get_headers()
 
 # Enable or disable downloader middlewares
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
-#DOWNLOADER_MIDDLEWARES = {
-#    'node_one.middlewares.NodeOneDownloaderMiddleware': 543,
-#}
+DOWNLOADER_MIDDLEWARES = {
+    # 'scrapy.downloadermiddleware.defaultheaders.DefaultHeadersMiddleware': None,
+    'scrapy.downloadermiddleware.useragent.UserAgentMiddleware': None,
+    'node_one.middlewares.NodeOneUserAgentMiddleware': 300,
+    # 'node_one.middlewares.NodeOneProxyMiddleware': 543,
+    # 'node_one.middlewares.NodeOneDefaultHeadersMiddleware': 400,
+
+}
 
 # Enable or disable extensions
 # See https://doc.scrapy.org/en/latest/topics/extensions.html
@@ -97,12 +107,21 @@ ITEM_PIPELINES = {
 
 
 
+
+
+MONGODB_URI = 'mongodb://192.168.131.24:27017'
+MONGODB_DATABASE = 'demo'
+MONGODB_COLLECTION = 'scio'
+
+
+
+
 # 日志文件         
 # (最好为爬虫名称，例如：qiushi.log)
 LOG_FILE = "logs/scrapy.log"
 
-# 日志等级
-LOG_LEVEL = 'INFO'
+# 日志等级。DEBUG 输出所有日志级别
+LOG_LEVEL = 'DEBUG'
 
 # 是否启用日志（创建日志后，不需开启，进行配置）
 LOG_ENABLED = False  # （默认为True，启用日志）

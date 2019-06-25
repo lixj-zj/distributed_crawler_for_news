@@ -6,8 +6,10 @@
 # https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 
 from scrapy import signals
-from node_one.com_config import random_ip
+from scrapy.downloadermiddlewares.useragent import UserAgentMiddleware
+# from scrapy.downloadermiddlewares.defaultheaders import DefaultHeadersMiddleware
 import logging
+
 
 class NodeOneSpiderMiddleware(object):
     # Not all methods need to be defined. If a method is not defined,
@@ -104,10 +106,50 @@ class NodeOneDownloaderMiddleware(object):
         spider.logger.info('Spider opened: %s' % spider.name)
 
 
+class NodeOneUserAgentMiddleware(UserAgentMiddleware):
+    def __init__(self, user_agent):
+        self.user_agent = user_agent
 
+    @classmethod
+    def from_crawler(cls, crawler):
+        return cls(
+            user_agent=crawler.settings.get("USER_AGENT")
+        )
 
-class MainNodeProxyMiddleware(object):
     def process_request(self, request, spider):
-        proxy = random_ip.RandomIp().get_one_proxies()
-        logging.info("Set random proxy is:{}".format(proxy))
-        request.meta['proxy'] = proxy.get('http')
+        logging.info("*********user-agent-middleware 中随机 User-Agent：{}"
+                     .format(self.user_agent))
+        request.headers['User-Agent'] = self.user_agent
+
+# class NodeOneDefaultHeadersMiddleware(DefaultHeadersMiddleware):
+#     def __init__(self, headers):
+#         self._headers = headers
+#
+#     @classmethod
+#     def from_crawl(cls, crawler):
+#         return cls(
+#             headers=crawler.settings.get("DEFAULT_REQUEST_HEADERS")
+#         )
+#
+#     def process_request(self, request, spider):
+#         logging.info("*********default-headers-middleware 中随机 headers：{}"
+#                      .format(self._headers))
+#         request.headers = self._headers
+
+
+class NodeOneProxyMiddleware(object):
+    def __init__(self, ip):
+        self.ip = ip
+
+    @classmethod
+    def from_crawler(cls, crawler):
+        return cls(
+            ip=crawler.settings.get("PROXIES")
+        )
+
+    def process_request(self, request, spider):
+        logging.info("*********proxy-middleware 中随机 ip：{}"
+                     .format(self.ip))
+        request.meta['proxy'] = self.ip.get("http")
+
+

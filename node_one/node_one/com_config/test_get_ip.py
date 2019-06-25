@@ -12,14 +12,13 @@
  @contact : lixj_zj@163.com
 """
 
-import user_agent
-import random_ip
+from node_one.com_config.random_ip import RandomIp
 
 # # 文件中写入IP
-# random_ip.RandomIp().write_ip_to_file()
+RandomIp().write_ip_to_file()
 #
 # # 更新IP池
-random_ip.RandomIp().review_ip_pool()
+# random_ip.RandomIp().review_ip_pool()
 #
 # # 获取随机一个IP
 # random_ip.RandomIp().get_one_ip()

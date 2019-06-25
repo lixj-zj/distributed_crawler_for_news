@@ -14,7 +14,7 @@
 
 import re
 import logging
-from node_one.website_parse.wechat import Scio
+from node_one.website_parse.scio import Scio
 from node_one.website_parse.wechat import Wechat
 
 

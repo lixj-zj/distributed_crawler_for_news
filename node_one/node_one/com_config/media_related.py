@@ -67,13 +67,13 @@ class MediaFile():
         :param img_urls: 图片列表
         :return: 完整的图片下载地址
         """
-        logging.info("page_url:{}, img_urls:{}".format(page_url, img_urls))
         try:
             download_urls = []
             if len(img_urls) is not 0:
                 for one_img_url in img_urls:
                     download_urls.append(page_url.rsplit("/", maxsplit=1)[0] +
                                          os.altsep + unquote(one_img_url, "utf-8"))
+            logging.info("page_url:{}, img_urls:{}".format(page_url, download_urls))
             return download_urls
         except Exception as e:
             logging.error("获取图片下载地址错误！错误信息：{}".format(str(e)))
@@ -91,6 +91,7 @@ class MediaFile():
             if len(video_urls) is not 0:
                 for one_video_url in video_urls:
                     download_urls.append(page_url.rsplit("/", maxsplit=1)[0] + os.altsep + one_video_url)
+            logging.info("page_url:{}, video_urls:{}".format(page_url, download_urls))
             return download_urls
         except Exception as e:
             logging.error("获取视频下载地址错误！错误信息：{}".format(str(e)))
@@ -108,6 +109,7 @@ class MediaFile():
             if len(audio_urls) is not 0:
                 for one_audio_url in audio_urls:
                     download_urls.append(page_url.rsplit("/", maxsplit=1)[0] + os.altsep + one_audio_url)
+            logging.info("page_url:{}, audio_urls:{}".format(page_url, download_urls))
             return download_urls
         except Exception as e:
             logging.error("获取音频下载地址错误！错误信息：{}".format(str(e)))

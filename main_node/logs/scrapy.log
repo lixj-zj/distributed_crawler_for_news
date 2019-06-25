@@ -7484,3 +7484,32 @@ TypeError: process_item() missing 1 required positional argument: 'spider'
  'scheduler/enqueued/memory': 1,
  'start_time': datetime.datetime(2019, 6, 24, 14, 19, 21, 866508)}
 2019-06-24 22:19:22 [scrapy.core.engine] INFO: Spider closed (finished)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

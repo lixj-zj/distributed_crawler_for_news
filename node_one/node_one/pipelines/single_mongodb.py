@@ -6,38 +6,36 @@
 # See: https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 
 import logging
-from pymongo import MongoClient
+import pymongo
 
 
 class SingleMongodbPipeline(object):
     """
     初始化并连接MongoDB
     """
-    def __init__(self):
-        self.mongodb_localhost = "mongodb://192.168.131.24:27017"
-        self.conn = MongoClient(self.mongodb_localhost)
-        self.db = self.conn.demo  # 连接数据库demo，没有自动创建
-        self.demo_json = self.db.scio  # 使用demo_json集合，没有自动创建
+    def __init__(self, mongo_uri, mongo_db, mongo_collection):
+        self.mongo_uri = mongo_uri
+        self.mongo_db = mongo_db
+        self.mongo_collection = mongo_collection
 
+    @classmethod
+    def from_crawler(cls, crawler):
+        return cls(
+            mongo_uri=crawler.settings.get("MONGODB_URI"),
+            mongo_db=crawler.settings.get("MONGODB_DATABASE"),
+            mongo_collection=crawler.settings.get("MONGODB_COLLECTION")
+        )
+
+    def open_spider(self, spider):
+        logging.info("开启mongo client spider...")
+        self.client = pymongo.MongoClient(self.mongo_uri)
+        self.db = self.client[self.mongo_db]
+
+    def close_spider(self, spider):
+        logging.info("关闭mongo client spider...")
+        self.client.close()
 
     def process_item(self, item, spider):
-        self.data_storage(item)
-
-
-    def data_storage(self, item):
         logging.info(">>>>>>开始操作mongodb！")
-        try:
-            # 1. 连接MongoDB
-            # demo_json = self.demo_json
-
-            # 2. 插入数据
-            self.demo_json.insert(item)
-
-            # 7. 插入json文件
-            # with open(self.jsonPath, "r", encoding="utf-8") as f:
-            #     jsonFile = json.load(f)
-            #     demo_json.insert(jsonFile)
-
-            logging.info(">>>>操作mongodb完成！")
-        except Exception as e:
-            logging.error(">>>>操作mongodb数据库失败！错误信息：", e)
+        self.db[self.mongo_collection].insert_one(dict(item))
+        return item  # return会在控制台显示输出入库的item数据，可以选择不写（此时显示None）
