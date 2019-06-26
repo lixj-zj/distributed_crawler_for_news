@@ -44,6 +44,7 @@ class Scio():
         item['video'] = sel.xpath('//*[@id="content"]//video/@src').extract()
         item['audio'] = sel.xpath('//*[@id="content"]//audio/@src').extract()
         item['content'] = sel.xpath('//*[@id="content"]').xpath('string(.)').extract()
+        item['attachment'] = sel.xpath('//*[@id="Affix1"]//a/@href').extract()
         item['author'] = sel.xpath('//*[@class="tr A_t1 f12"]/text()').extract()
 
         logging.info(">>>> scio_parse result: {}".format(str(item)))

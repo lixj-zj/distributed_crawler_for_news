@@ -16,17 +16,9 @@ class ScioItem(scrapy.Item):
     """
     解析scio的item
     """
-    # _id：插入mongodb时避免 KeyError: 'xxx does not support field: _id'
-    _id = scrapy.Field()
+    all_page_real_url = scrapy.Field()
 
-    page_url = scrapy.Field()
-    sub_title_str = scrapy.Field()
-    title = scrapy.Field()
-    img = scrapy.Field()
-    video = scrapy.Field()
-    audio = scrapy.Field()
-    content = scrapy.Field()
-    author = scrapy.Field()
+
 
 
 class WechatItem(scrapy.Item):

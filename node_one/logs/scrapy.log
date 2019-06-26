@@ -3288,3 +3288,508 @@ IndexError: list index out of range
  'scheduler/enqueued/memory': 3,
  'start_time': datetime.datetime(2019, 6, 25, 13, 9, 48, 364652)}
 2019-06-25 21:09:54 [scrapy.core.engine] INFO: Spider closed (finished)
+2019-06-26 13:17:22 [scrapy.utils.log] INFO: Scrapy 1.6.0 started (bot: node_one)
+2019-06-26 13:17:22 [scrapy.utils.log] INFO: Versions: lxml 4.3.4.0, libxml2 2.9.5, cssselect 1.0.3, parsel 1.5.1, w3lib 1.20.0, Twisted 19.2.1, Python 3.6.6 (v3.6.6:4cf1f54eb7, Jun 27 2018, 03:37:03) [MSC v.1900 64 bit (AMD64)], pyOpenSSL 19.0.0 (OpenSSL 1.1.1c  28 May 2019), cryptography 2.7, Platform Windows-10-10.0.17134-SP0
+2019-06-26 13:17:22 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'node_one', 'CONCURRENT_REQUESTS': 32, 'COOKIES_ENABLED': False, 'DOWNLOAD_DELAY': 3, 'LOG_ENABLED': False, 'LOG_FILE': 'logs/scrapy.log', 'NEWSPIDER_MODULE': 'node_one.spiders', 'SPIDER_MODULES': ['node_one.spiders'], 'USER_AGENT': 'Mozilla/4.0 (compatible; MSIE 5.5; Windows 98; Win 9x 4.90)'}
+2019-06-26 13:17:22 [scrapy.extensions.telnet] INFO: Telnet Password: 563f53043ce4ac24
+2019-06-26 13:17:22 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2019-06-26 13:17:22 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'node_one.middlewares.NodeOneUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2019-06-26 13:17:22 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2019-06-26 13:17:22 [scrapy.middleware] INFO: Enabled item pipelines:
+['node_one.pipelines.scio.ScioPipeline',
+ 'node_one.pipelines.single_mongodb.SingleMongodbPipeline']
+2019-06-26 13:17:22 [scrapy.core.engine] INFO: Spider opened
+2019-06-26 13:17:22 [root] INFO: 开启mongo client spider...
+2019-06-26 13:17:22 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2019-06-26 13:17:22 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2019-06-26 13:17:22 [root] INFO: *********user-agent-middleware 中随机 User-Agent：Mozilla/4.0 (compatible; MSIE 5.5; Windows 98; Win 9x 4.90)
+2019-06-26 13:17:22 [root] INFO: *********user-agent-middleware 中随机 User-Agent：Mozilla/4.0 (compatible; MSIE 5.5; Windows 98; Win 9x 4.90)
+2019-06-26 13:17:22 [root] INFO: *********user-agent-middleware 中随机 User-Agent：Mozilla/4.0 (compatible; MSIE 5.5; Windows 98; Win 9x 4.90)
+2019-06-26 13:17:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.scio.gov.cn/xwbjs/zygy/33093/hd33096/Document/1656021/1656021.htm> (referer: None)
+2019-06-26 13:17:23 [root] INFO: 路由 routing_method url: http://www.scio.gov.cn/xwbjs/zygy/33093/hd33096/Document/1656021/1656021.htm
+2019-06-26 13:17:23 [root] INFO: >>>> scio_parse result: {'_id': 'add9cf64-97d1-11e9-b24e-54e1ad3ff9f6',
+ 'attachment': [],
+ 'audio': [],
+ 'author': ['[责任编辑：焦非', '] '],
+ 'content': ['郭卫民会见美国亚洲协会政策研究院院长陆克文（焦非 摄）\u3000\u3000'
+             '5月24日，国务院新闻办公室副主任郭卫民在京会见美国亚洲协会政策研究院院长陆克文先生一行。双方就中美关系、开展中美智库交流等话题交换了意见。\u3000\u3000'
+             '中宣部国际联络局副局长张洪斌等陪同会见。\u3000\u3000版权所有，转载请注明出处。  '],
+ 'img': ['Image/5_24%E4%BC%9A%E8%A7%81.jpg'],
+ 'page_url': 'http://www.scio.gov.cn/xwbjs/zygy/33093/hd33096/Document/1656021/1656021.htm',
+ 'sub_title_str': ['国务院新闻办公室网站\u3000www.scio.gov.cn\u3000\u3000 '
+                   '2019-05-28\u3000\u3000 来源：国新网 '],
+ 'title': ['郭卫民会见美国亚洲协会政策研究院院长陆克文'],
+ 'video': []}
+2019-06-26 13:17:23 [root] INFO: page_url:http://www.scio.gov.cn/xwbjs/zygy/33093/hd33096/Document/1656021/1656021.htm, img_urls:['http://www.scio.gov.cn/xwbjs/zygy/33093/hd33096/Document/1656021/Image/5_24会见.jpg']
+2019-06-26 13:17:23 [root] INFO: page_url:http://www.scio.gov.cn/xwbjs/zygy/33093/hd33096/Document/1656021/1656021.htm, video_urls:[]
+2019-06-26 13:17:23 [root] INFO: page_url:http://www.scio.gov.cn/xwbjs/zygy/33093/hd33096/Document/1656021/1656021.htm, audio_urls:[]
+2019-06-26 13:17:23 [root] INFO: page_url:http://www.scio.gov.cn/xwbjs/zygy/33093/hd33096/Document/1656021/1656021.htm, attachment_urls:[]
+2019-06-26 13:17:23 [root] INFO: scio pipelines 数据清洗结果：{'_id': 'add9cf64-97d1-11e9-b24e-54e1ad3ff9f6', 'page_url': 'http://www.scio.gov.cn/xwbjs/zygy/33093/hd33096/Document/1656021/1656021.htm', 'title': '郭卫民会见美国亚洲协会政策研究院院长陆克文', 'sub_title_info': '国务院新闻办公室网站 www.scio.gov.cn', 'publish_time': '2019-05-28', 'resource': '国新网', 'img': ['http://www.scio.gov.cn/xwbjs/zygy/33093/hd33096/Document/1656021/Image/5_24会见.jpg'], 'video': [], 'audio': [], 'attachment': [], 'author': ['焦非'], 'content': '郭卫民会见美国亚洲协会政策研究院院长陆克文（焦非 摄）  5月24日，国务院新闻办公室副主任郭卫民在京会见美国亚洲协会政策研究院院长陆克文先生一行。双方就中美关系、开展中美智库交流等话题交换了意见。  中宣部国际联络局副局长张洪斌等陪同会见。  版权所有，转载请注明出处。'}
+2019-06-26 13:17:23 [root] INFO: >>>>>>开始操作mongodb！
+2019-06-26 13:17:23 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.scio.gov.cn/xwbjs/zygy/33093/hd33096/Document/1656021/1656021.htm>
+{'_id': 'add9cf64-97d1-11e9-b24e-54e1ad3ff9f6', 'page_url': 'http://www.scio.gov.cn/xwbjs/zygy/33093/hd33096/Document/1656021/1656021.htm', 'title': '郭卫民会见美国亚洲协会政策研究院院长陆克文', 'sub_title_info': '国务院新闻办公室网站 www.scio.gov.cn', 'publish_time': '2019-05-28', 'resource': '国新网', 'img': ['http://www.scio.gov.cn/xwbjs/zygy/33093/hd33096/Document/1656021/Image/5_24会见.jpg'], 'video': [], 'audio': [], 'attachment': [], 'author': ['焦非'], 'content': '郭卫民会见美国亚洲协会政策研究院院长陆克文（焦非 摄）  5月24日，国务院新闻办公室副主任郭卫民在京会见美国亚洲协会政策研究院院长陆克文先生一行。双方就中美关系、开展中美智库交流等话题交换了意见。  中宣部国际联络局副局长张洪斌等陪同会见。  版权所有，转载请注明出处。'}
+2019-06-26 13:17:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.scio.gov.cn/37234/Document/1656126/1656126.htm> (referer: None)
+2019-06-26 13:17:25 [root] INFO: 路由 routing_method url: http://www.scio.gov.cn/37234/Document/1656126/1656126.htm
+2019-06-26 13:17:25 [root] INFO: >>>> scio_parse result: {'_id': 'af076efe-97d1-11e9-b189-54e1ad3ff9f6',
+ 'attachment': [],
+ 'audio': [],
+ 'author': ['[责任编辑：焦非', '] '],
+ 'content': ['中俄合拍大型系列纪录片《这里是中国》第二季开播仪式在驻俄罗斯使馆举行\u3000\u3000'
+             '2019年6月3日，由北京中视雅韵文化传播中心与俄罗斯RT电视台联合拍摄的大型系列纪录片《这里是中国》第二季开播仪式在中国驻俄使馆隆重举行。中共中央宣传部常务副部长王晓晖、俄总统办公厅第一副主任格罗莫夫、李辉大使、俄RT电视台总编辑西蒙尼扬、北京中视雅韵文化传播中心总裁陈波亚出席活动并致辞。俄总统办公厅公关局局长斯米尔诺夫、俄塔斯社社长米哈伊洛夫、《俄罗斯报》社长涅戈伊察、RT电视台台长尼科洛夫，以及俄总统公关局、政府新闻局、外交部新闻局和中俄两国新闻媒体代表约150人出席了活动。王晓晖常务副部长致辞\u3000\u3000'
+             '王晓晖常务副部长在致辞中表示，今年是中华人民共和国成立70周年，也是中俄建交70周年。进入新时代，在两国元首的亲自引领下，中俄关系大踏步向前迈进，政治互信、经贸合作、人文交流齐头并进。中俄联袂打造大型系列纪录片《这里是中国》，是双方媒体积极响应两国元首号召、深化交流合作的实际行动。该片第一季于2017年在两国播出后产生强烈反响，成为“中俄媒体交流年”的标志性成果。在习近平主席即将对俄进行国事访问之际，在此举办《这里是中国》第二季开播式、第三季签约式和主题图片展开幕式，这对于进一步增进两国人民相互了解和友谊、推动中俄媒体和人文领域交流合作具有重要意义。格罗莫夫第一副主任致辞\u3000\u3000'
+             '格罗莫夫第一副主任在致辞中表示，今年是俄中关系发展历程中非常重要的一年，两国将以建交70周年为契机，举办一系列庆祝活动。当前，俄中关系达到前所未有的历史高度，两国媒体开展了全方位、多渠道的交流与合作，取得的成绩有目共睹。《这里是中国》是“俄中媒体交流年”框架下一个非常成功的项目，衷心感谢付出辛勤劳动和智慧的两国新闻媒体和记者。习近平主席即将对俄进行国事访问，期待在两国元首的战略引领下，俄中关系能够得到进一步的大发展，两国媒体合作达到更具内涵的新水平。李辉大使致辞\u3000\u3000'
+             '李辉大使在致辞中表示，再过两天，习近平主席将应普京总统邀请对俄进行国事访问，这在中俄建交70周年的大背景下具有重要意义，必将为新时代中俄关系注入新的强劲动力。走过70年风雨历程的中俄关系历久弥坚，双方将以此访为契机，回顾历史、展望未来。中俄双方在2016年和2017年成功举办了“媒体交流年”，这是两国元首从中俄关系发展大局出发做出的战略决策。在这一“主题年”框架内，中俄媒体的交流与合作取得了实质性进展。纪录片《这里是中国》的拍摄和播出就是例证之一。希望双方媒体进一步加强合作，为推动中俄关系发展和深化两国务实合作贡献力量，并预祝《这里是中国》第二季首播再创佳绩。西蒙尼扬总编辑致辞\u3000\u3000'
+             '西蒙尼扬总编辑在致辞中表示，两国媒体有着强烈的合作意愿，开展了一系列活动。特别是RT电视台正与中方合作伙伴联合打造多个项目。相信在两国政治互信不断加强的背景下，RT电视台与中方合作伙伴的佳作会更多，合作的领域会更广。陈波亚总裁表示，《这里是中国》自筹拍以来，两国媒体就展开了积极有效的合作，共同策划、紧密协作。双方将再接再厉，进一步拓展选题空间，扩大传播效果，共同为世界带来更多更精彩的中国故事。\u3000\u3000'
+             '活动期间，王晓晖常务副部长、北京工美集团代表甘学荣分别向俄、中双方赠送了中俄建交70周年纪念礼。王晓晖常务副部长、格罗莫夫第一副主任、李辉大使、西蒙尼扬总编辑、陈波亚总裁、尼科洛夫台长、何渊董事长共同为大型系列纪录片《这里是中国》第二季开播仪式剪彩，并见证了该片第三季合作协议文本的交换。现场还展出了该纪录片的精选图片，播放了精彩片段。活动开始前，李辉大使陪同王晓晖常务副部长会见了格罗莫夫第一副主任。\u3000\u3000'
+             '活动期间，李辉大使还就习近平主席访俄、中俄关系、两国务实合作、“一带一路”等接受了中俄媒体采访。  '],
+ 'img': ['Image/W020190604341258102753.jpg',
+         'Image/W020190604341258141409.jpg',
+         'Image/W020190604341258173909.jpg',
+         'Image/W020190604341258206956.jpg'],
+ 'page_url': 'http://www.scio.gov.cn/37234/Document/1656126/1656126.htm',
+ 'sub_title_str': ['国务院新闻办公室网站\u3000www.scio.gov.cn\u3000\u3000 '
+                   '2019-06-04\u3000\u3000 来源：中国驻俄罗斯大使馆 '],
+ 'title': ['中俄合拍大型系列纪录片《这里是中国》第二季开播仪式举行'],
+ 'video': []}
+2019-06-26 13:17:25 [root] INFO: page_url:http://www.scio.gov.cn/37234/Document/1656126/1656126.htm, img_urls:['http://www.scio.gov.cn/37234/Document/1656126/Image/W020190604341258102753.jpg', 'http://www.scio.gov.cn/37234/Document/1656126/Image/W020190604341258141409.jpg', 'http://www.scio.gov.cn/37234/Document/1656126/Image/W020190604341258173909.jpg', 'http://www.scio.gov.cn/37234/Document/1656126/Image/W020190604341258206956.jpg']
+2019-06-26 13:17:25 [root] INFO: page_url:http://www.scio.gov.cn/37234/Document/1656126/1656126.htm, video_urls:[]
+2019-06-26 13:17:25 [root] INFO: page_url:http://www.scio.gov.cn/37234/Document/1656126/1656126.htm, audio_urls:[]
+2019-06-26 13:17:25 [root] INFO: page_url:http://www.scio.gov.cn/37234/Document/1656126/1656126.htm, attachment_urls:[]
+2019-06-26 13:17:25 [root] INFO: scio pipelines 数据清洗结果：{'_id': 'af076efe-97d1-11e9-b189-54e1ad3ff9f6', 'page_url': 'http://www.scio.gov.cn/37234/Document/1656126/1656126.htm', 'title': '中俄合拍大型系列纪录片《这里是中国》第二季开播仪式举行', 'sub_title_info': '国务院新闻办公室网站 www.scio.gov.cn', 'publish_time': '2019-06-04', 'resource': '中国驻俄罗斯大使馆', 'img': ['http://www.scio.gov.cn/37234/Document/1656126/Image/W020190604341258102753.jpg', 'http://www.scio.gov.cn/37234/Document/1656126/Image/W020190604341258141409.jpg', 'http://www.scio.gov.cn/37234/Document/1656126/Image/W020190604341258173909.jpg', 'http://www.scio.gov.cn/37234/Document/1656126/Image/W020190604341258206956.jpg'], 'video': [], 'audio': [], 'attachment': [], 'author': ['焦非'], 'content': '中俄合拍大型系列纪录片《这里是中国》第二季开播仪式在驻俄罗斯使馆举行  2019年6月3日，由北京中视雅韵文化传播中心与俄罗斯RT电视台联合拍摄的大型系列纪录片《这里是中国》第二季开播仪式在中国驻俄使馆隆重举行。中共中央宣传部常务副部长王晓晖、俄总统办公厅第一副主任格罗莫夫、李辉大使、俄RT电视台总编辑西蒙尼扬、北京中视雅韵文化传播中心总裁陈波亚出席活动并致辞。俄总统办公厅公关局局长斯米尔诺夫、俄塔斯社社长米哈伊洛夫、《俄罗斯报》社长涅戈伊察、RT电视台台长尼科洛夫，以及俄总统公关局、政府新闻局、外交部新闻局和中俄两国新闻媒体代表约150人出席了活动。王晓晖常务副部长致辞  王晓晖常务副部长在致辞中表示，今年是中华人民共和国成立70周年，也是中俄建交70周年。进入新时代，在两国元首的亲自引领下，中俄关系大踏步向前迈进，政治互信、经贸合作、人文交流齐头并进。中俄联袂打造大型系列纪录片《这里是中国》，是双方媒体积极响应两国元首号召、深化交流合作的实际行动。该片第一季于2017年在两国播出后产生强烈反响，成为“中俄媒体交流年”的标志性成果。在习近平主席即将对俄进行国事访问之际，在此举办《这里是中国》第二季开播式、第三季签约式和主题图片展开幕式，这对于进一步增进两国人民相互了解和友谊、推动中俄媒体和人文领域交流合作具有重要意义。格罗莫夫第一副主任致辞  格罗莫夫第一副主任在致辞中表示，今年是俄中关系发展历程中非常重要的一年，两国将以建交70周年为契机，举办一系列庆祝活动。当前，俄中关系达到前所未有的历史高度，两国媒体开展了全方位、多渠道的交流与合作，取得的成绩有目共睹。《这里是中国》是“俄中媒体交流年”框架下一个非常成功的项目，衷心感谢付出辛勤劳动和智慧的两国新闻媒体和记者。习近平主席即将对俄进行国事访问，期待在两国元首的战略引领下，俄中关系能够得到进一步的大发展，两国媒体合作达到更具内涵的新水平。李辉大使致辞  李辉大使在致辞中表示，再过两天，习近平主席将应普京总统邀请对俄进行国事访问，这在中俄建交70周年的大背景下具有重要意义，必将为新时代中俄关系注入新的强劲动力。走过70年风雨历程的中俄关系历久弥坚，双方将以此访为契机，回顾历史、展望未来。中俄双方在2016年和2017年成功举办了“媒体交流年”，这是两国元首从中俄关系发展大局出发做出的战略决策。在这一“主题年”框架内，中俄媒体的交流与合作取得了实质性进展。纪录片《这里是中国》的拍摄和播出就是例证之一。希望双方媒体进一步加强合作，为推动中俄关系发展和深化两国务实合作贡献力量，并预祝《这里是中国》第二季首播再创佳绩。西蒙尼扬总编辑致辞  西蒙尼扬总编辑在致辞中表示，两国媒体有着强烈的合作意愿，开展了一系列活动。特别是RT电视台正与中方合作伙伴联合打造多个项目。相信在两国政治互信不断加强的背景下，RT电视台与中方合作伙伴的佳作会更多，合作的领域会更广。陈波亚总裁表示，《这里是中国》自筹拍以来，两国媒体就展开了积极有效的合作，共同策划、紧密协作。双方将再接再厉，进一步拓展选题空间，扩大传播效果，共同为世界带来更多更精彩的中国故事。  活动期间，王晓晖常务副部长、北京工美集团代表甘学荣分别向俄、中双方赠送了中俄建交70周年纪念礼。王晓晖常务副部长、格罗莫夫第一副主任、李辉大使、西蒙尼扬总编辑、陈波亚总裁、尼科洛夫台长、何渊董事长共同为大型系列纪录片《这里是中国》第二季开播仪式剪彩，并见证了该片第三季合作协议文本的交换。现场还展出了该纪录片的精选图片，播放了精彩片段。活动开始前，李辉大使陪同王晓晖常务副部长会见了格罗莫夫第一副主任。  活动期间，李辉大使还就习近平主席访俄、中俄关系、两国务实合作、“一带一路”等接受了中俄媒体采访。'}
+2019-06-26 13:17:25 [root] INFO: >>>>>>开始操作mongodb！
+2019-06-26 13:17:25 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.scio.gov.cn/37234/Document/1656126/1656126.htm>
+{'_id': 'af076efe-97d1-11e9-b189-54e1ad3ff9f6', 'page_url': 'http://www.scio.gov.cn/37234/Document/1656126/1656126.htm', 'title': '中俄合拍大型系列纪录片《这里是中国》第二季开播仪式举行', 'sub_title_info': '国务院新闻办公室网站 www.scio.gov.cn', 'publish_time': '2019-06-04', 'resource': '中国驻俄罗斯大使馆', 'img': ['http://www.scio.gov.cn/37234/Document/1656126/Image/W020190604341258102753.jpg', 'http://www.scio.gov.cn/37234/Document/1656126/Image/W020190604341258141409.jpg', 'http://www.scio.gov.cn/37234/Document/1656126/Image/W020190604341258173909.jpg', 'http://www.scio.gov.cn/37234/Document/1656126/Image/W020190604341258206956.jpg'], 'video': [], 'audio': [], 'attachment': [], 'author': ['焦非'], 'content': '中俄合拍大型系列纪录片《这里是中国》第二季开播仪式在驻俄罗斯使馆举行  2019年6月3日，由北京中视雅韵文化传播中心与俄罗斯RT电视台联合拍摄的大型系列纪录片《这里是中国》第二季开播仪式在中国驻俄使馆隆重举行。中共中央宣传部常务副部长王晓晖、俄总统办公厅第一副主任格罗莫夫、李辉大使、俄RT电视台总编辑西蒙尼扬、北京中视雅韵文化传播中心总裁陈波亚出席活动并致辞。俄总统办公厅公关局局长斯米尔诺夫、俄塔斯社社长米哈伊洛夫、《俄罗斯报》社长涅戈伊察、RT电视台台长尼科洛夫，以及俄总统公关局、政府新闻局、外交部新闻局和中俄两国新闻媒体代表约150人出席了活动。王晓晖常务副部长致辞  王晓晖常务副部长在致辞中表示，今年是中华人民共和国成立70周年，也是中俄建交70周年。进入新时代，在两国元首的亲自引领下，中俄关系大踏步向前迈进，政治互信、经贸合作、人文交流齐头并进。中俄联袂打造大型系列纪录片《这里是中国》，是双方媒体积极响应两国元首号召、深化交流合作的实际行动。该片第一季于2017年在两国播出后产生强烈反响，成为“中俄媒体交流年”的标志性成果。在习近平主席即将对俄进行国事访问之际，在此举办《这里是中国》第二季开播式、第三季签约式和主题图片展开幕式，这对于进一步增进两国人民相互了解和友谊、推动中俄媒体和人文领域交流合作具有重要意义。格罗莫夫第一副主任致辞  格罗莫夫第一副主任在致辞中表示，今年是俄中关系发展历程中非常重要的一年，两国将以建交70周年为契机，举办一系列庆祝活动。当前，俄中关系达到前所未有的历史高度，两国媒体开展了全方位、多渠道的交流与合作，取得的成绩有目共睹。《这里是中国》是“俄中媒体交流年”框架下一个非常成功的项目，衷心感谢付出辛勤劳动和智慧的两国新闻媒体和记者。习近平主席即将对俄进行国事访问，期待在两国元首的战略引领下，俄中关系能够得到进一步的大发展，两国媒体合作达到更具内涵的新水平。李辉大使致辞  李辉大使在致辞中表示，再过两天，习近平主席将应普京总统邀请对俄进行国事访问，这在中俄建交70周年的大背景下具有重要意义，必将为新时代中俄关系注入新的强劲动力。走过70年风雨历程的中俄关系历久弥坚，双方将以此访为契机，回顾历史、展望未来。中俄双方在2016年和2017年成功举办了“媒体交流年”，这是两国元首从中俄关系发展大局出发做出的战略决策。在这一“主题年”框架内，中俄媒体的交流与合作取得了实质性进展。纪录片《这里是中国》的拍摄和播出就是例证之一。希望双方媒体进一步加强合作，为推动中俄关系发展和深化两国务实合作贡献力量，并预祝《这里是中国》第二季首播再创佳绩。西蒙尼扬总编辑致辞  西蒙尼扬总编辑在致辞中表示，两国媒体有着强烈的合作意愿，开展了一系列活动。特别是RT电视台正与中方合作伙伴联合打造多个项目。相信在两国政治互信不断加强的背景下，RT电视台与中方合作伙伴的佳作会更多，合作的领域会更广。陈波亚总裁表示，《这里是中国》自筹拍以来，两国媒体就展开了积极有效的合作，共同策划、紧密协作。双方将再接再厉，进一步拓展选题空间，扩大传播效果，共同为世界带来更多更精彩的中国故事。  活动期间，王晓晖常务副部长、北京工美集团代表甘学荣分别向俄、中双方赠送了中俄建交70周年纪念礼。王晓晖常务副部长、格罗莫夫第一副主任、李辉大使、西蒙尼扬总编辑、陈波亚总裁、尼科洛夫台长、何渊董事长共同为大型系列纪录片《这里是中国》第二季开播仪式剪彩，并见证了该片第三季合作协议文本的交换。现场还展出了该纪录片的精选图片，播放了精彩片段。活动开始前，李辉大使陪同王晓晖常务副部长会见了格罗莫夫第一副主任。  活动期间，李辉大使还就习近平主席访俄、中俄关系、两国务实合作、“一带一路”等接受了中俄媒体采访。'}
+2019-06-26 13:17:28 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.scio.gov.cn/xwbjs/zygy/32310/hd32313/Document/1656303/1656303.htm> (referer: None)
+2019-06-26 13:17:29 [root] INFO: 路由 routing_method url: http://www.scio.gov.cn/xwbjs/zygy/32310/hd32313/Document/1656303/1656303.htm
+2019-06-26 13:17:29 [root] INFO: >>>> scio_parse result: {'_id': 'b15a27da-97d1-11e9-91f5-54e1ad3ff9f6',
+ 'attachment': [],
+ 'audio': [],
+ 'author': ['[责任编辑：焦非', '] '],
+ 'content': ['蒋建国会见伊拉克新闻集团主席法德勒·法拉吉拉。（焦非 摄）蒋建国与伊拉克新闻集团主席法德勒·法拉吉拉一行合影。（焦非 '
+             '摄）\u3000\u3000'
+             '6月5日，中宣部副部长蒋建国在京会见伊拉克新闻集团主席法德勒·法拉吉拉先生一行，双方就加强中伊两国媒体交流合作等话题展开了深入探讨。\u3000\u3000'
+             '中宣部国际联络局副局长马佳等陪同会见。\u3000\u3000版权所有，转载请注明出处。  '],
+ 'img': ['Image/1.jpg', 'Image/2.jpg'],
+ 'page_url': 'http://www.scio.gov.cn/xwbjs/zygy/32310/hd32313/Document/1656303/1656303.htm',
+ 'sub_title_str': ['国务院新闻办公室网站\u3000www.scio.gov.cn\u3000\u3000 '
+                   '2019-06-06\u3000\u3000 来源：国新网 '],
+ 'title': ['蒋建国会见伊拉克新闻集团主席法德勒·法拉吉拉'],
+ 'video': []}
+2019-06-26 13:17:29 [root] INFO: page_url:http://www.scio.gov.cn/xwbjs/zygy/32310/hd32313/Document/1656303/1656303.htm, img_urls:['http://www.scio.gov.cn/xwbjs/zygy/32310/hd32313/Document/1656303/Image/1.jpg', 'http://www.scio.gov.cn/xwbjs/zygy/32310/hd32313/Document/1656303/Image/2.jpg']
+2019-06-26 13:17:29 [root] INFO: page_url:http://www.scio.gov.cn/xwbjs/zygy/32310/hd32313/Document/1656303/1656303.htm, video_urls:[]
+2019-06-26 13:17:29 [root] INFO: page_url:http://www.scio.gov.cn/xwbjs/zygy/32310/hd32313/Document/1656303/1656303.htm, audio_urls:[]
+2019-06-26 13:17:29 [root] INFO: page_url:http://www.scio.gov.cn/xwbjs/zygy/32310/hd32313/Document/1656303/1656303.htm, attachment_urls:[]
+2019-06-26 13:17:29 [root] INFO: scio pipelines 数据清洗结果：{'_id': 'b15a27da-97d1-11e9-91f5-54e1ad3ff9f6', 'page_url': 'http://www.scio.gov.cn/xwbjs/zygy/32310/hd32313/Document/1656303/1656303.htm', 'title': '蒋建国会见伊拉克新闻集团主席法德勒·法拉吉拉', 'sub_title_info': '国务院新闻办公室网站 www.scio.gov.cn', 'publish_time': '2019-06-06', 'resource': '国新网', 'img': ['http://www.scio.gov.cn/xwbjs/zygy/32310/hd32313/Document/1656303/Image/1.jpg', 'http://www.scio.gov.cn/xwbjs/zygy/32310/hd32313/Document/1656303/Image/2.jpg'], 'video': [], 'audio': [], 'attachment': [], 'author': ['焦非'], 'content': '蒋建国会见伊拉克新闻集团主席法德勒·法拉吉拉。（焦非 摄）蒋建国与伊拉克新闻集团主席法德勒·法拉吉拉一行合影。（焦非 摄）  6月5日，中宣部副部长蒋建国在京会见伊拉克新闻集团主席法德勒·法拉吉拉先生一行，双方就加强中伊两国媒体交流合作等话题展开了深入探讨。  中宣部国际联络局副局长马佳等陪同会见。  版权所有，转载请注明出处。'}
+2019-06-26 13:17:29 [root] INFO: >>>>>>开始操作mongodb！
+2019-06-26 13:17:29 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.scio.gov.cn/xwbjs/zygy/32310/hd32313/Document/1656303/1656303.htm>
+{'_id': 'b15a27da-97d1-11e9-91f5-54e1ad3ff9f6', 'page_url': 'http://www.scio.gov.cn/xwbjs/zygy/32310/hd32313/Document/1656303/1656303.htm', 'title': '蒋建国会见伊拉克新闻集团主席法德勒·法拉吉拉', 'sub_title_info': '国务院新闻办公室网站 www.scio.gov.cn', 'publish_time': '2019-06-06', 'resource': '国新网', 'img': ['http://www.scio.gov.cn/xwbjs/zygy/32310/hd32313/Document/1656303/Image/1.jpg', 'http://www.scio.gov.cn/xwbjs/zygy/32310/hd32313/Document/1656303/Image/2.jpg'], 'video': [], 'audio': [], 'attachment': [], 'author': ['焦非'], 'content': '蒋建国会见伊拉克新闻集团主席法德勒·法拉吉拉。（焦非 摄）蒋建国与伊拉克新闻集团主席法德勒·法拉吉拉一行合影。（焦非 摄）  6月5日，中宣部副部长蒋建国在京会见伊拉克新闻集团主席法德勒·法拉吉拉先生一行，双方就加强中伊两国媒体交流合作等话题展开了深入探讨。  中宣部国际联络局副局长马佳等陪同会见。  版权所有，转载请注明出处。'}
+2019-06-26 13:17:29 [scrapy.core.engine] INFO: Closing spider (finished)
+2019-06-26 13:17:29 [root] INFO: 关闭mongo client spider...
+2019-06-26 13:17:29 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 980,
+ 'downloader/request_count': 3,
+ 'downloader/request_method_count/GET': 3,
+ 'downloader/response_bytes': 44244,
+ 'downloader/response_count': 3,
+ 'downloader/response_status_count/200': 3,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2019, 6, 26, 5, 17, 29, 125443),
+ 'item_scraped_count': 3,
+ 'log_count/DEBUG': 6,
+ 'log_count/INFO': 38,
+ 'response_received_count': 3,
+ 'scheduler/dequeued': 3,
+ 'scheduler/dequeued/memory': 3,
+ 'scheduler/enqueued': 3,
+ 'scheduler/enqueued/memory': 3,
+ 'start_time': datetime.datetime(2019, 6, 26, 5, 17, 22, 798361)}
+2019-06-26 13:17:29 [scrapy.core.engine] INFO: Spider closed (finished)
+2019-06-26 13:19:29 [scrapy.utils.log] INFO: Scrapy 1.6.0 started (bot: node_one)
+2019-06-26 13:19:29 [scrapy.utils.log] INFO: Versions: lxml 4.3.4.0, libxml2 2.9.5, cssselect 1.0.3, parsel 1.5.1, w3lib 1.20.0, Twisted 19.2.1, Python 3.6.6 (v3.6.6:4cf1f54eb7, Jun 27 2018, 03:37:03) [MSC v.1900 64 bit (AMD64)], pyOpenSSL 19.0.0 (OpenSSL 1.1.1c  28 May 2019), cryptography 2.7, Platform Windows-10-10.0.17134-SP0
+2019-06-26 13:19:29 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'node_one', 'CONCURRENT_REQUESTS': 32, 'COOKIES_ENABLED': False, 'DOWNLOAD_DELAY': 3, 'LOG_ENABLED': False, 'LOG_FILE': 'logs/scrapy.log', 'NEWSPIDER_MODULE': 'node_one.spiders', 'SPIDER_MODULES': ['node_one.spiders'], 'USER_AGENT': 'Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; Trident/4.0; SV1; QQDownload 732; .NET4.0C; .NET4.0E; 360SE)'}
+2019-06-26 13:19:29 [scrapy.extensions.telnet] INFO: Telnet Password: c0269c2107c2bdb8
+2019-06-26 13:19:29 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2019-06-26 13:19:29 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'node_one.middlewares.NodeOneUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2019-06-26 13:19:29 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2019-06-26 13:19:30 [scrapy.middleware] INFO: Enabled item pipelines:
+['node_one.pipelines.scio.ScioPipeline',
+ 'node_one.pipelines.single_mongodb.SingleMongodbPipeline']
+2019-06-26 13:19:30 [scrapy.core.engine] INFO: Spider opened
+2019-06-26 13:19:30 [root] INFO: 开启mongo client spider...
+2019-06-26 13:19:30 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2019-06-26 13:19:30 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2019-06-26 13:19:30 [root] INFO: *********user-agent-middleware 中随机 User-Agent：Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; Trident/4.0; SV1; QQDownload 732; .NET4.0C; .NET4.0E; 360SE)
+2019-06-26 13:19:30 [root] INFO: *********user-agent-middleware 中随机 User-Agent：Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; Trident/4.0; SV1; QQDownload 732; .NET4.0C; .NET4.0E; 360SE)
+2019-06-26 13:19:30 [root] INFO: *********user-agent-middleware 中随机 User-Agent：Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; Trident/4.0; SV1; QQDownload 732; .NET4.0C; .NET4.0E; 360SE)
+2019-06-26 13:19:30 [root] INFO: *********user-agent-middleware 中随机 User-Agent：Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; Trident/4.0; SV1; QQDownload 732; .NET4.0C; .NET4.0E; 360SE)
+2019-06-26 13:19:30 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.scio.gov.cn/37236/37377/Document/1650050/1650050.htm> (referer: None)
+2019-06-26 13:19:30 [root] INFO: 路由 routing_method url: http://www.scio.gov.cn/37236/37377/Document/1650050/1650050.htm
+2019-06-26 13:19:30 [root] INFO: >>>> scio_parse result: {'_id': 'f9c8374c-97d1-11e9-b103-54e1ad3ff9f6',
+ 'attachment': ['Image/201903201650050_336198.xls',
+                'Image/201903201650050_336199.doc'],
+ 'audio': [],
+ 'author': ['[责任编辑：焦非', '] '],
+ 'content': ['\u3000\u3000'
+             '根据工作需要和有关规定，中央宣传部直属单位2019年度拟公开招聘应届高校毕业生，具体事项如下。\u3000\u3000'
+             '一、基本条件\u3000\u30001、具有中华人民共和国国籍；\u3000\u3000'
+             '2、在思想上政治上行动上同以习近平同志为核心的党中央保持高度一致，热爱宣传思想文化事业；\u3000\u3000'
+             '3、践行社会主义核心价值观，遵纪守法，诚实守信，品行端正；\u3000\u3000'
+             '4、岗位所需的专业或技能条件；\u3000\u30005、适应岗位要求的身体条件；\u3000\u3000'
+             '6、全日制大学本科及以上学历，年龄在35周岁以下（1984年7月以后出生）；\u3000\u3000'
+             '7、岗位所需要的其他条件。\u3000\u3000二、招聘职位（见附表）\u3000\u3000'
+             '三、招聘程序\u3000\u3000'
+             '1、报名。有意报考者请访问中国文明网，并于2019年3月19日至3月28日下午5点期间，按要求填写《中宣部直属单位2019年度公开招聘应届高校毕业生报名表》后提交到报名邮箱（zxbkl@wenming.cn）。\u3000\u3000'
+             '2、资格审查。对报名人员进行资格审查，在符合条件的人员中择优确定参加笔试人员。笔试开考比例不低于1:5。\u3000\u3000'
+             '3、笔试。参加笔试人员名单及笔试安排将于2019年4月上旬在中国文明网公布，请及时关注。笔试地点在北京。\u3000\u3000'
+             '4、面试。按照笔试成绩高低确定各岗位参加面试人员。\u3000\u3000'
+             '5、体检。组织到相关医院体检，体检费用由中宣部承担。\u3000\u3000'
+             '6、考察。到考生所在学校进行考察。\u3000\u30007、公示。拟聘用人员名单在中国文明网公示7天。\u3000\u3000'
+             '8、经公示无异议的，签订聘用合同，试用期满考核合格者正式聘用，最低服务期限为5年。\u3000\u3000'
+             '四、注意事项\u3000\u30001、本次公开招聘每位考生只能报考1个岗位，可选择是否服从调剂。\u3000\u3000'
+             '2、为方便归类，考生报名邮件及报名表名称请务必标为职位代码＋用人单位＋姓名，否则不予筛选。\u3000\u3000'
+             '3、报名时请按要求填写手机号码和固定电话，并保持通讯工具畅通。笔试、面试等有关信息将及时发布在中国文明网，请考生随时关注。符合条件人员较少的岗位，将取消或减少名额。\u3000\u3000'
+             '4、进入面试的考生，需提供有关证书、发表文章等材料复印件。\u3000\u3000'
+             '5、全国高校全日制统招统分应届毕业生，应在2019年7月底前取得相应专业的大学本科以上学历及学士以上学位。\u3000\u3000'
+             '6、京内生源为具有北京市常住人口户籍、不需进京落户的毕业生。京外生源毕业生试用期满考核合格后可办理进京落户手续。留学回国人员（含赴香港、澳门学习人员）须符合教育部留学服务中心关于留学回国人员就业报到及落户政策要求。\u3000\u3000'
+             '7、专业参考目录为教育部《普通高等学校本科专业目录》。\u3000\u3000'
+             '8、学习出版社、五洲传播出版社、中国新闻出版传媒集团有限公司、中国电影集团公司、中国电影股份有限公司、华夏电影发行有限责任公司为企业，其他单位为事业单位。\u3000\u3000'
+             '9、公开招聘工作联系电话：010-63097401（工作日期间）。\u3000\u3000五、有关纪律要求\u3000\u3000'
+             '根据《事业单位公开招聘违纪违规行为处理决定》等规定，考生报名信息请务必认真完整填写，确保真实准确。如有弄虚作假或关键信息有隐瞒行为，一经查实立即取消后续资格。中央宣传部干部局2019年3月19日 '
+             '文档附件中宣部直属单位2019年度公开招聘应届高校毕业生职位信息表中宣部直属单位2019年度公开招聘应届高校毕业生报名表 '],
+ 'img': [],
+ 'page_url': 'http://www.scio.gov.cn/37236/37377/Document/1650050/1650050.htm',
+ 'sub_title_str': ['国务院新闻办公室网站\u3000www.scio.gov.cn\u3000\u3000 '
+                   '2019-03-20\u3000\u3000 来源：中国文明网 '],
+ 'title': ['中央宣传部直属单位2019年度公开招聘应届高校毕业生公告'],
+ 'video': []}
+2019-06-26 13:19:30 [root] INFO: page_url:http://www.scio.gov.cn/37236/37377/Document/1650050/1650050.htm, img_urls:[]
+2019-06-26 13:19:30 [root] INFO: page_url:http://www.scio.gov.cn/37236/37377/Document/1650050/1650050.htm, video_urls:[]
+2019-06-26 13:19:30 [root] INFO: page_url:http://www.scio.gov.cn/37236/37377/Document/1650050/1650050.htm, audio_urls:[]
+2019-06-26 13:19:30 [root] INFO: page_url:http://www.scio.gov.cn/37236/37377/Document/1650050/1650050.htm, attachment_urls:['http://www.scio.gov.cn/37236/37377/Document/1650050/Image/201903201650050_336198.xls', 'http://www.scio.gov.cn/37236/37377/Document/1650050/Image/201903201650050_336199.doc']
+2019-06-26 13:19:30 [root] INFO: scio pipelines 数据清洗结果：{'_id': 'f9c8374c-97d1-11e9-b103-54e1ad3ff9f6', 'page_url': 'http://www.scio.gov.cn/37236/37377/Document/1650050/1650050.htm', 'title': '中央宣传部直属单位2019年度公开招聘应届高校毕业生公告', 'sub_title_info': '国务院新闻办公室网站 www.scio.gov.cn', 'publish_time': '2019-03-20', 'resource': '中国文明网', 'img': [], 'video': [], 'audio': [], 'attachment': ['http://www.scio.gov.cn/37236/37377/Document/1650050/Image/201903201650050_336198.xls', 'http://www.scio.gov.cn/37236/37377/Document/1650050/Image/201903201650050_336199.doc'], 'author': ['焦非'], 'content': '根据工作需要和有关规定，中央宣传部直属单位2019年度拟公开招聘应届高校毕业生，具体事项如下。  一、基本条件  1、具有中华人民共和国国籍；  2、在思想上政治上行动上同以习近平同志为核心的党中央保持高度一致，热爱宣传思想文化事业；  3、践行社会主义核心价值观，遵纪守法，诚实守信，品行端正；  4、岗位所需的专业或技能条件；  5、适应岗位要求的身体条件；  6、全日制大学本科及以上学历，年龄在35周岁以下（1984年7月以后出生）；  7、岗位所需要的其他条件。  二、招聘职位（见附表）  三、招聘程序  1、报名。有意报考者请访问中国文明网，并于2019年3月19日至3月28日下午5点期间，按要求填写《中宣部直属单位2019年度公开招聘应届高校毕业生报名表》后提交到报名邮箱（zxbkl@wenming.cn）。  2、资格审查。对报名人员进行资格审查，在符合条件的人员中择优确定参加笔试人员。笔试开考比例不低于1:5。  3、笔试。参加笔试人员名单及笔试安排将于2019年4月上旬在中国文明网公布，请及时关注。笔试地点在北京。  4、面试。按照笔试成绩高低确定各岗位参加面试人员。  5、体检。组织到相关医院体检，体检费用由中宣部承担。  6、考察。到考生所在学校进行考察。  7、公示。拟聘用人员名单在中国文明网公示7天。  8、经公示无异议的，签订聘用合同，试用期满考核合格者正式聘用，最低服务期限为5年。  四、注意事项  1、本次公开招聘每位考生只能报考1个岗位，可选择是否服从调剂。  2、为方便归类，考生报名邮件及报名表名称请务必标为职位代码＋用人单位＋姓名，否则不予筛选。  3、报名时请按要求填写手机号码和固定电话，并保持通讯工具畅通。笔试、面试等有关信息将及时发布在中国文明网，请考生随时关注。符合条件人员较少的岗位，将取消或减少名额。  4、进入面试的考生，需提供有关证书、发表文章等材料复印件。  5、全国高校全日制统招统分应届毕业生，应在2019年7月底前取得相应专业的大学本科以上学历及学士以上学位。  6、京内生源为具有北京市常住人口户籍、不需进京落户的毕业生。京外生源毕业生试用期满考核合格后可办理进京落户手续。留学回国人员（含赴香港、澳门学习人员）须符合教育部留学服务中心关于留学回国人员就业报到及落户政策要求。  7、专业参考目录为教育部《普通高等学校本科专业目录》。  8、学习出版社、五洲传播出版社、中国新闻出版传媒集团有限公司、中国电影集团公司、中国电影股份有限公司、华夏电影发行有限责任公司为企业，其他单位为事业单位。  9、公开招聘工作联系电话：010-63097401（工作日期间）。  五、有关纪律要求  根据《事业单位公开招聘违纪违规行为处理决定》等规定，考生报名信息请务必认真完整填写，确保真实准确。如有弄虚作假或关键信息有隐瞒行为，一经查实立即取消后续资格。中央宣传部干部局2019年3月19日 文档附件中宣部直属单位2019年度公开招聘应届高校毕业生职位信息表中宣部直属单位2019年度公开招聘应届高校毕业生报名表'}
+2019-06-26 13:19:30 [root] INFO: >>>>>>开始操作mongodb！
+2019-06-26 13:19:30 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.scio.gov.cn/37236/37377/Document/1650050/1650050.htm>
+{'_id': 'f9c8374c-97d1-11e9-b103-54e1ad3ff9f6', 'page_url': 'http://www.scio.gov.cn/37236/37377/Document/1650050/1650050.htm', 'title': '中央宣传部直属单位2019年度公开招聘应届高校毕业生公告', 'sub_title_info': '国务院新闻办公室网站 www.scio.gov.cn', 'publish_time': '2019-03-20', 'resource': '中国文明网', 'img': [], 'video': [], 'audio': [], 'attachment': ['http://www.scio.gov.cn/37236/37377/Document/1650050/Image/201903201650050_336198.xls', 'http://www.scio.gov.cn/37236/37377/Document/1650050/Image/201903201650050_336199.doc'], 'author': ['焦非'], 'content': '根据工作需要和有关规定，中央宣传部直属单位2019年度拟公开招聘应届高校毕业生，具体事项如下。  一、基本条件  1、具有中华人民共和国国籍；  2、在思想上政治上行动上同以习近平同志为核心的党中央保持高度一致，热爱宣传思想文化事业；  3、践行社会主义核心价值观，遵纪守法，诚实守信，品行端正；  4、岗位所需的专业或技能条件；  5、适应岗位要求的身体条件；  6、全日制大学本科及以上学历，年龄在35周岁以下（1984年7月以后出生）；  7、岗位所需要的其他条件。  二、招聘职位（见附表）  三、招聘程序  1、报名。有意报考者请访问中国文明网，并于2019年3月19日至3月28日下午5点期间，按要求填写《中宣部直属单位2019年度公开招聘应届高校毕业生报名表》后提交到报名邮箱（zxbkl@wenming.cn）。  2、资格审查。对报名人员进行资格审查，在符合条件的人员中择优确定参加笔试人员。笔试开考比例不低于1:5。  3、笔试。参加笔试人员名单及笔试安排将于2019年4月上旬在中国文明网公布，请及时关注。笔试地点在北京。  4、面试。按照笔试成绩高低确定各岗位参加面试人员。  5、体检。组织到相关医院体检，体检费用由中宣部承担。  6、考察。到考生所在学校进行考察。  7、公示。拟聘用人员名单在中国文明网公示7天。  8、经公示无异议的，签订聘用合同，试用期满考核合格者正式聘用，最低服务期限为5年。  四、注意事项  1、本次公开招聘每位考生只能报考1个岗位，可选择是否服从调剂。  2、为方便归类，考生报名邮件及报名表名称请务必标为职位代码＋用人单位＋姓名，否则不予筛选。  3、报名时请按要求填写手机号码和固定电话，并保持通讯工具畅通。笔试、面试等有关信息将及时发布在中国文明网，请考生随时关注。符合条件人员较少的岗位，将取消或减少名额。  4、进入面试的考生，需提供有关证书、发表文章等材料复印件。  5、全国高校全日制统招统分应届毕业生，应在2019年7月底前取得相应专业的大学本科以上学历及学士以上学位。  6、京内生源为具有北京市常住人口户籍、不需进京落户的毕业生。京外生源毕业生试用期满考核合格后可办理进京落户手续。留学回国人员（含赴香港、澳门学习人员）须符合教育部留学服务中心关于留学回国人员就业报到及落户政策要求。  7、专业参考目录为教育部《普通高等学校本科专业目录》。  8、学习出版社、五洲传播出版社、中国新闻出版传媒集团有限公司、中国电影集团公司、中国电影股份有限公司、华夏电影发行有限责任公司为企业，其他单位为事业单位。  9、公开招聘工作联系电话：010-63097401（工作日期间）。  五、有关纪律要求  根据《事业单位公开招聘违纪违规行为处理决定》等规定，考生报名信息请务必认真完整填写，确保真实准确。如有弄虚作假或关键信息有隐瞒行为，一经查实立即取消后续资格。中央宣传部干部局2019年3月19日 文档附件中宣部直属单位2019年度公开招聘应届高校毕业生职位信息表中宣部直属单位2019年度公开招聘应届高校毕业生报名表'}
+2019-06-26 13:19:34 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.scio.gov.cn/xwbjs/zygy/33093/hd33096/Document/1656021/1656021.htm> (referer: None)
+2019-06-26 13:19:34 [root] INFO: 路由 routing_method url: http://www.scio.gov.cn/xwbjs/zygy/33093/hd33096/Document/1656021/1656021.htm
+2019-06-26 13:19:34 [root] INFO: >>>> scio_parse result: {'_id': 'fc29b32e-97d1-11e9-895e-54e1ad3ff9f6',
+ 'attachment': [],
+ 'audio': [],
+ 'author': ['[责任编辑：焦非', '] '],
+ 'content': ['郭卫民会见美国亚洲协会政策研究院院长陆克文（焦非 摄）\u3000\u3000'
+             '5月24日，国务院新闻办公室副主任郭卫民在京会见美国亚洲协会政策研究院院长陆克文先生一行。双方就中美关系、开展中美智库交流等话题交换了意见。\u3000\u3000'
+             '中宣部国际联络局副局长张洪斌等陪同会见。\u3000\u3000版权所有，转载请注明出处。  '],
+ 'img': ['Image/5_24%E4%BC%9A%E8%A7%81.jpg'],
+ 'page_url': 'http://www.scio.gov.cn/xwbjs/zygy/33093/hd33096/Document/1656021/1656021.htm',
+ 'sub_title_str': ['国务院新闻办公室网站\u3000www.scio.gov.cn\u3000\u3000 '
+                   '2019-05-28\u3000\u3000 来源：国新网 '],
+ 'title': ['郭卫民会见美国亚洲协会政策研究院院长陆克文'],
+ 'video': []}
+2019-06-26 13:19:34 [root] INFO: page_url:http://www.scio.gov.cn/xwbjs/zygy/33093/hd33096/Document/1656021/1656021.htm, img_urls:['http://www.scio.gov.cn/xwbjs/zygy/33093/hd33096/Document/1656021/Image/5_24会见.jpg']
+2019-06-26 13:19:34 [root] INFO: page_url:http://www.scio.gov.cn/xwbjs/zygy/33093/hd33096/Document/1656021/1656021.htm, video_urls:[]
+2019-06-26 13:19:34 [root] INFO: page_url:http://www.scio.gov.cn/xwbjs/zygy/33093/hd33096/Document/1656021/1656021.htm, audio_urls:[]
+2019-06-26 13:19:34 [root] INFO: page_url:http://www.scio.gov.cn/xwbjs/zygy/33093/hd33096/Document/1656021/1656021.htm, attachment_urls:[]
+2019-06-26 13:19:34 [root] INFO: scio pipelines 数据清洗结果：{'_id': 'fc29b32e-97d1-11e9-895e-54e1ad3ff9f6', 'page_url': 'http://www.scio.gov.cn/xwbjs/zygy/33093/hd33096/Document/1656021/1656021.htm', 'title': '郭卫民会见美国亚洲协会政策研究院院长陆克文', 'sub_title_info': '国务院新闻办公室网站 www.scio.gov.cn', 'publish_time': '2019-05-28', 'resource': '国新网', 'img': ['http://www.scio.gov.cn/xwbjs/zygy/33093/hd33096/Document/1656021/Image/5_24会见.jpg'], 'video': [], 'audio': [], 'attachment': [], 'author': ['焦非'], 'content': '郭卫民会见美国亚洲协会政策研究院院长陆克文（焦非 摄）  5月24日，国务院新闻办公室副主任郭卫民在京会见美国亚洲协会政策研究院院长陆克文先生一行。双方就中美关系、开展中美智库交流等话题交换了意见。  中宣部国际联络局副局长张洪斌等陪同会见。  版权所有，转载请注明出处。'}
+2019-06-26 13:19:34 [root] INFO: >>>>>>开始操作mongodb！
+2019-06-26 13:19:34 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.scio.gov.cn/xwbjs/zygy/33093/hd33096/Document/1656021/1656021.htm>
+{'_id': 'fc29b32e-97d1-11e9-895e-54e1ad3ff9f6', 'page_url': 'http://www.scio.gov.cn/xwbjs/zygy/33093/hd33096/Document/1656021/1656021.htm', 'title': '郭卫民会见美国亚洲协会政策研究院院长陆克文', 'sub_title_info': '国务院新闻办公室网站 www.scio.gov.cn', 'publish_time': '2019-05-28', 'resource': '国新网', 'img': ['http://www.scio.gov.cn/xwbjs/zygy/33093/hd33096/Document/1656021/Image/5_24会见.jpg'], 'video': [], 'audio': [], 'attachment': [], 'author': ['焦非'], 'content': '郭卫民会见美国亚洲协会政策研究院院长陆克文（焦非 摄）  5月24日，国务院新闻办公室副主任郭卫民在京会见美国亚洲协会政策研究院院长陆克文先生一行。双方就中美关系、开展中美智库交流等话题交换了意见。  中宣部国际联络局副局长张洪斌等陪同会见。  版权所有，转载请注明出处。'}
+2019-06-26 13:19:37 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.scio.gov.cn/37234/Document/1656126/1656126.htm> (referer: None)
+2019-06-26 13:19:37 [root] INFO: 路由 routing_method url: http://www.scio.gov.cn/37234/Document/1656126/1656126.htm
+2019-06-26 13:19:37 [root] INFO: >>>> scio_parse result: {'_id': 'fded5f6e-97d1-11e9-904b-54e1ad3ff9f6',
+ 'attachment': [],
+ 'audio': [],
+ 'author': ['[责任编辑：焦非', '] '],
+ 'content': ['中俄合拍大型系列纪录片《这里是中国》第二季开播仪式在驻俄罗斯使馆举行\u3000\u3000'
+             '2019年6月3日，由北京中视雅韵文化传播中心与俄罗斯RT电视台联合拍摄的大型系列纪录片《这里是中国》第二季开播仪式在中国驻俄使馆隆重举行。中共中央宣传部常务副部长王晓晖、俄总统办公厅第一副主任格罗莫夫、李辉大使、俄RT电视台总编辑西蒙尼扬、北京中视雅韵文化传播中心总裁陈波亚出席活动并致辞。俄总统办公厅公关局局长斯米尔诺夫、俄塔斯社社长米哈伊洛夫、《俄罗斯报》社长涅戈伊察、RT电视台台长尼科洛夫，以及俄总统公关局、政府新闻局、外交部新闻局和中俄两国新闻媒体代表约150人出席了活动。王晓晖常务副部长致辞\u3000\u3000'
+             '王晓晖常务副部长在致辞中表示，今年是中华人民共和国成立70周年，也是中俄建交70周年。进入新时代，在两国元首的亲自引领下，中俄关系大踏步向前迈进，政治互信、经贸合作、人文交流齐头并进。中俄联袂打造大型系列纪录片《这里是中国》，是双方媒体积极响应两国元首号召、深化交流合作的实际行动。该片第一季于2017年在两国播出后产生强烈反响，成为“中俄媒体交流年”的标志性成果。在习近平主席即将对俄进行国事访问之际，在此举办《这里是中国》第二季开播式、第三季签约式和主题图片展开幕式，这对于进一步增进两国人民相互了解和友谊、推动中俄媒体和人文领域交流合作具有重要意义。格罗莫夫第一副主任致辞\u3000\u3000'
+             '格罗莫夫第一副主任在致辞中表示，今年是俄中关系发展历程中非常重要的一年，两国将以建交70周年为契机，举办一系列庆祝活动。当前，俄中关系达到前所未有的历史高度，两国媒体开展了全方位、多渠道的交流与合作，取得的成绩有目共睹。《这里是中国》是“俄中媒体交流年”框架下一个非常成功的项目，衷心感谢付出辛勤劳动和智慧的两国新闻媒体和记者。习近平主席即将对俄进行国事访问，期待在两国元首的战略引领下，俄中关系能够得到进一步的大发展，两国媒体合作达到更具内涵的新水平。李辉大使致辞\u3000\u3000'
+             '李辉大使在致辞中表示，再过两天，习近平主席将应普京总统邀请对俄进行国事访问，这在中俄建交70周年的大背景下具有重要意义，必将为新时代中俄关系注入新的强劲动力。走过70年风雨历程的中俄关系历久弥坚，双方将以此访为契机，回顾历史、展望未来。中俄双方在2016年和2017年成功举办了“媒体交流年”，这是两国元首从中俄关系发展大局出发做出的战略决策。在这一“主题年”框架内，中俄媒体的交流与合作取得了实质性进展。纪录片《这里是中国》的拍摄和播出就是例证之一。希望双方媒体进一步加强合作，为推动中俄关系发展和深化两国务实合作贡献力量，并预祝《这里是中国》第二季首播再创佳绩。西蒙尼扬总编辑致辞\u3000\u3000'
+             '西蒙尼扬总编辑在致辞中表示，两国媒体有着强烈的合作意愿，开展了一系列活动。特别是RT电视台正与中方合作伙伴联合打造多个项目。相信在两国政治互信不断加强的背景下，RT电视台与中方合作伙伴的佳作会更多，合作的领域会更广。陈波亚总裁表示，《这里是中国》自筹拍以来，两国媒体就展开了积极有效的合作，共同策划、紧密协作。双方将再接再厉，进一步拓展选题空间，扩大传播效果，共同为世界带来更多更精彩的中国故事。\u3000\u3000'
+             '活动期间，王晓晖常务副部长、北京工美集团代表甘学荣分别向俄、中双方赠送了中俄建交70周年纪念礼。王晓晖常务副部长、格罗莫夫第一副主任、李辉大使、西蒙尼扬总编辑、陈波亚总裁、尼科洛夫台长、何渊董事长共同为大型系列纪录片《这里是中国》第二季开播仪式剪彩，并见证了该片第三季合作协议文本的交换。现场还展出了该纪录片的精选图片，播放了精彩片段。活动开始前，李辉大使陪同王晓晖常务副部长会见了格罗莫夫第一副主任。\u3000\u3000'
+             '活动期间，李辉大使还就习近平主席访俄、中俄关系、两国务实合作、“一带一路”等接受了中俄媒体采访。  '],
+ 'img': ['Image/W020190604341258102753.jpg',
+         'Image/W020190604341258141409.jpg',
+         'Image/W020190604341258173909.jpg',
+         'Image/W020190604341258206956.jpg'],
+ 'page_url': 'http://www.scio.gov.cn/37234/Document/1656126/1656126.htm',
+ 'sub_title_str': ['国务院新闻办公室网站\u3000www.scio.gov.cn\u3000\u3000 '
+                   '2019-06-04\u3000\u3000 来源：中国驻俄罗斯大使馆 '],
+ 'title': ['中俄合拍大型系列纪录片《这里是中国》第二季开播仪式举行'],
+ 'video': []}
+2019-06-26 13:19:37 [root] INFO: page_url:http://www.scio.gov.cn/37234/Document/1656126/1656126.htm, img_urls:['http://www.scio.gov.cn/37234/Document/1656126/Image/W020190604341258102753.jpg', 'http://www.scio.gov.cn/37234/Document/1656126/Image/W020190604341258141409.jpg', 'http://www.scio.gov.cn/37234/Document/1656126/Image/W020190604341258173909.jpg', 'http://www.scio.gov.cn/37234/Document/1656126/Image/W020190604341258206956.jpg']
+2019-06-26 13:19:37 [root] INFO: page_url:http://www.scio.gov.cn/37234/Document/1656126/1656126.htm, video_urls:[]
+2019-06-26 13:19:37 [root] INFO: page_url:http://www.scio.gov.cn/37234/Document/1656126/1656126.htm, audio_urls:[]
+2019-06-26 13:19:37 [root] INFO: page_url:http://www.scio.gov.cn/37234/Document/1656126/1656126.htm, attachment_urls:[]
+2019-06-26 13:19:37 [root] INFO: scio pipelines 数据清洗结果：{'_id': 'fded5f6e-97d1-11e9-904b-54e1ad3ff9f6', 'page_url': 'http://www.scio.gov.cn/37234/Document/1656126/1656126.htm', 'title': '中俄合拍大型系列纪录片《这里是中国》第二季开播仪式举行', 'sub_title_info': '国务院新闻办公室网站 www.scio.gov.cn', 'publish_time': '2019-06-04', 'resource': '中国驻俄罗斯大使馆', 'img': ['http://www.scio.gov.cn/37234/Document/1656126/Image/W020190604341258102753.jpg', 'http://www.scio.gov.cn/37234/Document/1656126/Image/W020190604341258141409.jpg', 'http://www.scio.gov.cn/37234/Document/1656126/Image/W020190604341258173909.jpg', 'http://www.scio.gov.cn/37234/Document/1656126/Image/W020190604341258206956.jpg'], 'video': [], 'audio': [], 'attachment': [], 'author': ['焦非'], 'content': '中俄合拍大型系列纪录片《这里是中国》第二季开播仪式在驻俄罗斯使馆举行  2019年6月3日，由北京中视雅韵文化传播中心与俄罗斯RT电视台联合拍摄的大型系列纪录片《这里是中国》第二季开播仪式在中国驻俄使馆隆重举行。中共中央宣传部常务副部长王晓晖、俄总统办公厅第一副主任格罗莫夫、李辉大使、俄RT电视台总编辑西蒙尼扬、北京中视雅韵文化传播中心总裁陈波亚出席活动并致辞。俄总统办公厅公关局局长斯米尔诺夫、俄塔斯社社长米哈伊洛夫、《俄罗斯报》社长涅戈伊察、RT电视台台长尼科洛夫，以及俄总统公关局、政府新闻局、外交部新闻局和中俄两国新闻媒体代表约150人出席了活动。王晓晖常务副部长致辞  王晓晖常务副部长在致辞中表示，今年是中华人民共和国成立70周年，也是中俄建交70周年。进入新时代，在两国元首的亲自引领下，中俄关系大踏步向前迈进，政治互信、经贸合作、人文交流齐头并进。中俄联袂打造大型系列纪录片《这里是中国》，是双方媒体积极响应两国元首号召、深化交流合作的实际行动。该片第一季于2017年在两国播出后产生强烈反响，成为“中俄媒体交流年”的标志性成果。在习近平主席即将对俄进行国事访问之际，在此举办《这里是中国》第二季开播式、第三季签约式和主题图片展开幕式，这对于进一步增进两国人民相互了解和友谊、推动中俄媒体和人文领域交流合作具有重要意义。格罗莫夫第一副主任致辞  格罗莫夫第一副主任在致辞中表示，今年是俄中关系发展历程中非常重要的一年，两国将以建交70周年为契机，举办一系列庆祝活动。当前，俄中关系达到前所未有的历史高度，两国媒体开展了全方位、多渠道的交流与合作，取得的成绩有目共睹。《这里是中国》是“俄中媒体交流年”框架下一个非常成功的项目，衷心感谢付出辛勤劳动和智慧的两国新闻媒体和记者。习近平主席即将对俄进行国事访问，期待在两国元首的战略引领下，俄中关系能够得到进一步的大发展，两国媒体合作达到更具内涵的新水平。李辉大使致辞  李辉大使在致辞中表示，再过两天，习近平主席将应普京总统邀请对俄进行国事访问，这在中俄建交70周年的大背景下具有重要意义，必将为新时代中俄关系注入新的强劲动力。走过70年风雨历程的中俄关系历久弥坚，双方将以此访为契机，回顾历史、展望未来。中俄双方在2016年和2017年成功举办了“媒体交流年”，这是两国元首从中俄关系发展大局出发做出的战略决策。在这一“主题年”框架内，中俄媒体的交流与合作取得了实质性进展。纪录片《这里是中国》的拍摄和播出就是例证之一。希望双方媒体进一步加强合作，为推动中俄关系发展和深化两国务实合作贡献力量，并预祝《这里是中国》第二季首播再创佳绩。西蒙尼扬总编辑致辞  西蒙尼扬总编辑在致辞中表示，两国媒体有着强烈的合作意愿，开展了一系列活动。特别是RT电视台正与中方合作伙伴联合打造多个项目。相信在两国政治互信不断加强的背景下，RT电视台与中方合作伙伴的佳作会更多，合作的领域会更广。陈波亚总裁表示，《这里是中国》自筹拍以来，两国媒体就展开了积极有效的合作，共同策划、紧密协作。双方将再接再厉，进一步拓展选题空间，扩大传播效果，共同为世界带来更多更精彩的中国故事。  活动期间，王晓晖常务副部长、北京工美集团代表甘学荣分别向俄、中双方赠送了中俄建交70周年纪念礼。王晓晖常务副部长、格罗莫夫第一副主任、李辉大使、西蒙尼扬总编辑、陈波亚总裁、尼科洛夫台长、何渊董事长共同为大型系列纪录片《这里是中国》第二季开播仪式剪彩，并见证了该片第三季合作协议文本的交换。现场还展出了该纪录片的精选图片，播放了精彩片段。活动开始前，李辉大使陪同王晓晖常务副部长会见了格罗莫夫第一副主任。  活动期间，李辉大使还就习近平主席访俄、中俄关系、两国务实合作、“一带一路”等接受了中俄媒体采访。'}
+2019-06-26 13:19:37 [root] INFO: >>>>>>开始操作mongodb！
+2019-06-26 13:19:37 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.scio.gov.cn/37234/Document/1656126/1656126.htm>
+{'_id': 'fded5f6e-97d1-11e9-904b-54e1ad3ff9f6', 'page_url': 'http://www.scio.gov.cn/37234/Document/1656126/1656126.htm', 'title': '中俄合拍大型系列纪录片《这里是中国》第二季开播仪式举行', 'sub_title_info': '国务院新闻办公室网站 www.scio.gov.cn', 'publish_time': '2019-06-04', 'resource': '中国驻俄罗斯大使馆', 'img': ['http://www.scio.gov.cn/37234/Document/1656126/Image/W020190604341258102753.jpg', 'http://www.scio.gov.cn/37234/Document/1656126/Image/W020190604341258141409.jpg', 'http://www.scio.gov.cn/37234/Document/1656126/Image/W020190604341258173909.jpg', 'http://www.scio.gov.cn/37234/Document/1656126/Image/W020190604341258206956.jpg'], 'video': [], 'audio': [], 'attachment': [], 'author': ['焦非'], 'content': '中俄合拍大型系列纪录片《这里是中国》第二季开播仪式在驻俄罗斯使馆举行  2019年6月3日，由北京中视雅韵文化传播中心与俄罗斯RT电视台联合拍摄的大型系列纪录片《这里是中国》第二季开播仪式在中国驻俄使馆隆重举行。中共中央宣传部常务副部长王晓晖、俄总统办公厅第一副主任格罗莫夫、李辉大使、俄RT电视台总编辑西蒙尼扬、北京中视雅韵文化传播中心总裁陈波亚出席活动并致辞。俄总统办公厅公关局局长斯米尔诺夫、俄塔斯社社长米哈伊洛夫、《俄罗斯报》社长涅戈伊察、RT电视台台长尼科洛夫，以及俄总统公关局、政府新闻局、外交部新闻局和中俄两国新闻媒体代表约150人出席了活动。王晓晖常务副部长致辞  王晓晖常务副部长在致辞中表示，今年是中华人民共和国成立70周年，也是中俄建交70周年。进入新时代，在两国元首的亲自引领下，中俄关系大踏步向前迈进，政治互信、经贸合作、人文交流齐头并进。中俄联袂打造大型系列纪录片《这里是中国》，是双方媒体积极响应两国元首号召、深化交流合作的实际行动。该片第一季于2017年在两国播出后产生强烈反响，成为“中俄媒体交流年”的标志性成果。在习近平主席即将对俄进行国事访问之际，在此举办《这里是中国》第二季开播式、第三季签约式和主题图片展开幕式，这对于进一步增进两国人民相互了解和友谊、推动中俄媒体和人文领域交流合作具有重要意义。格罗莫夫第一副主任致辞  格罗莫夫第一副主任在致辞中表示，今年是俄中关系发展历程中非常重要的一年，两国将以建交70周年为契机，举办一系列庆祝活动。当前，俄中关系达到前所未有的历史高度，两国媒体开展了全方位、多渠道的交流与合作，取得的成绩有目共睹。《这里是中国》是“俄中媒体交流年”框架下一个非常成功的项目，衷心感谢付出辛勤劳动和智慧的两国新闻媒体和记者。习近平主席即将对俄进行国事访问，期待在两国元首的战略引领下，俄中关系能够得到进一步的大发展，两国媒体合作达到更具内涵的新水平。李辉大使致辞  李辉大使在致辞中表示，再过两天，习近平主席将应普京总统邀请对俄进行国事访问，这在中俄建交70周年的大背景下具有重要意义，必将为新时代中俄关系注入新的强劲动力。走过70年风雨历程的中俄关系历久弥坚，双方将以此访为契机，回顾历史、展望未来。中俄双方在2016年和2017年成功举办了“媒体交流年”，这是两国元首从中俄关系发展大局出发做出的战略决策。在这一“主题年”框架内，中俄媒体的交流与合作取得了实质性进展。纪录片《这里是中国》的拍摄和播出就是例证之一。希望双方媒体进一步加强合作，为推动中俄关系发展和深化两国务实合作贡献力量，并预祝《这里是中国》第二季首播再创佳绩。西蒙尼扬总编辑致辞  西蒙尼扬总编辑在致辞中表示，两国媒体有着强烈的合作意愿，开展了一系列活动。特别是RT电视台正与中方合作伙伴联合打造多个项目。相信在两国政治互信不断加强的背景下，RT电视台与中方合作伙伴的佳作会更多，合作的领域会更广。陈波亚总裁表示，《这里是中国》自筹拍以来，两国媒体就展开了积极有效的合作，共同策划、紧密协作。双方将再接再厉，进一步拓展选题空间，扩大传播效果，共同为世界带来更多更精彩的中国故事。  活动期间，王晓晖常务副部长、北京工美集团代表甘学荣分别向俄、中双方赠送了中俄建交70周年纪念礼。王晓晖常务副部长、格罗莫夫第一副主任、李辉大使、西蒙尼扬总编辑、陈波亚总裁、尼科洛夫台长、何渊董事长共同为大型系列纪录片《这里是中国》第二季开播仪式剪彩，并见证了该片第三季合作协议文本的交换。现场还展出了该纪录片的精选图片，播放了精彩片段。活动开始前，李辉大使陪同王晓晖常务副部长会见了格罗莫夫第一副主任。  活动期间，李辉大使还就习近平主席访俄、中俄关系、两国务实合作、“一带一路”等接受了中俄媒体采访。'}
+2019-06-26 13:19:41 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.scio.gov.cn/xwbjs/zygy/32310/hd32313/Document/1656303/1656303.htm> (referer: None)
+2019-06-26 13:19:41 [root] INFO: 路由 routing_method url: http://www.scio.gov.cn/xwbjs/zygy/32310/hd32313/Document/1656303/1656303.htm
+2019-06-26 13:19:41 [root] INFO: >>>> scio_parse result: {'_id': '002aa35c-97d2-11e9-989d-54e1ad3ff9f6',
+ 'attachment': [],
+ 'audio': [],
+ 'author': ['[责任编辑：焦非', '] '],
+ 'content': ['蒋建国会见伊拉克新闻集团主席法德勒·法拉吉拉。（焦非 摄）蒋建国与伊拉克新闻集团主席法德勒·法拉吉拉一行合影。（焦非 '
+             '摄）\u3000\u3000'
+             '6月5日，中宣部副部长蒋建国在京会见伊拉克新闻集团主席法德勒·法拉吉拉先生一行，双方就加强中伊两国媒体交流合作等话题展开了深入探讨。\u3000\u3000'
+             '中宣部国际联络局副局长马佳等陪同会见。\u3000\u3000版权所有，转载请注明出处。  '],
+ 'img': ['Image/1.jpg', 'Image/2.jpg'],
+ 'page_url': 'http://www.scio.gov.cn/xwbjs/zygy/32310/hd32313/Document/1656303/1656303.htm',
+ 'sub_title_str': ['国务院新闻办公室网站\u3000www.scio.gov.cn\u3000\u3000 '
+                   '2019-06-06\u3000\u3000 来源：国新网 '],
+ 'title': ['蒋建国会见伊拉克新闻集团主席法德勒·法拉吉拉'],
+ 'video': []}
+2019-06-26 13:19:41 [root] INFO: page_url:http://www.scio.gov.cn/xwbjs/zygy/32310/hd32313/Document/1656303/1656303.htm, img_urls:['http://www.scio.gov.cn/xwbjs/zygy/32310/hd32313/Document/1656303/Image/1.jpg', 'http://www.scio.gov.cn/xwbjs/zygy/32310/hd32313/Document/1656303/Image/2.jpg']
+2019-06-26 13:19:41 [root] INFO: page_url:http://www.scio.gov.cn/xwbjs/zygy/32310/hd32313/Document/1656303/1656303.htm, video_urls:[]
+2019-06-26 13:19:41 [root] INFO: page_url:http://www.scio.gov.cn/xwbjs/zygy/32310/hd32313/Document/1656303/1656303.htm, audio_urls:[]
+2019-06-26 13:19:41 [root] INFO: page_url:http://www.scio.gov.cn/xwbjs/zygy/32310/hd32313/Document/1656303/1656303.htm, attachment_urls:[]
+2019-06-26 13:19:41 [root] INFO: scio pipelines 数据清洗结果：{'_id': '002aa35c-97d2-11e9-989d-54e1ad3ff9f6', 'page_url': 'http://www.scio.gov.cn/xwbjs/zygy/32310/hd32313/Document/1656303/1656303.htm', 'title': '蒋建国会见伊拉克新闻集团主席法德勒·法拉吉拉', 'sub_title_info': '国务院新闻办公室网站 www.scio.gov.cn', 'publish_time': '2019-06-06', 'resource': '国新网', 'img': ['http://www.scio.gov.cn/xwbjs/zygy/32310/hd32313/Document/1656303/Image/1.jpg', 'http://www.scio.gov.cn/xwbjs/zygy/32310/hd32313/Document/1656303/Image/2.jpg'], 'video': [], 'audio': [], 'attachment': [], 'author': ['焦非'], 'content': '蒋建国会见伊拉克新闻集团主席法德勒·法拉吉拉。（焦非 摄）蒋建国与伊拉克新闻集团主席法德勒·法拉吉拉一行合影。（焦非 摄）  6月5日，中宣部副部长蒋建国在京会见伊拉克新闻集团主席法德勒·法拉吉拉先生一行，双方就加强中伊两国媒体交流合作等话题展开了深入探讨。  中宣部国际联络局副局长马佳等陪同会见。  版权所有，转载请注明出处。'}
+2019-06-26 13:19:41 [root] INFO: >>>>>>开始操作mongodb！
+2019-06-26 13:19:41 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.scio.gov.cn/xwbjs/zygy/32310/hd32313/Document/1656303/1656303.htm>
+{'_id': '002aa35c-97d2-11e9-989d-54e1ad3ff9f6', 'page_url': 'http://www.scio.gov.cn/xwbjs/zygy/32310/hd32313/Document/1656303/1656303.htm', 'title': '蒋建国会见伊拉克新闻集团主席法德勒·法拉吉拉', 'sub_title_info': '国务院新闻办公室网站 www.scio.gov.cn', 'publish_time': '2019-06-06', 'resource': '国新网', 'img': ['http://www.scio.gov.cn/xwbjs/zygy/32310/hd32313/Document/1656303/Image/1.jpg', 'http://www.scio.gov.cn/xwbjs/zygy/32310/hd32313/Document/1656303/Image/2.jpg'], 'video': [], 'audio': [], 'attachment': [], 'author': ['焦非'], 'content': '蒋建国会见伊拉克新闻集团主席法德勒·法拉吉拉。（焦非 摄）蒋建国与伊拉克新闻集团主席法德勒·法拉吉拉一行合影。（焦非 摄）  6月5日，中宣部副部长蒋建国在京会见伊拉克新闻集团主席法德勒·法拉吉拉先生一行，双方就加强中伊两国媒体交流合作等话题展开了深入探讨。  中宣部国际联络局副局长马佳等陪同会见。  版权所有，转载请注明出处。'}
+2019-06-26 13:19:41 [scrapy.core.engine] INFO: Closing spider (finished)
+2019-06-26 13:19:41 [root] INFO: 关闭mongo client spider...
+2019-06-26 13:19:41 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 1508,
+ 'downloader/request_count': 4,
+ 'downloader/request_method_count/GET': 4,
+ 'downloader/response_bytes': 60665,
+ 'downloader/response_count': 4,
+ 'downloader/response_status_count/200': 4,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2019, 6, 26, 5, 19, 41, 341100),
+ 'item_scraped_count': 4,
+ 'log_count/DEBUG': 8,
+ 'log_count/INFO': 47,
+ 'response_received_count': 4,
+ 'scheduler/dequeued': 4,
+ 'scheduler/dequeued/memory': 4,
+ 'scheduler/enqueued': 4,
+ 'scheduler/enqueued/memory': 4,
+ 'start_time': datetime.datetime(2019, 6, 26, 5, 19, 30, 155016)}
+2019-06-26 13:19:41 [scrapy.core.engine] INFO: Spider closed (finished)
+2019-06-26 23:48:37 [scrapy.utils.log] INFO: Scrapy 1.6.0 started (bot: node_one)
+2019-06-26 23:48:37 [scrapy.utils.log] INFO: Versions: lxml 4.3.4.0, libxml2 2.9.5, cssselect 1.0.3, parsel 1.5.1, w3lib 1.20.0, Twisted 19.2.1, Python 3.6.6 (v3.6.6:4cf1f54eb7, Jun 27 2018, 03:37:03) [MSC v.1900 64 bit (AMD64)], pyOpenSSL 19.0.0 (OpenSSL 1.1.1c  28 May 2019), cryptography 2.7, Platform Windows-10-10.0.17134-SP0
+2019-06-26 23:48:37 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'node_one', 'CONCURRENT_REQUESTS': 32, 'COOKIES_ENABLED': False, 'DOWNLOAD_DELAY': 1, 'LOG_ENABLED': False, 'LOG_FILE': 'logs/scrapy.log', 'NEWSPIDER_MODULE': 'node_one.spiders', 'SPIDER_MODULES': ['node_one.spiders'], 'USER_AGENT': 'Mozilla/5.0 (iPad; U; CPU OS 4_2_1 like Mac OS X; zh-cn) AppleWebKit/533.17.9 (KHTML, like Gecko) Version/5.0.2 Mobile/8C148 Safari/6533.18.5'}
+2019-06-26 23:48:38 [scrapy.extensions.telnet] INFO: Telnet Password: 20eb5f61890a128f
+2019-06-26 23:48:38 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2019-06-26 23:48:38 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'node_one.middlewares.NodeOneUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2019-06-26 23:48:38 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2019-06-26 23:48:38 [scrapy.middleware] INFO: Enabled item pipelines:
+['node_one.pipelines.scio.ScioPipeline',
+ 'node_one.pipelines.single_mongodb.SingleMongodbPipeline']
+2019-06-26 23:48:38 [scrapy.core.engine] INFO: Spider opened
+2019-06-26 23:48:38 [root] INFO: 开启mongo client spider...
+2019-06-26 23:48:38 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2019-06-26 23:48:38 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2019-06-26 23:48:38 [root] INFO: *********user-agent-middleware 中随机 User-Agent：Mozilla/5.0 (iPad; U; CPU OS 4_2_1 like Mac OS X; zh-cn) AppleWebKit/533.17.9 (KHTML, like Gecko) Version/5.0.2 Mobile/8C148 Safari/6533.18.5
+2019-06-26 23:48:38 [root] INFO: *********user-agent-middleware 中随机 User-Agent：Mozilla/5.0 (iPad; U; CPU OS 4_2_1 like Mac OS X; zh-cn) AppleWebKit/533.17.9 (KHTML, like Gecko) Version/5.0.2 Mobile/8C148 Safari/6533.18.5
+2019-06-26 23:48:38 [root] INFO: *********user-agent-middleware 中随机 User-Agent：Mozilla/5.0 (iPad; U; CPU OS 4_2_1 like Mac OS X; zh-cn) AppleWebKit/533.17.9 (KHTML, like Gecko) Version/5.0.2 Mobile/8C148 Safari/6533.18.5
+2019-06-26 23:48:38 [root] INFO: *********user-agent-middleware 中随机 User-Agent：Mozilla/5.0 (iPad; U; CPU OS 4_2_1 like Mac OS X; zh-cn) AppleWebKit/533.17.9 (KHTML, like Gecko) Version/5.0.2 Mobile/8C148 Safari/6533.18.5
+2019-06-26 23:48:38 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.scio.gov.cn/37236/37377/Document/1650050/1650050.htm> (referer: None)
+2019-06-26 23:48:39 [root] INFO: 路由 routing_method url: http://www.scio.gov.cn/37236/37377/Document/1650050/1650050.htm
+2019-06-26 23:48:39 [root] INFO: >>>> scio_parse result: {'_id': 'dd9dd17a-9829-11e9-97a4-54e1ad3ff9f6',
+ 'attachment': ['Image/201903201650050_336198.xls',
+                'Image/201903201650050_336199.doc'],
+ 'audio': [],
+ 'author': ['[责任编辑：焦非', '] '],
+ 'content': ['\u3000\u3000'
+             '根据工作需要和有关规定，中央宣传部直属单位2019年度拟公开招聘应届高校毕业生，具体事项如下。\u3000\u3000'
+             '一、基本条件\u3000\u30001、具有中华人民共和国国籍；\u3000\u3000'
+             '2、在思想上政治上行动上同以习近平同志为核心的党中央保持高度一致，热爱宣传思想文化事业；\u3000\u3000'
+             '3、践行社会主义核心价值观，遵纪守法，诚实守信，品行端正；\u3000\u3000'
+             '4、岗位所需的专业或技能条件；\u3000\u30005、适应岗位要求的身体条件；\u3000\u3000'
+             '6、全日制大学本科及以上学历，年龄在35周岁以下（1984年7月以后出生）；\u3000\u3000'
+             '7、岗位所需要的其他条件。\u3000\u3000二、招聘职位（见附表）\u3000\u3000'
+             '三、招聘程序\u3000\u3000'
+             '1、报名。有意报考者请访问中国文明网，并于2019年3月19日至3月28日下午5点期间，按要求填写《中宣部直属单位2019年度公开招聘应届高校毕业生报名表》后提交到报名邮箱（zxbkl@wenming.cn）。\u3000\u3000'
+             '2、资格审查。对报名人员进行资格审查，在符合条件的人员中择优确定参加笔试人员。笔试开考比例不低于1:5。\u3000\u3000'
+             '3、笔试。参加笔试人员名单及笔试安排将于2019年4月上旬在中国文明网公布，请及时关注。笔试地点在北京。\u3000\u3000'
+             '4、面试。按照笔试成绩高低确定各岗位参加面试人员。\u3000\u3000'
+             '5、体检。组织到相关医院体检，体检费用由中宣部承担。\u3000\u3000'
+             '6、考察。到考生所在学校进行考察。\u3000\u30007、公示。拟聘用人员名单在中国文明网公示7天。\u3000\u3000'
+             '8、经公示无异议的，签订聘用合同，试用期满考核合格者正式聘用，最低服务期限为5年。\u3000\u3000'
+             '四、注意事项\u3000\u30001、本次公开招聘每位考生只能报考1个岗位，可选择是否服从调剂。\u3000\u3000'
+             '2、为方便归类，考生报名邮件及报名表名称请务必标为职位代码＋用人单位＋姓名，否则不予筛选。\u3000\u3000'
+             '3、报名时请按要求填写手机号码和固定电话，并保持通讯工具畅通。笔试、面试等有关信息将及时发布在中国文明网，请考生随时关注。符合条件人员较少的岗位，将取消或减少名额。\u3000\u3000'
+             '4、进入面试的考生，需提供有关证书、发表文章等材料复印件。\u3000\u3000'
+             '5、全国高校全日制统招统分应届毕业生，应在2019年7月底前取得相应专业的大学本科以上学历及学士以上学位。\u3000\u3000'
+             '6、京内生源为具有北京市常住人口户籍、不需进京落户的毕业生。京外生源毕业生试用期满考核合格后可办理进京落户手续。留学回国人员（含赴香港、澳门学习人员）须符合教育部留学服务中心关于留学回国人员就业报到及落户政策要求。\u3000\u3000'
+             '7、专业参考目录为教育部《普通高等学校本科专业目录》。\u3000\u3000'
+             '8、学习出版社、五洲传播出版社、中国新闻出版传媒集团有限公司、中国电影集团公司、中国电影股份有限公司、华夏电影发行有限责任公司为企业，其他单位为事业单位。\u3000\u3000'
+             '9、公开招聘工作联系电话：010-63097401（工作日期间）。\u3000\u3000五、有关纪律要求\u3000\u3000'
+             '根据《事业单位公开招聘违纪违规行为处理决定》等规定，考生报名信息请务必认真完整填写，确保真实准确。如有弄虚作假或关键信息有隐瞒行为，一经查实立即取消后续资格。中央宣传部干部局2019年3月19日 '
+             '文档附件中宣部直属单位2019年度公开招聘应届高校毕业生职位信息表中宣部直属单位2019年度公开招聘应届高校毕业生报名表 '],
+ 'img': [],
+ 'page_url': 'http://www.scio.gov.cn/37236/37377/Document/1650050/1650050.htm',
+ 'sub_title_str': ['国务院新闻办公室网站\u3000www.scio.gov.cn\u3000\u3000 '
+                   '2019-03-20\u3000\u3000 来源：中国文明网 '],
+ 'title': ['中央宣传部直属单位2019年度公开招聘应届高校毕业生公告'],
+ 'video': []}
+2019-06-26 23:48:39 [root] INFO: page_url:http://www.scio.gov.cn/37236/37377/Document/1650050/1650050.htm, img_urls:[]
+2019-06-26 23:48:39 [root] INFO: page_url:http://www.scio.gov.cn/37236/37377/Document/1650050/1650050.htm, video_urls:[]
+2019-06-26 23:48:39 [root] INFO: page_url:http://www.scio.gov.cn/37236/37377/Document/1650050/1650050.htm, audio_urls:[]
+2019-06-26 23:48:39 [root] INFO: page_url:http://www.scio.gov.cn/37236/37377/Document/1650050/1650050.htm, attachment_urls:['http://www.scio.gov.cn/37236/37377/Document/1650050/Image/201903201650050_336198.xls', 'http://www.scio.gov.cn/37236/37377/Document/1650050/Image/201903201650050_336199.doc']
+2019-06-26 23:48:39 [root] INFO: scio pipelines 数据清洗结果：{'_id': 'dd9dd17a-9829-11e9-97a4-54e1ad3ff9f6', 'page_url': 'http://www.scio.gov.cn/37236/37377/Document/1650050/1650050.htm', 'title': '中央宣传部直属单位2019年度公开招聘应届高校毕业生公告', 'sub_title_info': '国务院新闻办公室网站 www.scio.gov.cn', 'publish_time': '2019-03-20', 'resource': '中国文明网', 'img': [], 'video': [], 'audio': [], 'attachment': ['http://www.scio.gov.cn/37236/37377/Document/1650050/Image/201903201650050_336198.xls', 'http://www.scio.gov.cn/37236/37377/Document/1650050/Image/201903201650050_336199.doc'], 'author': ['焦非'], 'content': '根据工作需要和有关规定，中央宣传部直属单位2019年度拟公开招聘应届高校毕业生，具体事项如下。  一、基本条件  1、具有中华人民共和国国籍；  2、在思想上政治上行动上同以习近平同志为核心的党中央保持高度一致，热爱宣传思想文化事业；  3、践行社会主义核心价值观，遵纪守法，诚实守信，品行端正；  4、岗位所需的专业或技能条件；  5、适应岗位要求的身体条件；  6、全日制大学本科及以上学历，年龄在35周岁以下（1984年7月以后出生）；  7、岗位所需要的其他条件。  二、招聘职位（见附表）  三、招聘程序  1、报名。有意报考者请访问中国文明网，并于2019年3月19日至3月28日下午5点期间，按要求填写《中宣部直属单位2019年度公开招聘应届高校毕业生报名表》后提交到报名邮箱（zxbkl@wenming.cn）。  2、资格审查。对报名人员进行资格审查，在符合条件的人员中择优确定参加笔试人员。笔试开考比例不低于1:5。  3、笔试。参加笔试人员名单及笔试安排将于2019年4月上旬在中国文明网公布，请及时关注。笔试地点在北京。  4、面试。按照笔试成绩高低确定各岗位参加面试人员。  5、体检。组织到相关医院体检，体检费用由中宣部承担。  6、考察。到考生所在学校进行考察。  7、公示。拟聘用人员名单在中国文明网公示7天。  8、经公示无异议的，签订聘用合同，试用期满考核合格者正式聘用，最低服务期限为5年。  四、注意事项  1、本次公开招聘每位考生只能报考1个岗位，可选择是否服从调剂。  2、为方便归类，考生报名邮件及报名表名称请务必标为职位代码＋用人单位＋姓名，否则不予筛选。  3、报名时请按要求填写手机号码和固定电话，并保持通讯工具畅通。笔试、面试等有关信息将及时发布在中国文明网，请考生随时关注。符合条件人员较少的岗位，将取消或减少名额。  4、进入面试的考生，需提供有关证书、发表文章等材料复印件。  5、全国高校全日制统招统分应届毕业生，应在2019年7月底前取得相应专业的大学本科以上学历及学士以上学位。  6、京内生源为具有北京市常住人口户籍、不需进京落户的毕业生。京外生源毕业生试用期满考核合格后可办理进京落户手续。留学回国人员（含赴香港、澳门学习人员）须符合教育部留学服务中心关于留学回国人员就业报到及落户政策要求。  7、专业参考目录为教育部《普通高等学校本科专业目录》。  8、学习出版社、五洲传播出版社、中国新闻出版传媒集团有限公司、中国电影集团公司、中国电影股份有限公司、华夏电影发行有限责任公司为企业，其他单位为事业单位。  9、公开招聘工作联系电话：010-63097401（工作日期间）。  五、有关纪律要求  根据《事业单位公开招聘违纪违规行为处理决定》等规定，考生报名信息请务必认真完整填写，确保真实准确。如有弄虚作假或关键信息有隐瞒行为，一经查实立即取消后续资格。中央宣传部干部局2019年3月19日 文档附件中宣部直属单位2019年度公开招聘应届高校毕业生职位信息表中宣部直属单位2019年度公开招聘应届高校毕业生报名表'}
+2019-06-26 23:48:39 [root] INFO: >>>>>>开始操作mongodb！
+2019-06-26 23:48:39 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.scio.gov.cn/37236/37377/Document/1650050/1650050.htm>
+{'_id': 'dd9dd17a-9829-11e9-97a4-54e1ad3ff9f6', 'page_url': 'http://www.scio.gov.cn/37236/37377/Document/1650050/1650050.htm', 'title': '中央宣传部直属单位2019年度公开招聘应届高校毕业生公告', 'sub_title_info': '国务院新闻办公室网站 www.scio.gov.cn', 'publish_time': '2019-03-20', 'resource': '中国文明网', 'img': [], 'video': [], 'audio': [], 'attachment': ['http://www.scio.gov.cn/37236/37377/Document/1650050/Image/201903201650050_336198.xls', 'http://www.scio.gov.cn/37236/37377/Document/1650050/Image/201903201650050_336199.doc'], 'author': ['焦非'], 'content': '根据工作需要和有关规定，中央宣传部直属单位2019年度拟公开招聘应届高校毕业生，具体事项如下。  一、基本条件  1、具有中华人民共和国国籍；  2、在思想上政治上行动上同以习近平同志为核心的党中央保持高度一致，热爱宣传思想文化事业；  3、践行社会主义核心价值观，遵纪守法，诚实守信，品行端正；  4、岗位所需的专业或技能条件；  5、适应岗位要求的身体条件；  6、全日制大学本科及以上学历，年龄在35周岁以下（1984年7月以后出生）；  7、岗位所需要的其他条件。  二、招聘职位（见附表）  三、招聘程序  1、报名。有意报考者请访问中国文明网，并于2019年3月19日至3月28日下午5点期间，按要求填写《中宣部直属单位2019年度公开招聘应届高校毕业生报名表》后提交到报名邮箱（zxbkl@wenming.cn）。  2、资格审查。对报名人员进行资格审查，在符合条件的人员中择优确定参加笔试人员。笔试开考比例不低于1:5。  3、笔试。参加笔试人员名单及笔试安排将于2019年4月上旬在中国文明网公布，请及时关注。笔试地点在北京。  4、面试。按照笔试成绩高低确定各岗位参加面试人员。  5、体检。组织到相关医院体检，体检费用由中宣部承担。  6、考察。到考生所在学校进行考察。  7、公示。拟聘用人员名单在中国文明网公示7天。  8、经公示无异议的，签订聘用合同，试用期满考核合格者正式聘用，最低服务期限为5年。  四、注意事项  1、本次公开招聘每位考生只能报考1个岗位，可选择是否服从调剂。  2、为方便归类，考生报名邮件及报名表名称请务必标为职位代码＋用人单位＋姓名，否则不予筛选。  3、报名时请按要求填写手机号码和固定电话，并保持通讯工具畅通。笔试、面试等有关信息将及时发布在中国文明网，请考生随时关注。符合条件人员较少的岗位，将取消或减少名额。  4、进入面试的考生，需提供有关证书、发表文章等材料复印件。  5、全国高校全日制统招统分应届毕业生，应在2019年7月底前取得相应专业的大学本科以上学历及学士以上学位。  6、京内生源为具有北京市常住人口户籍、不需进京落户的毕业生。京外生源毕业生试用期满考核合格后可办理进京落户手续。留学回国人员（含赴香港、澳门学习人员）须符合教育部留学服务中心关于留学回国人员就业报到及落户政策要求。  7、专业参考目录为教育部《普通高等学校本科专业目录》。  8、学习出版社、五洲传播出版社、中国新闻出版传媒集团有限公司、中国电影集团公司、中国电影股份有限公司、华夏电影发行有限责任公司为企业，其他单位为事业单位。  9、公开招聘工作联系电话：010-63097401（工作日期间）。  五、有关纪律要求  根据《事业单位公开招聘违纪违规行为处理决定》等规定，考生报名信息请务必认真完整填写，确保真实准确。如有弄虚作假或关键信息有隐瞒行为，一经查实立即取消后续资格。中央宣传部干部局2019年3月19日 文档附件中宣部直属单位2019年度公开招聘应届高校毕业生职位信息表中宣部直属单位2019年度公开招聘应届高校毕业生报名表'}
+2019-06-26 23:48:40 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.scio.gov.cn/xwbjs/zygy/33093/hd33096/Document/1656021/1656021.htm> (referer: None)
+2019-06-26 23:48:40 [root] INFO: 路由 routing_method url: http://www.scio.gov.cn/xwbjs/zygy/33093/hd33096/Document/1656021/1656021.htm
+2019-06-26 23:48:40 [root] INFO: >>>> scio_parse result: {'_id': 'de507a92-9829-11e9-b92f-54e1ad3ff9f6',
+ 'attachment': [],
+ 'audio': [],
+ 'author': ['[责任编辑：焦非', '] '],
+ 'content': ['郭卫民会见美国亚洲协会政策研究院院长陆克文（焦非 摄）\u3000\u3000'
+             '5月24日，国务院新闻办公室副主任郭卫民在京会见美国亚洲协会政策研究院院长陆克文先生一行。双方就中美关系、开展中美智库交流等话题交换了意见。\u3000\u3000'
+             '中宣部国际联络局副局长张洪斌等陪同会见。\u3000\u3000版权所有，转载请注明出处。  '],
+ 'img': ['Image/5_24%E4%BC%9A%E8%A7%81.jpg'],
+ 'page_url': 'http://www.scio.gov.cn/xwbjs/zygy/33093/hd33096/Document/1656021/1656021.htm',
+ 'sub_title_str': ['国务院新闻办公室网站\u3000www.scio.gov.cn\u3000\u3000 '
+                   '2019-05-28\u3000\u3000 来源：国新网 '],
+ 'title': ['郭卫民会见美国亚洲协会政策研究院院长陆克文'],
+ 'video': []}
+2019-06-26 23:48:40 [root] INFO: page_url:http://www.scio.gov.cn/xwbjs/zygy/33093/hd33096/Document/1656021/1656021.htm, img_urls:['http://www.scio.gov.cn/xwbjs/zygy/33093/hd33096/Document/1656021/Image/5_24会见.jpg']
+2019-06-26 23:48:40 [root] INFO: page_url:http://www.scio.gov.cn/xwbjs/zygy/33093/hd33096/Document/1656021/1656021.htm, video_urls:[]
+2019-06-26 23:48:40 [root] INFO: page_url:http://www.scio.gov.cn/xwbjs/zygy/33093/hd33096/Document/1656021/1656021.htm, audio_urls:[]
+2019-06-26 23:48:40 [root] INFO: page_url:http://www.scio.gov.cn/xwbjs/zygy/33093/hd33096/Document/1656021/1656021.htm, attachment_urls:[]
+2019-06-26 23:48:40 [root] INFO: scio pipelines 数据清洗结果：{'_id': 'de507a92-9829-11e9-b92f-54e1ad3ff9f6', 'page_url': 'http://www.scio.gov.cn/xwbjs/zygy/33093/hd33096/Document/1656021/1656021.htm', 'title': '郭卫民会见美国亚洲协会政策研究院院长陆克文', 'sub_title_info': '国务院新闻办公室网站 www.scio.gov.cn', 'publish_time': '2019-05-28', 'resource': '国新网', 'img': ['http://www.scio.gov.cn/xwbjs/zygy/33093/hd33096/Document/1656021/Image/5_24会见.jpg'], 'video': [], 'audio': [], 'attachment': [], 'author': ['焦非'], 'content': '郭卫民会见美国亚洲协会政策研究院院长陆克文（焦非 摄）  5月24日，国务院新闻办公室副主任郭卫民在京会见美国亚洲协会政策研究院院长陆克文先生一行。双方就中美关系、开展中美智库交流等话题交换了意见。  中宣部国际联络局副局长张洪斌等陪同会见。  版权所有，转载请注明出处。'}
+2019-06-26 23:48:40 [root] INFO: >>>>>>开始操作mongodb！
+2019-06-26 23:48:40 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.scio.gov.cn/xwbjs/zygy/33093/hd33096/Document/1656021/1656021.htm>
+{'_id': 'de507a92-9829-11e9-b92f-54e1ad3ff9f6', 'page_url': 'http://www.scio.gov.cn/xwbjs/zygy/33093/hd33096/Document/1656021/1656021.htm', 'title': '郭卫民会见美国亚洲协会政策研究院院长陆克文', 'sub_title_info': '国务院新闻办公室网站 www.scio.gov.cn', 'publish_time': '2019-05-28', 'resource': '国新网', 'img': ['http://www.scio.gov.cn/xwbjs/zygy/33093/hd33096/Document/1656021/Image/5_24会见.jpg'], 'video': [], 'audio': [], 'attachment': [], 'author': ['焦非'], 'content': '郭卫民会见美国亚洲协会政策研究院院长陆克文（焦非 摄）  5月24日，国务院新闻办公室副主任郭卫民在京会见美国亚洲协会政策研究院院长陆克文先生一行。双方就中美关系、开展中美智库交流等话题交换了意见。  中宣部国际联络局副局长张洪斌等陪同会见。  版权所有，转载请注明出处。'}
+2019-06-26 23:48:41 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.scio.gov.cn/37234/Document/1656126/1656126.htm> (referer: None)
+2019-06-26 23:48:41 [root] INFO: 路由 routing_method url: http://www.scio.gov.cn/37234/Document/1656126/1656126.htm
+2019-06-26 23:48:41 [root] INFO: >>>> scio_parse result: {'_id': 'df198286-9829-11e9-8a20-54e1ad3ff9f6',
+ 'attachment': [],
+ 'audio': [],
+ 'author': ['[责任编辑：焦非', '] '],
+ 'content': ['中俄合拍大型系列纪录片《这里是中国》第二季开播仪式在驻俄罗斯使馆举行\u3000\u3000'
+             '2019年6月3日，由北京中视雅韵文化传播中心与俄罗斯RT电视台联合拍摄的大型系列纪录片《这里是中国》第二季开播仪式在中国驻俄使馆隆重举行。中共中央宣传部常务副部长王晓晖、俄总统办公厅第一副主任格罗莫夫、李辉大使、俄RT电视台总编辑西蒙尼扬、北京中视雅韵文化传播中心总裁陈波亚出席活动并致辞。俄总统办公厅公关局局长斯米尔诺夫、俄塔斯社社长米哈伊洛夫、《俄罗斯报》社长涅戈伊察、RT电视台台长尼科洛夫，以及俄总统公关局、政府新闻局、外交部新闻局和中俄两国新闻媒体代表约150人出席了活动。王晓晖常务副部长致辞\u3000\u3000'
+             '王晓晖常务副部长在致辞中表示，今年是中华人民共和国成立70周年，也是中俄建交70周年。进入新时代，在两国元首的亲自引领下，中俄关系大踏步向前迈进，政治互信、经贸合作、人文交流齐头并进。中俄联袂打造大型系列纪录片《这里是中国》，是双方媒体积极响应两国元首号召、深化交流合作的实际行动。该片第一季于2017年在两国播出后产生强烈反响，成为“中俄媒体交流年”的标志性成果。在习近平主席即将对俄进行国事访问之际，在此举办《这里是中国》第二季开播式、第三季签约式和主题图片展开幕式，这对于进一步增进两国人民相互了解和友谊、推动中俄媒体和人文领域交流合作具有重要意义。格罗莫夫第一副主任致辞\u3000\u3000'
+             '格罗莫夫第一副主任在致辞中表示，今年是俄中关系发展历程中非常重要的一年，两国将以建交70周年为契机，举办一系列庆祝活动。当前，俄中关系达到前所未有的历史高度，两国媒体开展了全方位、多渠道的交流与合作，取得的成绩有目共睹。《这里是中国》是“俄中媒体交流年”框架下一个非常成功的项目，衷心感谢付出辛勤劳动和智慧的两国新闻媒体和记者。习近平主席即将对俄进行国事访问，期待在两国元首的战略引领下，俄中关系能够得到进一步的大发展，两国媒体合作达到更具内涵的新水平。李辉大使致辞\u3000\u3000'
+             '李辉大使在致辞中表示，再过两天，习近平主席将应普京总统邀请对俄进行国事访问，这在中俄建交70周年的大背景下具有重要意义，必将为新时代中俄关系注入新的强劲动力。走过70年风雨历程的中俄关系历久弥坚，双方将以此访为契机，回顾历史、展望未来。中俄双方在2016年和2017年成功举办了“媒体交流年”，这是两国元首从中俄关系发展大局出发做出的战略决策。在这一“主题年”框架内，中俄媒体的交流与合作取得了实质性进展。纪录片《这里是中国》的拍摄和播出就是例证之一。希望双方媒体进一步加强合作，为推动中俄关系发展和深化两国务实合作贡献力量，并预祝《这里是中国》第二季首播再创佳绩。西蒙尼扬总编辑致辞\u3000\u3000'
+             '西蒙尼扬总编辑在致辞中表示，两国媒体有着强烈的合作意愿，开展了一系列活动。特别是RT电视台正与中方合作伙伴联合打造多个项目。相信在两国政治互信不断加强的背景下，RT电视台与中方合作伙伴的佳作会更多，合作的领域会更广。陈波亚总裁表示，《这里是中国》自筹拍以来，两国媒体就展开了积极有效的合作，共同策划、紧密协作。双方将再接再厉，进一步拓展选题空间，扩大传播效果，共同为世界带来更多更精彩的中国故事。\u3000\u3000'
+             '活动期间，王晓晖常务副部长、北京工美集团代表甘学荣分别向俄、中双方赠送了中俄建交70周年纪念礼。王晓晖常务副部长、格罗莫夫第一副主任、李辉大使、西蒙尼扬总编辑、陈波亚总裁、尼科洛夫台长、何渊董事长共同为大型系列纪录片《这里是中国》第二季开播仪式剪彩，并见证了该片第三季合作协议文本的交换。现场还展出了该纪录片的精选图片，播放了精彩片段。活动开始前，李辉大使陪同王晓晖常务副部长会见了格罗莫夫第一副主任。\u3000\u3000'
+             '活动期间，李辉大使还就习近平主席访俄、中俄关系、两国务实合作、“一带一路”等接受了中俄媒体采访。  '],
+ 'img': ['Image/W020190604341258102753.jpg',
+         'Image/W020190604341258141409.jpg',
+         'Image/W020190604341258173909.jpg',
+         'Image/W020190604341258206956.jpg'],
+ 'page_url': 'http://www.scio.gov.cn/37234/Document/1656126/1656126.htm',
+ 'sub_title_str': ['国务院新闻办公室网站\u3000www.scio.gov.cn\u3000\u3000 '
+                   '2019-06-04\u3000\u3000 来源：中国驻俄罗斯大使馆 '],
+ 'title': ['中俄合拍大型系列纪录片《这里是中国》第二季开播仪式举行'],
+ 'video': []}
+2019-06-26 23:48:41 [root] INFO: page_url:http://www.scio.gov.cn/37234/Document/1656126/1656126.htm, img_urls:['http://www.scio.gov.cn/37234/Document/1656126/Image/W020190604341258102753.jpg', 'http://www.scio.gov.cn/37234/Document/1656126/Image/W020190604341258141409.jpg', 'http://www.scio.gov.cn/37234/Document/1656126/Image/W020190604341258173909.jpg', 'http://www.scio.gov.cn/37234/Document/1656126/Image/W020190604341258206956.jpg']
+2019-06-26 23:48:41 [root] INFO: page_url:http://www.scio.gov.cn/37234/Document/1656126/1656126.htm, video_urls:[]
+2019-06-26 23:48:41 [root] INFO: page_url:http://www.scio.gov.cn/37234/Document/1656126/1656126.htm, audio_urls:[]
+2019-06-26 23:48:41 [root] INFO: page_url:http://www.scio.gov.cn/37234/Document/1656126/1656126.htm, attachment_urls:[]
+2019-06-26 23:48:41 [root] INFO: scio pipelines 数据清洗结果：{'_id': 'df198286-9829-11e9-8a20-54e1ad3ff9f6', 'page_url': 'http://www.scio.gov.cn/37234/Document/1656126/1656126.htm', 'title': '中俄合拍大型系列纪录片《这里是中国》第二季开播仪式举行', 'sub_title_info': '国务院新闻办公室网站 www.scio.gov.cn', 'publish_time': '2019-06-04', 'resource': '中国驻俄罗斯大使馆', 'img': ['http://www.scio.gov.cn/37234/Document/1656126/Image/W020190604341258102753.jpg', 'http://www.scio.gov.cn/37234/Document/1656126/Image/W020190604341258141409.jpg', 'http://www.scio.gov.cn/37234/Document/1656126/Image/W020190604341258173909.jpg', 'http://www.scio.gov.cn/37234/Document/1656126/Image/W020190604341258206956.jpg'], 'video': [], 'audio': [], 'attachment': [], 'author': ['焦非'], 'content': '中俄合拍大型系列纪录片《这里是中国》第二季开播仪式在驻俄罗斯使馆举行  2019年6月3日，由北京中视雅韵文化传播中心与俄罗斯RT电视台联合拍摄的大型系列纪录片《这里是中国》第二季开播仪式在中国驻俄使馆隆重举行。中共中央宣传部常务副部长王晓晖、俄总统办公厅第一副主任格罗莫夫、李辉大使、俄RT电视台总编辑西蒙尼扬、北京中视雅韵文化传播中心总裁陈波亚出席活动并致辞。俄总统办公厅公关局局长斯米尔诺夫、俄塔斯社社长米哈伊洛夫、《俄罗斯报》社长涅戈伊察、RT电视台台长尼科洛夫，以及俄总统公关局、政府新闻局、外交部新闻局和中俄两国新闻媒体代表约150人出席了活动。王晓晖常务副部长致辞  王晓晖常务副部长在致辞中表示，今年是中华人民共和国成立70周年，也是中俄建交70周年。进入新时代，在两国元首的亲自引领下，中俄关系大踏步向前迈进，政治互信、经贸合作、人文交流齐头并进。中俄联袂打造大型系列纪录片《这里是中国》，是双方媒体积极响应两国元首号召、深化交流合作的实际行动。该片第一季于2017年在两国播出后产生强烈反响，成为“中俄媒体交流年”的标志性成果。在习近平主席即将对俄进行国事访问之际，在此举办《这里是中国》第二季开播式、第三季签约式和主题图片展开幕式，这对于进一步增进两国人民相互了解和友谊、推动中俄媒体和人文领域交流合作具有重要意义。格罗莫夫第一副主任致辞  格罗莫夫第一副主任在致辞中表示，今年是俄中关系发展历程中非常重要的一年，两国将以建交70周年为契机，举办一系列庆祝活动。当前，俄中关系达到前所未有的历史高度，两国媒体开展了全方位、多渠道的交流与合作，取得的成绩有目共睹。《这里是中国》是“俄中媒体交流年”框架下一个非常成功的项目，衷心感谢付出辛勤劳动和智慧的两国新闻媒体和记者。习近平主席即将对俄进行国事访问，期待在两国元首的战略引领下，俄中关系能够得到进一步的大发展，两国媒体合作达到更具内涵的新水平。李辉大使致辞  李辉大使在致辞中表示，再过两天，习近平主席将应普京总统邀请对俄进行国事访问，这在中俄建交70周年的大背景下具有重要意义，必将为新时代中俄关系注入新的强劲动力。走过70年风雨历程的中俄关系历久弥坚，双方将以此访为契机，回顾历史、展望未来。中俄双方在2016年和2017年成功举办了“媒体交流年”，这是两国元首从中俄关系发展大局出发做出的战略决策。在这一“主题年”框架内，中俄媒体的交流与合作取得了实质性进展。纪录片《这里是中国》的拍摄和播出就是例证之一。希望双方媒体进一步加强合作，为推动中俄关系发展和深化两国务实合作贡献力量，并预祝《这里是中国》第二季首播再创佳绩。西蒙尼扬总编辑致辞  西蒙尼扬总编辑在致辞中表示，两国媒体有着强烈的合作意愿，开展了一系列活动。特别是RT电视台正与中方合作伙伴联合打造多个项目。相信在两国政治互信不断加强的背景下，RT电视台与中方合作伙伴的佳作会更多，合作的领域会更广。陈波亚总裁表示，《这里是中国》自筹拍以来，两国媒体就展开了积极有效的合作，共同策划、紧密协作。双方将再接再厉，进一步拓展选题空间，扩大传播效果，共同为世界带来更多更精彩的中国故事。  活动期间，王晓晖常务副部长、北京工美集团代表甘学荣分别向俄、中双方赠送了中俄建交70周年纪念礼。王晓晖常务副部长、格罗莫夫第一副主任、李辉大使、西蒙尼扬总编辑、陈波亚总裁、尼科洛夫台长、何渊董事长共同为大型系列纪录片《这里是中国》第二季开播仪式剪彩，并见证了该片第三季合作协议文本的交换。现场还展出了该纪录片的精选图片，播放了精彩片段。活动开始前，李辉大使陪同王晓晖常务副部长会见了格罗莫夫第一副主任。  活动期间，李辉大使还就习近平主席访俄、中俄关系、两国务实合作、“一带一路”等接受了中俄媒体采访。'}
+2019-06-26 23:48:41 [root] INFO: >>>>>>开始操作mongodb！
+2019-06-26 23:48:41 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.scio.gov.cn/37234/Document/1656126/1656126.htm>
+{'_id': 'df198286-9829-11e9-8a20-54e1ad3ff9f6', 'page_url': 'http://www.scio.gov.cn/37234/Document/1656126/1656126.htm', 'title': '中俄合拍大型系列纪录片《这里是中国》第二季开播仪式举行', 'sub_title_info': '国务院新闻办公室网站 www.scio.gov.cn', 'publish_time': '2019-06-04', 'resource': '中国驻俄罗斯大使馆', 'img': ['http://www.scio.gov.cn/37234/Document/1656126/Image/W020190604341258102753.jpg', 'http://www.scio.gov.cn/37234/Document/1656126/Image/W020190604341258141409.jpg', 'http://www.scio.gov.cn/37234/Document/1656126/Image/W020190604341258173909.jpg', 'http://www.scio.gov.cn/37234/Document/1656126/Image/W020190604341258206956.jpg'], 'video': [], 'audio': [], 'attachment': [], 'author': ['焦非'], 'content': '中俄合拍大型系列纪录片《这里是中国》第二季开播仪式在驻俄罗斯使馆举行  2019年6月3日，由北京中视雅韵文化传播中心与俄罗斯RT电视台联合拍摄的大型系列纪录片《这里是中国》第二季开播仪式在中国驻俄使馆隆重举行。中共中央宣传部常务副部长王晓晖、俄总统办公厅第一副主任格罗莫夫、李辉大使、俄RT电视台总编辑西蒙尼扬、北京中视雅韵文化传播中心总裁陈波亚出席活动并致辞。俄总统办公厅公关局局长斯米尔诺夫、俄塔斯社社长米哈伊洛夫、《俄罗斯报》社长涅戈伊察、RT电视台台长尼科洛夫，以及俄总统公关局、政府新闻局、外交部新闻局和中俄两国新闻媒体代表约150人出席了活动。王晓晖常务副部长致辞  王晓晖常务副部长在致辞中表示，今年是中华人民共和国成立70周年，也是中俄建交70周年。进入新时代，在两国元首的亲自引领下，中俄关系大踏步向前迈进，政治互信、经贸合作、人文交流齐头并进。中俄联袂打造大型系列纪录片《这里是中国》，是双方媒体积极响应两国元首号召、深化交流合作的实际行动。该片第一季于2017年在两国播出后产生强烈反响，成为“中俄媒体交流年”的标志性成果。在习近平主席即将对俄进行国事访问之际，在此举办《这里是中国》第二季开播式、第三季签约式和主题图片展开幕式，这对于进一步增进两国人民相互了解和友谊、推动中俄媒体和人文领域交流合作具有重要意义。格罗莫夫第一副主任致辞  格罗莫夫第一副主任在致辞中表示，今年是俄中关系发展历程中非常重要的一年，两国将以建交70周年为契机，举办一系列庆祝活动。当前，俄中关系达到前所未有的历史高度，两国媒体开展了全方位、多渠道的交流与合作，取得的成绩有目共睹。《这里是中国》是“俄中媒体交流年”框架下一个非常成功的项目，衷心感谢付出辛勤劳动和智慧的两国新闻媒体和记者。习近平主席即将对俄进行国事访问，期待在两国元首的战略引领下，俄中关系能够得到进一步的大发展，两国媒体合作达到更具内涵的新水平。李辉大使致辞  李辉大使在致辞中表示，再过两天，习近平主席将应普京总统邀请对俄进行国事访问，这在中俄建交70周年的大背景下具有重要意义，必将为新时代中俄关系注入新的强劲动力。走过70年风雨历程的中俄关系历久弥坚，双方将以此访为契机，回顾历史、展望未来。中俄双方在2016年和2017年成功举办了“媒体交流年”，这是两国元首从中俄关系发展大局出发做出的战略决策。在这一“主题年”框架内，中俄媒体的交流与合作取得了实质性进展。纪录片《这里是中国》的拍摄和播出就是例证之一。希望双方媒体进一步加强合作，为推动中俄关系发展和深化两国务实合作贡献力量，并预祝《这里是中国》第二季首播再创佳绩。西蒙尼扬总编辑致辞  西蒙尼扬总编辑在致辞中表示，两国媒体有着强烈的合作意愿，开展了一系列活动。特别是RT电视台正与中方合作伙伴联合打造多个项目。相信在两国政治互信不断加强的背景下，RT电视台与中方合作伙伴的佳作会更多，合作的领域会更广。陈波亚总裁表示，《这里是中国》自筹拍以来，两国媒体就展开了积极有效的合作，共同策划、紧密协作。双方将再接再厉，进一步拓展选题空间，扩大传播效果，共同为世界带来更多更精彩的中国故事。  活动期间，王晓晖常务副部长、北京工美集团代表甘学荣分别向俄、中双方赠送了中俄建交70周年纪念礼。王晓晖常务副部长、格罗莫夫第一副主任、李辉大使、西蒙尼扬总编辑、陈波亚总裁、尼科洛夫台长、何渊董事长共同为大型系列纪录片《这里是中国》第二季开播仪式剪彩，并见证了该片第三季合作协议文本的交换。现场还展出了该纪录片的精选图片，播放了精彩片段。活动开始前，李辉大使陪同王晓晖常务副部长会见了格罗莫夫第一副主任。  活动期间，李辉大使还就习近平主席访俄、中俄关系、两国务实合作、“一带一路”等接受了中俄媒体采访。'}
+2019-06-26 23:48:42 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.scio.gov.cn/xwbjs/zygy/32310/hd32313/Document/1656303/1656303.htm> (referer: None)
+2019-06-26 23:48:43 [root] INFO: 路由 routing_method url: http://www.scio.gov.cn/xwbjs/zygy/32310/hd32313/Document/1656303/1656303.htm
+2019-06-26 23:48:43 [root] INFO: >>>> scio_parse result: {'_id': 'dff9d306-9829-11e9-85ac-54e1ad3ff9f6',
+ 'attachment': [],
+ 'audio': [],
+ 'author': ['[责任编辑：焦非', '] '],
+ 'content': ['蒋建国会见伊拉克新闻集团主席法德勒·法拉吉拉。（焦非 摄）蒋建国与伊拉克新闻集团主席法德勒·法拉吉拉一行合影。（焦非 '
+             '摄）\u3000\u3000'
+             '6月5日，中宣部副部长蒋建国在京会见伊拉克新闻集团主席法德勒·法拉吉拉先生一行，双方就加强中伊两国媒体交流合作等话题展开了深入探讨。\u3000\u3000'
+             '中宣部国际联络局副局长马佳等陪同会见。\u3000\u3000版权所有，转载请注明出处。  '],
+ 'img': ['Image/1.jpg', 'Image/2.jpg'],
+ 'page_url': 'http://www.scio.gov.cn/xwbjs/zygy/32310/hd32313/Document/1656303/1656303.htm',
+ 'sub_title_str': ['国务院新闻办公室网站\u3000www.scio.gov.cn\u3000\u3000 '
+                   '2019-06-06\u3000\u3000 来源：国新网 '],
+ 'title': ['蒋建国会见伊拉克新闻集团主席法德勒·法拉吉拉'],
+ 'video': []}
+2019-06-26 23:48:43 [root] INFO: page_url:http://www.scio.gov.cn/xwbjs/zygy/32310/hd32313/Document/1656303/1656303.htm, img_urls:['http://www.scio.gov.cn/xwbjs/zygy/32310/hd32313/Document/1656303/Image/1.jpg', 'http://www.scio.gov.cn/xwbjs/zygy/32310/hd32313/Document/1656303/Image/2.jpg']
+2019-06-26 23:48:43 [root] INFO: page_url:http://www.scio.gov.cn/xwbjs/zygy/32310/hd32313/Document/1656303/1656303.htm, video_urls:[]
+2019-06-26 23:48:43 [root] INFO: page_url:http://www.scio.gov.cn/xwbjs/zygy/32310/hd32313/Document/1656303/1656303.htm, audio_urls:[]
+2019-06-26 23:48:43 [root] INFO: page_url:http://www.scio.gov.cn/xwbjs/zygy/32310/hd32313/Document/1656303/1656303.htm, attachment_urls:[]
+2019-06-26 23:48:43 [root] INFO: scio pipelines 数据清洗结果：{'_id': 'dff9d306-9829-11e9-85ac-54e1ad3ff9f6', 'page_url': 'http://www.scio.gov.cn/xwbjs/zygy/32310/hd32313/Document/1656303/1656303.htm', 'title': '蒋建国会见伊拉克新闻集团主席法德勒·法拉吉拉', 'sub_title_info': '国务院新闻办公室网站 www.scio.gov.cn', 'publish_time': '2019-06-06', 'resource': '国新网', 'img': ['http://www.scio.gov.cn/xwbjs/zygy/32310/hd32313/Document/1656303/Image/1.jpg', 'http://www.scio.gov.cn/xwbjs/zygy/32310/hd32313/Document/1656303/Image/2.jpg'], 'video': [], 'audio': [], 'attachment': [], 'author': ['焦非'], 'content': '蒋建国会见伊拉克新闻集团主席法德勒·法拉吉拉。（焦非 摄）蒋建国与伊拉克新闻集团主席法德勒·法拉吉拉一行合影。（焦非 摄）  6月5日，中宣部副部长蒋建国在京会见伊拉克新闻集团主席法德勒·法拉吉拉先生一行，双方就加强中伊两国媒体交流合作等话题展开了深入探讨。  中宣部国际联络局副局长马佳等陪同会见。  版权所有，转载请注明出处。'}
+2019-06-26 23:48:43 [root] INFO: >>>>>>开始操作mongodb！
+2019-06-26 23:48:43 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.scio.gov.cn/xwbjs/zygy/32310/hd32313/Document/1656303/1656303.htm>
+{'_id': 'dff9d306-9829-11e9-85ac-54e1ad3ff9f6', 'page_url': 'http://www.scio.gov.cn/xwbjs/zygy/32310/hd32313/Document/1656303/1656303.htm', 'title': '蒋建国会见伊拉克新闻集团主席法德勒·法拉吉拉', 'sub_title_info': '国务院新闻办公室网站 www.scio.gov.cn', 'publish_time': '2019-06-06', 'resource': '国新网', 'img': ['http://www.scio.gov.cn/xwbjs/zygy/32310/hd32313/Document/1656303/Image/1.jpg', 'http://www.scio.gov.cn/xwbjs/zygy/32310/hd32313/Document/1656303/Image/2.jpg'], 'video': [], 'audio': [], 'attachment': [], 'author': ['焦非'], 'content': '蒋建国会见伊拉克新闻集团主席法德勒·法拉吉拉。（焦非 摄）蒋建国与伊拉克新闻集团主席法德勒·法拉吉拉一行合影。（焦非 摄）  6月5日，中宣部副部长蒋建国在京会见伊拉克新闻集团主席法德勒·法拉吉拉先生一行，双方就加强中伊两国媒体交流合作等话题展开了深入探讨。  中宣部国际联络局副局长马佳等陪同会见。  版权所有，转载请注明出处。'}
+2019-06-26 23:48:43 [scrapy.core.engine] INFO: Closing spider (finished)
+2019-06-26 23:48:43 [root] INFO: 关闭mongo client spider...
+2019-06-26 23:48:43 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 1628,
+ 'downloader/request_count': 4,
+ 'downloader/request_method_count/GET': 4,
+ 'downloader/response_bytes': 60665,
+ 'downloader/response_count': 4,
+ 'downloader/response_status_count/200': 4,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2019, 6, 26, 15, 48, 43, 48300),
+ 'item_scraped_count': 4,
+ 'log_count/DEBUG': 8,
+ 'log_count/INFO': 47,
+ 'response_received_count': 4,
+ 'scheduler/dequeued': 4,
+ 'scheduler/dequeued/memory': 4,
+ 'scheduler/enqueued': 4,
+ 'scheduler/enqueued/memory': 4,
+ 'start_time': datetime.datetime(2019, 6, 26, 15, 48, 38, 642084)}
+2019-06-26 23:48:43 [scrapy.core.engine] INFO: Spider closed (finished)
+2019-06-26 23:48:53 [scrapy.utils.log] INFO: Scrapy 1.6.0 started (bot: node_one)
+2019-06-26 23:48:53 [scrapy.utils.log] INFO: Versions: lxml 4.3.4.0, libxml2 2.9.5, cssselect 1.0.3, parsel 1.5.1, w3lib 1.20.0, Twisted 19.2.1, Python 3.6.6 (v3.6.6:4cf1f54eb7, Jun 27 2018, 03:37:03) [MSC v.1900 64 bit (AMD64)], pyOpenSSL 19.0.0 (OpenSSL 1.1.1c  28 May 2019), cryptography 2.7, Platform Windows-10-10.0.17134-SP0

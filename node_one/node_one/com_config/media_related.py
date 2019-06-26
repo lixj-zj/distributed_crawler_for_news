@@ -115,6 +115,25 @@ class MediaFile():
             logging.error("获取音频下载地址错误！错误信息：{}".format(str(e)))
 
 
+    def get_attachment_urls(self, page_url, attachment_urls):
+        """
+        截取页面名称后的url地址，并与attachment列表中的每个地址拼接
+        :param page_url: 页面地址
+        :param attachment_urls: 附件列表
+        :return: 完整的附件下载地址
+        """
+        try:
+            download_urls = []
+            if len(attachment_urls) is not 0:
+                for one_url in attachment_urls:
+                    download_urls.append(page_url.rsplit("/", maxsplit=1)[0] + os.altsep + one_url)
+            logging.info("page_url:{}, attachment_urls:{}".format(page_url, download_urls))
+            return download_urls
+        except Exception as e:
+            logging.error("获取附件下载地址错误！错误信息：{}".format(str(e)))
+
+
+
     # TODO 下载多媒体文件暂缓，暂时用处不大
 
 if __name__ == '__main__':

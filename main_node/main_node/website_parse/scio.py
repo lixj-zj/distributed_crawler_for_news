@@ -15,13 +15,76 @@
 
 from scrapy.selector import Selector
 from main_node.items import ScioItem
-import uuid
+import os
 import logging
-
+from lxml import etree
+import time
+import re
+from numba import jit
+from main_node.spiders.new_requests import  NewRequests as new_requests
 
 class Scio():
     def __init__(self):
         pass
+
+    # 获取总页数
+    def max_num_of_pages(self, sel, response):
+        try:
+            navi_last_page = sel.xpath('//*[@id="PagerOutline1_PageIndex"]/text()').extract()
+            r = re.search(r"共\d*页", navi_last_page[0])
+            last_page = r.group()[1:-1]
+            return last_page
+        except Exception as e:
+            logging.error("获取总页数错误！url：{}，错误信息：{}".format(response.url, str(e)))
+
+
+    def get_url_pages(self, first_page_url, max_page_num):
+        # "http://www.scio.gov.cn/37234/index_3.htm"
+        # 记录所有父页面的地址 index_2.htm
+        try:
+            father_url = []
+            father_url.append(first_page_url)
+            no_filename_url = first_page_url.rsplit("/", maxsplit=1)
+            for page in range(1, int(max_page_num)):
+                father_url.append(no_filename_url[0] + "/index_" + str(page) + ".htm")
+            return father_url
+        except Exception as e:
+            logging.error("获取url列表页错误！错误信息：{}".format(str(e)))
+
+    @jit
+    def get_all_news_urls(self, father_url, max_num):
+        try:
+            # 记录所有目标新闻页面的url
+            all_page_result = set()
+            for one_page_url in father_url[:max_num]:
+                html = new_requests().get_html_from_url(one_page_url)
+                struct = etree.HTML(html)
+                # 查找指定标签下的所有的a标签的href属性
+                page_contains_url = struct.xpath('//*[@id="PagerOutline1"]//a/@href')
+                for url in page_contains_url:
+                    if "Document" in url:
+                        all_page_result.add(one_page_url.rsplit("/", maxsplit=1)[0] + os.altsep + url)
+                logging.info("{}记录完成！".format(one_page_url))
+                time.sleep(1)
+            return list(all_page_result)
+        except Exception as e:
+            logging.error("获取目标新闻页面url错误！错误信息：{}".format(str(e)))
+
+
+    def get_real_urls(self, base_url, url_list, max):
+        real_url = []
+        for url in url_list[:max]:
+            html = new_requests().get_html_from_url(url)
+            # 重定向地址匹配的re pattern
+            pattern = r'window.location.replace\(\"../../../(.*)\"\);'
+            match_location = re.findall(pattern, html)
+            # 存在页面重定向的地址，则添加拼接后的新的地址，否则直接添加该地址
+            if len(match_location) is not 0:
+                real_url.append(base_url + os.altsep + match_location[0])
+            else:
+                real_url.append(url)
+        return real_url
+
 
     def scio_parse(self, response):
         """
@@ -29,22 +92,14 @@ class Scio():
         :param response: spider中parse解析函数入参
         :return: 提取数据后的item
         """
+        base_url = 'www.scio.gov.cn'
         sel = Selector(response)
+        start_url = response.url
         item = ScioItem()
 
-        # TODO 随机数问题: random() -> uuid
-        # 插入mongodb时避免 KeyError: 'xxx does not support field: _id'
-        item['_id'] = str(uuid.uuid1())
-
-        # real_url 经过跳转之后的url
-        item['page_url'] = response.url
-        item['title'] = sel.xpath('//*[@class="tc A_title"]/text()').extract()
-        item['sub_title_str'] = sel.xpath('//*[@class="tc A_t1 f12 pr"]/div[1]/text()').extract()
-        item['img'] = sel.xpath('//*[@id="content"]//img/@src').extract()
-        item['video'] = sel.xpath('//*[@id="content"]//video/@src').extract()
-        item['audio'] = sel.xpath('//*[@id="content"]//audio/@src').extract()
-        item['content'] = sel.xpath('//*[@id="content"]').xpath('string(.)').extract()
-        item['author'] = sel.xpath('//*[@class="tr A_t1 f12"]/text()').extract()
-
-        logging.info("scio_parse result: {}".format(str(item)))
+        # max_pages_num = self.max_num_of_pages(sel, response)
+        father_url = self.get_url_pages(start_url, 3)
+        all_page_result = self.get_all_news_urls(father_url, max_num=5)
+        all_page_real_url = self.get_real_urls(base_url, all_page_result, max=5)
+        item['all_page_real_url'] = list(all_page_real_url)[:5]
         return item

@@ -5,8 +5,10 @@
 # See documentation in:
 # https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 
-from scrapy import signals
+
 # from main_node.com_config import random_ip
+from scrapy import signals
+from scrapy.downloadermiddlewares.useragent import UserAgentMiddleware
 import logging
 
 
@@ -106,9 +108,37 @@ class MainNodeDownloaderMiddleware(object):
 
 
 
-# class MainNodeProxyMiddleware(object):
-#     def process_request(self, request, spider):
-#         proxy = random_ip.RandomIp().get_one_proxies()
-#         logging.info("Set random proxy is:{}".format(proxy))
-#         request.meta['proxy'] = proxy.get('http')
+class MainNodeUserAgentMiddleware(UserAgentMiddleware):
+    def __init__(self, user_agent):
+        self.user_agent = user_agent
+
+    @classmethod
+    def from_crawler(cls, crawler):
+        return cls(
+            user_agent=crawler.settings.get("USER_AGENT")
+        )
+
+    def process_request(self, request, spider):
+        logging.info("*********user-agent-middleware 中随机 User-Agent：{}"
+                     .format(self.user_agent))
+        request.headers['User-Agent'] = self.user_agent
+
+
+
+class MainNodeProxyMiddleware(object):
+    def __init__(self, ip):
+        self.ip = ip
+
+    @classmethod
+    def from_crawler(cls, crawler):
+        return cls(
+            ip=crawler.settings.get("PROXIES")
+        )
+
+    def process_request(self, request, spider):
+        logging.info("*********proxy-middleware 中随机 ip：{}"
+                     .format(self.ip))
+        request.meta['proxy'] = self.ip.get("http")
+
+
 

@@ -12,8 +12,6 @@
  @contact : lixj_zj@163.com
 """
 
-from main_node.com_config.media_related import MediaFile
-from main_node.pipelines.single_mongodb import SingleMongodbPipeline
 import re
 import logging
 
@@ -22,39 +20,12 @@ class ScioPipeline(object):
     def __init__(self):
         pass
 
-    def pro_process(self, item):
+    def process_item(self, item, spider):
         """
         scio 数据预处理
         :param item: parse()获取到的源数据
         :return: 数据清洗后的数据
         """
         result = dict()
-        result['_id'] = item['_id']
-        result['page_url'] = item['page_url']
-        result['title'] = item['title'][0]
-
-        # subtitle
-        sub_title = item['sub_title_str'][0].strip().replace(u'\u3000', u' ')
-        split_res = sub_title.split("   ")
-        result['sub_title_info'] = split_res[0]
-        result['publish_time'] = split_res[1]
-        result['resource'] = split_res[2].split("：")[1]
-
-        # 多媒体文件
-        result['img'] = MediaFile().get_image_urls(item['page_url'], item['img'])
-        result['video'] = MediaFile().get_video_urls(item['page_url'], item['video'])
-        result['audio'] = MediaFile().get_audio_urls(item['page_url'], item['audio'])
-
-        # 正则匹配author
-        author_pattern = r'责任编辑：(.*)'
-        result['author'] = re.findall(author_pattern, item['author'][0])
-
-        # TODO 待优化点
-        result['content'] = item['content'][0].strip().replace(u'\u3000', u' ').replace("\n", "").replace("\r", "")
-
+        result['all_page_real_url'] = item['all_page_real_url']
         return result
-
-
-    def process_item(self, item, spider):
-        result = self.pro_process(item)
-        SingleMongodbPipeline().process_item(result, spider)

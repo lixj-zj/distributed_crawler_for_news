@@ -24,7 +24,7 @@ def max_num_of_pages(first_page_url):
     try:
         html = get_html_from_url(first_page_url)
         struct = etree.HTML(html)
-        navi_last_page = struct.xpath('//*[@id="PagerOutline1_PageIndex"]/text()')
+        navi_last_page = struct.xpath('//*[@id="naviLastPage"]/text()')
         r = re.search(r"共\d*页", navi_last_page[0])
         last_page = r.group()[1:-1]
         return last_page

@@ -44,6 +44,9 @@ class ScioPipeline(object):
         result['video'] = MediaFile().get_video_urls(item['page_url'], item['video'])
         result['audio'] = MediaFile().get_audio_urls(item['page_url'], item['audio'])
 
+        # 附件下载地址
+        result['attachment'] = MediaFile().get_attachment_urls(item['page_url'], item['attachment'])
+
         # 正则匹配author
         author_pattern = r'责任编辑：(.*)'
         result['author'] = re.findall(author_pattern, item['author'][0])

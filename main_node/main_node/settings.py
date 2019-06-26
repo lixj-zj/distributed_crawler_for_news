@@ -10,26 +10,32 @@
 #     https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 
 from main_node.com_config.user_agent import UserAgent
+from main_node.com_config.random_ip import RandomIp
 
 BOT_NAME = 'main_node'
 
 SPIDER_MODULES = ['main_node.spiders']
 NEWSPIDER_MODULE = 'main_node.spiders'
 
+CONCURRENT_ITEMS = 100
+
 # Crawl responsibly by identifying yourself (and your website_parse) on the user-agent
 # USER_AGENT = 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.6 '
 USER_AGENT = UserAgent().get_user_agent()
+
+PROXIES = RandomIp().get_one_proxies()
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = False
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
-# CONCURRENT_REQUESTS = 32
+CONCURRENT_REQUESTS = 32
 
 # Configure a delay for requests for the same website_parse (default: 0)
 # See https://doc.scrapy.org/en/latest/topics/settings.html#download-delay
 # See also autothrottle settings and docs
-DOWNLOAD_DELAY = 3
+# 下载延迟，防反扒
+DOWNLOAD_DELAY = 1
 # The download delay setting will honor only one of:
 # CONCURRENT_REQUESTS_PER_DOMAIN = 16
 # CONCURRENT_REQUESTS_PER_IP = 16
@@ -55,11 +61,11 @@ DEFAULT_REQUEST_HEADERS = UserAgent().get_headers()
 
 # Enable or disable downloader middlewares
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
-# DOWNLOADER_MIDDLEWARES = {
-   # 'main_node.middlewares.MainNodeDownloaderMiddleware': 543,
-   #  'main_node.middlewares.MainNodeProxyMiddleware': 100,
-    # 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware': 100,
-# }
+DOWNLOADER_MIDDLEWARES = {
+    # 'scrapy.downloadermiddleware.defaultheaders.DefaultHeadersMiddleware': None,
+    'scrapy.downloadermiddleware.useragent.UserAgentMiddleware': None,
+    'main_node.middlewares.MainNodeUserAgentMiddleware': 300,
+}
 
 # Enable or disable extensions
 # See https://doc.scrapy.org/en/latest/topics/extensions.html
@@ -71,7 +77,7 @@ DEFAULT_REQUEST_HEADERS = UserAgent().get_headers()
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
     # 'main_node.pipelines.MainNodePipeline': 300,
-    # 'main_node.pipelines.single_mongodb.SingleMongodbPipeline': 300,
+    'main_node.pipelines.write_into_file.WriteIntoFilePipeline': 300,
     'main_node.pipelines.scio.ScioPipeline': 100,
 }
 
@@ -137,11 +143,10 @@ ITEM_PIPELINES = {
 # HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
 
 
-
-
-MONGODB_URI = 'mongodb://192.168.131.24:27017'
-MONGODB_DATABASE = 'demo'
-MONGODB_COLLECTION = 'scio'
+# 下载文件相关配置
+FILE_PATH = "main_node/download_uri"
+FILE_NAME = 'scio'
+FILE_SUFFIX = '.txt'
 
 
 # 日志文件         
@@ -149,7 +154,7 @@ MONGODB_COLLECTION = 'scio'
 LOG_FILE = "logs/scrapy.log"
 
 # 日志等级
-LOG_LEVEL = 'INFO'
+LOG_LEVEL = 'DEBUG'
 
 # 是否启用日志（创建日志后，不需开启，进行配置）
 LOG_ENABLED = False  # （默认为True，启用日志）

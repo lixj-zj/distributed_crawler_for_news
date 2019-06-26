@@ -16,19 +16,32 @@ import requests
 from lxml import etree
 import re
 
-res = requests.get('http://www.scio.gov.cn/xwbjs/zygy/38848/38852/Document/1653987/1653987.htm')
+from user_agent import UserAgent
+
+# headers = {
+#     'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+#     'Accept-Language': 'en',
+# }
+
+url='http://www.scio.gov.cn/37236/37377/Document/1650050/1650050.htm'
+res = requests.get(url, headers=UserAgent().get_headers())
 res.encoding=res.apparent_encoding
 struct = etree.HTML(res.text)
-title = struct.xpath('//*[@class="tc A_title"]/text()')[0]
+print(res.text)
 
-sub_title_str = struct.xpath('//*[@class="tc A_t1 f12 pr"]/div[1]/text()')[0]
-sub_title = sub_title_str.strip().replace(u'\u3000', u' ')
+aa = struct.xpath('//*[@id="Affix1"]//a/@href')
+print(aa)
 
-result = sub_title.split("   ")
-sub_title_info = result[0]
-publish_time = result[1]
-resource = result[2].split("：")[1]
-content = struct.xpath('//*[@id="content"]')[0].xpath('string(.)').strip()
-author = struct.xpath('//*[@class="tr A_t1 f12"]/text()')[0]
 
-print()
+# title = struct.xpath('//*[@class="tc A_title"]/text()')[0]
+#
+# sub_title_str = struct.xpath('//*[@class="tc A_t1 f12 pr"]/div[1]/text()')[0]
+# sub_title = sub_title_str.strip().replace(u'\u3000', u' ')
+#
+# result = sub_title.split("   ")
+# sub_title_info = result[0]
+# publish_time = result[1]
+# resource = result[2].split("：")[1]
+# content = struct.xpath('//*[@id="content"]')[0].xpath('string(.)').strip()
+# author = struct.xpath('//*[@class="tr A_t1 f12"]/text()')[0]
+

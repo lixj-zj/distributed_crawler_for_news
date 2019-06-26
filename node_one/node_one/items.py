@@ -29,6 +29,7 @@ class ScioItem(scrapy.Item):
     audio = scrapy.Field()
     content = scrapy.Field()
     author = scrapy.Field()
+    attachment = scrapy.Field()
 
 
 class WechatItem(scrapy.Item):
