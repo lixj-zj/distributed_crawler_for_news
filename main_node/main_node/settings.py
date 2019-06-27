@@ -77,8 +77,11 @@ DOWNLOADER_MIDDLEWARES = {
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
     # 'main_node.pipelines.MainNodePipeline': 300,
-    'main_node.pipelines.write_into_file.WriteIntoFilePipeline': 300,
+    # 'main_node.pipelines.write_into_file.WriteIntoFilePipeline': 300,
     'main_node.pipelines.scio.ScioPipeline': 100,
+
+    # Store scraped item in redis for post-processing. 分布式redispipeline
+    'scrapy_redis.pipelines.RedisPipeline': 200,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
@@ -107,19 +110,22 @@ ITEM_PIPELINES = {
 
 
 
-# #scrapy-redis配置
-# # 过滤器
-# DUPEFILTER_CLASS = "scrapy_redis.dupefilter.RFPDupeFilter"
-# # 调度器
-# SCHEDULER = "scrapy_redis.scheduler.Scheduler"
-# # 调度状态持久化
-# SCHEDULER_PERSIST = True
-# # 请求调度使用优先队列
-# SCHEDULER_QUEUE_CLASS = 'scrapy_redis.queue.SpiderPriorityQueue'
-# # redis 使用的端口和地址
-# REDIS_HOST = '127.0.0.1'
-# REDIS_PORT = 6379
-#
+#scrapy-redis配置
+# 指纹重复过滤器
+# Ensure all spiders share same duplicates filter through redis.
+DUPEFILTER_CLASS = "scrapy_redis.dupefilter.RFPDupeFilter"
+# 调度器
+# Enables scheduling storing requests queue in redis.
+SCHEDULER = "scrapy_redis.scheduler.Scheduler"
+# 调度状态持久化
+SCHEDULER_PERSIST = True
+# 请求调度使用优先队列
+SCHEDULER_QUEUE_CLASS = 'scrapy_redis.queue.SpiderPriorityQueue'
+# redis 使用的端口和地址
+REDIS_HOST = '192.168.1.8'
+REDIS_PORT = 6379
+
+
 # ##增加全局并发数的一些配置:
 # # 默认 Item 并发数：100
 # CONCURRENT_ITEMS = 100

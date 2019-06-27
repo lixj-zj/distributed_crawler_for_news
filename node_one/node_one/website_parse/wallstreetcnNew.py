@@ -48,7 +48,6 @@ def requestUrl(url):
     try:
         if re.status_code == 200:
             re.encoding = re.apparent_encoding
-            logging.info("requests url 请求完成！url:{}".format(url))
             return re.text
         else:
             logging.error("request url 请求状态异常！异常url：{}，异常链接状态：{}".format(url, re.status_code))

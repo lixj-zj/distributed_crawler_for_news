@@ -16,7 +16,7 @@ class ScioItem(scrapy.Item):
     """
     解析scio的item
     """
-    all_page_real_url = scrapy.Field()
+    all_real_urls = scrapy.Field()
 
 
 

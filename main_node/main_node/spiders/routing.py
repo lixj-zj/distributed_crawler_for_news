@@ -36,14 +36,13 @@ class Routing():
                 'api.wallstreetcn.com': 'get_detail_info_from_api'
             }
 
-    def routing_method(self, response):
+    def routing_method(self, url):
         """
         根据url路由对应的方法
         :param url: 解析的url
         :return: 对应解析函数函数返回的数据内容
         """
         try:
-            url = response.url
             logging.info("路由 routing_method url: {}".format(url))
             # 惰性匹配网址
             pattern = r'//(.*?)/'
@@ -53,7 +52,7 @@ class Routing():
             if web_site in self.routing_dict.keys():
                 # 字符串映射到函数的字典。
                 # 这种技术的主要优点是字符串不需要匹配函数的名称。
-                detail_info = self.routing_dict[web_site](response)
+                detail_info = self.routing_dict[web_site](url)
                 return detail_info
             else:
                 # 不阻断后续url分析，记录无法解析的url

@@ -22,10 +22,9 @@ class ScioPipeline(object):
 
     def process_item(self, item, spider):
         """
-        scio 数据预处理
-        :param item: parse()获取到的源数据
-        :return: 数据清洗后的数据
+
+        :param item:
+        :param spider:
+        :return:
         """
-        result = dict()
-        result['all_page_real_url'] = item['all_page_real_url']
-        return result
+        return item

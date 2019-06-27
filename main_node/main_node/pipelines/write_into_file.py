@@ -32,17 +32,9 @@ class WriteIntoFilePipeline(object):
         logging.info("写入内容：{}".format(item))
         file_path = self.file_path + os.altsep + self.file_name + self.file_suffix
 
-        content_set = set()
-        # 判断文件是否存在，不存在则新建
-        if os.path.isfile(file_path):
-            # 先读取文件中的内容转成set
-            with open(file_path, "r", encoding="utf-8") as f:
-                content = f.read()
-            content_set.add(content.split(","))
-
-        # 写入文件-去重
-        with open(file_path, "a+", encoding="utf-8") as f:
-            for uri in item['all_page_real_url']:
-                if not content_set.__contains__(uri):
-                    f.write(uri if uri is item[-1] else uri + ",")
-        return item  # return会在控制台显示输出入库的item数据，可以选择不写（此时显示None）
+        # # 写入文件-去重
+        # with open(file_path, "a+", encoding="utf-8") as f:
+        #     for uri in item['all_real_urls']:
+        #         f.write(uri if uri is item[-1] else uri + ",")
+        #
+        # return item  # return会在控制台显示输出入库的item数据，可以选择不写（此时显示None）

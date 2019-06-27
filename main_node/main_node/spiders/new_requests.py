@@ -26,7 +26,6 @@ class NewRequests():
         try:
             if req.status_code == 200:
                 req.encoding = req.apparent_encoding
-                logging.info("requests url 请求完成！url:{}".format(url))
                 return req.text
             else:
                 logging.error("request url 请求状态异常！异常url：{}，异常链接状态：{}".format(url, req.status_code))
