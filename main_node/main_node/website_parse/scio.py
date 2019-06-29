@@ -109,12 +109,12 @@ class Scio():
         base_url = 'www.scio.gov.cn'
         item = ScioItem()
 
-        html = new_requests().get_html_from_url(start_url)
-        max_pages_num = self.max_num_of_pages(html)
-        father_url = self.list_url_pages(start_url, max_pages_num)
-        all_page_result = self.all_news_urls(father_url, max_num=5)
+        # html = new_requests().get_html_from_url(start_url)
+        # max_pages_num = self.max_num_of_pages(html)
+        father_url = self.list_url_pages(start_url, 2)
+        all_page_result = self.all_news_urls(father_url, max_num=10)
         result_urls = self.real_urls(base_url, all_page_result)
 
-        item['all_real_urls'] = result_urls
+        item['all_real_urls'] = result_urls[:10]
 
         return item

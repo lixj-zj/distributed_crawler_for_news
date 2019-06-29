@@ -17,8 +17,6 @@ BOT_NAME = 'main_node'
 SPIDER_MODULES = ['main_node.spiders']
 NEWSPIDER_MODULE = 'main_node.spiders'
 
-CONCURRENT_ITEMS = 100
-
 # Crawl responsibly by identifying yourself (and your website_parse) on the user-agent
 # USER_AGENT = 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.6 '
 USER_AGENT = UserAgent().get_user_agent()
@@ -27,9 +25,6 @@ PROXIES = RandomIp().get_one_proxies()
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = False
-
-# Configure maximum concurrent requests performed by Scrapy (default: 16)
-CONCURRENT_REQUESTS = 32
 
 # Configure a delay for requests for the same website_parse (default: 0)
 # See https://doc.scrapy.org/en/latest/topics/settings.html#download-delay
@@ -78,10 +73,10 @@ DOWNLOADER_MIDDLEWARES = {
 ITEM_PIPELINES = {
     # 'main_node.pipelines.MainNodePipeline': 300,
     # 'main_node.pipelines.write_into_file.WriteIntoFilePipeline': 300,
-    'main_node.pipelines.scio.ScioPipeline': 100,
 
+    # main_node
     # Store scraped item in redis for post-processing. 分布式redispipeline
-    'scrapy_redis.pipelines.RedisPipeline': 200,
+    'scrapy_redis.pipelines.RedisPipeline': 300,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
@@ -120,33 +115,37 @@ SCHEDULER = "scrapy_redis.scheduler.Scheduler"
 # 调度状态持久化
 SCHEDULER_PERSIST = True
 # 请求调度使用优先队列
-SCHEDULER_QUEUE_CLASS = 'scrapy_redis.queue.SpiderPriorityQueue'
+SCHEDULER_QUEUE_CLASS = 'scrapy_redis.queue.PriorityQueue'
 # redis 使用的端口和地址
-REDIS_HOST = '192.168.1.8'
-REDIS_PORT = 6379
+REDIS_URL = "redis://192.168.131.24:6379"
 
 
-# ##增加全局并发数的一些配置:
-# # 默认 Item 并发数：100
-# CONCURRENT_ITEMS = 100
-# # 默认 Request 并发数：16
-# CONCURRENT_REQUESTS = 16
-# # 默认每个域名的并发数：8
-# CONCURRENT_REQUESTS_PER_DOMAIN = 8
-# # 每个IP的最大并发数：0表示忽略
-# CONCURRENT_REQUESTS_PER_IP = 0
-#
-# ##缓存，scrapy默认已经自带了缓存，配置如下
-# # 打开缓存
-# HTTPCACHE_ENABLED = True
-# # 设置缓存过期时间（单位：秒）
-# # HTTPCACHE_EXPIRATION_SECS = 0
-# # 缓存路径(默认为：.scrapy/httpcache)
-# HTTPCACHE_DIR = 'httpcache'
-# # 忽略的状态码
-# HTTPCACHE_IGNORE_HTTP_CODES = []
-# # 缓存模式(文件缓存)
-# HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
+# 配置重爬
+SCHEDULER_FLUSH_ON_START = True
+
+
+##增加全局并发数的一些配置:
+# 默认 Item 并发数：100
+CONCURRENT_ITEMS = 100
+# 默认 Request 并发数：16
+CONCURRENT_REQUESTS = 32
+# 默认每个域名的并发数：8
+CONCURRENT_REQUESTS_PER_DOMAIN = 8
+# 每个IP的最大并发数：0表示忽略
+CONCURRENT_REQUESTS_PER_IP = 0
+
+
+# 缓存，scrapy默认已经自带了缓存，配置如下
+# 打开缓存
+HTTPCACHE_ENABLED = True
+# 设置缓存过期时间（单位：秒）
+# HTTPCACHE_EXPIRATION_SECS = 0
+# 缓存路径(默认为：.scrapy/httpcache)
+HTTPCACHE_DIR = 'httpcache'
+# 忽略的状态码
+HTTPCACHE_IGNORE_HTTP_CODES = []
+# 缓存模式(文件缓存)
+HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
 
 
 # 下载文件相关配置

@@ -83,6 +83,9 @@ ITEM_PIPELINES = {
    # 'node_one.pipelines.NodeOnePipeline': 300,
     'node_one.pipelines.single_mongodb.SingleMongodbPipeline': 300,
     'node_one.pipelines.scio.ScioPipeline': 100,
+
+    # Store scraped item in redis for post-processing. 分布式redispipeline
+    # 'scrapy_redis.pipelines.RedisPipeline': 200,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
@@ -105,6 +108,23 @@ ITEM_PIPELINES = {
 #HTTPCACHE_DIR = 'httpcache'
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
+
+
+
+
+#scrapy-redis配置
+# 指纹重复过滤器
+# Ensure all spiders share same duplicates filter through redis.
+DUPEFILTER_CLASS = "scrapy_redis.dupefilter.RFPDupeFilter"
+# 调度器
+# Enables scheduling storing requests queue in redis.
+SCHEDULER = "scrapy_redis.scheduler.Scheduler"
+# 调度状态持久化
+SCHEDULER_PERSIST = True
+# 请求调度使用优先队列
+SCHEDULER_QUEUE_CLASS = 'scrapy_redis.queue.SpiderPriorityQueue'
+# redis 使用的端口和地址
+REDIS_URL = "redis://192.168.209.251:6379"
 
 
 
