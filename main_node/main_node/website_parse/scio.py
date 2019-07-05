@@ -52,27 +52,28 @@ class Scio():
         except Exception as e:
             logging.error("获取url列表页错误！错误信息：{}".format(e))
 
-
-    def all_news_urls(self, father_url, max_num):
+    def all_news_urls(self, page_url):
         """
         由父链接获取其主要部分的所有链接
         :param father_url: 父链接
-        :param max_num: 
-        :return: 
+        :param max_num:
+        :return:
         """
         try:
             # 记录所有目标新闻页面的url
             all_page_result = set()
-            for one_page_url in father_url[:max_num]:
-                html = new_requests().get_html_from_url(one_page_url)
-                struct = etree.HTML(html)
-                # 查找指定标签下的所有的a标签的href属性
-                page_contains_url = struct.xpath('//*[@id="PagerOutline1"]//a/@href')
-                for url in page_contains_url:
-                    if "Document" in url:
-                        all_page_result.add(one_page_url.rsplit("/", maxsplit=1)[0] + os.altsep + url)
-                time.sleep(1)
+            # for one_page_url in father_url[:max_num]:
+            html = new_requests().get_html_from_url(page_url)
+            pre_url = page_url.rsplit("/", maxsplit=1)[0]
+            struct = etree.HTML(html)
+            # 查找指定标签下的所有的a标签的href属性
+            page_contains_url = struct.xpath('//*[@id="PagerOutline1"]//a/@href')
+            for url in page_contains_url:
+                if "Document" in url:
+                    all_page_result.add(pre_url + os.altsep + url)
+            time.sleep(1)
             return list(all_page_result)
+
         except Exception as e:
             logging.error("获取目标新闻页面url错误！错误信息：{}".format(e))
 
@@ -80,10 +81,10 @@ class Scio():
     def real_urls(self, base_url, url_list):
         """
         获取网页真实链接
-        :param base_url: 
-        :param url_list: 
-        :param max: 
-        :return: 
+        :param base_url:
+        :param url_list:
+        :param max:
+        :return:
         """
         # TODO 列表筛选值优化
         result = []
@@ -100,7 +101,7 @@ class Scio():
         return result
 
 
-    def scio_parse(self, start_url):
+    def scio_parse(self, url):
         """
         解析scio网站内容
         :param response: spider中parse解析函数入参
@@ -111,10 +112,10 @@ class Scio():
 
         # html = new_requests().get_html_from_url(start_url)
         # max_pages_num = self.max_num_of_pages(html)
-        father_url = self.list_url_pages(start_url, 2)
-        all_page_result = self.all_news_urls(father_url, max_num=10)
+        # father_url = self.list_url_pages(url, 3)
+        all_page_result = self.all_news_urls(url)
         result_urls = self.real_urls(base_url, all_page_result)
 
-        item['all_real_urls'] = result_urls[:10]
+        item['all_real_urls'] = result_urls
 
         return item

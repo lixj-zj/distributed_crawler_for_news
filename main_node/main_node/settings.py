@@ -58,7 +58,7 @@ DEFAULT_REQUEST_HEADERS = UserAgent().get_headers()
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 DOWNLOADER_MIDDLEWARES = {
     # 'scrapy.downloadermiddleware.defaultheaders.DefaultHeadersMiddleware': None,
-    'scrapy.downloadermiddleware.useragent.UserAgentMiddleware': None,
+    # 'scrapy.downloadermiddleware.useragent.UserAgentMiddleware': None,
     'main_node.middlewares.MainNodeUserAgentMiddleware': 300,
 }
 
@@ -71,12 +71,12 @@ DOWNLOADER_MIDDLEWARES = {
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-    # 'main_node.pipelines.MainNodePipeline': 300,
-    # 'main_node.pipelines.write_into_file.WriteIntoFilePipeline': 300,
+    'main_node.pipelines.main_node.MainNodePipeline': 300,
+    'main_node.pipelines.write_into_file.WriteIntoFilePipeline': 400,
 
     # main_node
     # Store scraped item in redis for post-processing. 分布式redispipeline
-    'scrapy_redis.pipelines.RedisPipeline': 300,
+    'scrapy_redis.pipelines.RedisPipeline': 200,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
@@ -105,23 +105,21 @@ ITEM_PIPELINES = {
 
 
 
-#scrapy-redis配置
+# scrapy-redis配置
 # 指纹重复过滤器
 # Ensure all spiders share same duplicates filter through redis.
 DUPEFILTER_CLASS = "scrapy_redis.dupefilter.RFPDupeFilter"
 # 调度器
 # Enables scheduling storing requests queue in redis.
 SCHEDULER = "scrapy_redis.scheduler.Scheduler"
-# 调度状态持久化
+# 调度状态持久化，断点续爬
 SCHEDULER_PERSIST = True
 # 请求调度使用优先队列
 SCHEDULER_QUEUE_CLASS = 'scrapy_redis.queue.PriorityQueue'
 # redis 使用的端口和地址
-REDIS_URL = "redis://192.168.131.24:6379"
-
-
+REDIS_URL = "redis://192.168.131.26:6379"
 # 配置重爬
-SCHEDULER_FLUSH_ON_START = True
+# SCHEDULER_FLUSH_ON_START = True   # /////////////////////////////////////////////////
 
 
 ##增加全局并发数的一些配置:

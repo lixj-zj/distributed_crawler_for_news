@@ -29,12 +29,23 @@ class WriteIntoFilePipeline(object):
 
     def process_item(self, item, spider):
         logging.info(">>>>>>开始操作写入下载链接文件！")
-        logging.info("写入内容：{}".format(item))
         file_path = self.file_path + os.altsep + self.file_name + self.file_suffix
 
-        # # 写入文件-去重
+        # # 写入文件
         # with open(file_path, "a+", encoding="utf-8") as f:
         #     for uri in item['all_real_urls']:
         #         f.write(uri if uri is item[-1] else uri + ",")
-        #
-        # return item  # return会在控制台显示输出入库的item数据，可以选择不写（此时显示None）
+        #         f.write(" >>>> one done.")
+
+        with open(file_path, "r") as f:
+            user_list = f.read()
+
+        with open(file_path, "a+", encoding="utf-8") as f:
+            for url in item['all_real_urls']:
+                if url not in user_list:
+                    f.write(url)
+                    f.write("\n")
+                f.write("\n")
+
+        logging.info(">>>>>>>写入完成！")
+        return item  # return会在控制台显示输出入库的item数据，可以选择不写（此时显示None）

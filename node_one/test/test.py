@@ -23,14 +23,14 @@ from user_agent import UserAgent
 #     'Accept-Language': 'en',
 # }
 
-url='http://www.scio.gov.cn/37236/37377/Document/1650050/1650050.htm'
-res = requests.get(url, headers=UserAgent().get_headers())
-res.encoding=res.apparent_encoding
-struct = etree.HTML(res.text)
-print(res.text)
-
-aa = struct.xpath('//*[@id="Affix1"]//a/@href')
-print(aa)
+# url='http://www.scio.gov.cn/37236/37377/Document/1650050/1650050.htm'
+# res = requests.get(url, headers=UserAgent().get_headers())
+# res.encoding=res.apparent_encoding
+# struct = etree.HTML(res.text)
+# print(res.text)
+#
+# aa = struct.xpath('//*[@id="Affix1"]//a/@href')
+# print(aa)
 
 
 # title = struct.xpath('//*[@class="tc A_title"]/text()')[0]
@@ -45,3 +45,8 @@ print(aa)
 # content = struct.xpath('//*[@id="content"]')[0].xpath('string(.)').strip()
 # author = struct.xpath('//*[@class="tr A_t1 f12"]/text()')[0]
 
+
+page_contains_url = ['Document/1654022/1654022.htm']
+for url in page_contains_url:
+    if "Document" in url:
+        all_page_result.add(url.rsplit("/", maxsplit=1)[0] + os.altsep + url)
