@@ -31,12 +31,6 @@ class WriteIntoFilePipeline(object):
         logging.info(">>>>>>开始操作写入下载链接文件！")
         file_path = self.file_path + os.altsep + self.file_name + self.file_suffix
 
-        # # 写入文件
-        # with open(file_path, "a+", encoding="utf-8") as f:
-        #     for uri in item['all_real_urls']:
-        #         f.write(uri if uri is item[-1] else uri + ",")
-        #         f.write(" >>>> one done.")
-
         with open(file_path, "r") as f:
             user_list = f.read()
 

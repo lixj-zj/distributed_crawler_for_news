@@ -39,18 +39,18 @@ class Scio():
         except Exception as e:
             logging.error("获取总页数错误！url：{}，错误信息：{}".format(html, e))
 
-    def list_url_pages(self, first_page_url, max_page_num):
-        # "http://www.scio.gov.cn/37234/index_3.htm"
-        # 记录所有父页面的地址 index_2.htm
-        try:
-            father_url = []
-            father_url.append(first_page_url)
-            no_filename_url = first_page_url.rsplit("/", maxsplit=1)
-            for page in range(1, int(max_page_num)):
-                father_url.append(no_filename_url[0] + "/index_" + str(page) + ".htm")
-            return father_url
-        except Exception as e:
-            logging.error("获取url列表页错误！错误信息：{}".format(e))
+    # def list_url_pages(self, first_page_url, max_page_num):
+    #     # "http://www.scio.gov.cn/37234/index_3.htm"
+    #     # 记录所有父页面的地址 index_2.htm
+    #     try:
+    #         father_url = []
+    #         father_url.append(first_page_url)
+    #         no_filename_url = first_page_url.rsplit("/", maxsplit=1)
+    #         for page in range(1, int(max_page_num)):
+    #             father_url.append(no_filename_url[0] + "/index_" + str(page) + ".htm")
+    #         return father_url
+    #     except Exception as e:
+    #         logging.error("获取url列表页错误！错误信息：{}".format(e))
 
     def all_news_urls(self, page_url):
         """
@@ -77,7 +77,6 @@ class Scio():
         except Exception as e:
             logging.error("获取目标新闻页面url错误！错误信息：{}".format(e))
 
-
     def real_urls(self, base_url, url_list):
         """
         获取网页真实链接
@@ -100,7 +99,6 @@ class Scio():
                 result.append(url)
         return result
 
-
     def scio_parse(self, url):
         """
         解析scio网站内容
@@ -109,13 +107,7 @@ class Scio():
         """
         base_url = 'www.scio.gov.cn'
         item = ScioItem()
-
-        # html = new_requests().get_html_from_url(start_url)
-        # max_pages_num = self.max_num_of_pages(html)
-        # father_url = self.list_url_pages(url, 3)
         all_page_result = self.all_news_urls(url)
         result_urls = self.real_urls(base_url, all_page_result)
-
         item['all_real_urls'] = result_urls
-
         return item

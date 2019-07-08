@@ -63,6 +63,8 @@ class Routing():
         except Exception as e:
             logging.error("routing_method 解析异常！异常信息：{}".format(str(e)))
 
+    def get_next_url(self, url):
+        pass
 
 if __name__ == '__main__':
     pass
