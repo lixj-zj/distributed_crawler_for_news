@@ -26107,3 +26107,225 @@ redis.exceptions.TimeoutError: Timeout reading from socket
  'scheduler/enqueued/redis': 1,
  'start_time': datetime.datetime(2019, 6, 29, 14, 49, 3, 237885)}
 2019-06-29 23:01:18 [scrapy.core.engine] INFO: Spider closed (shutdown)
+2019-06-30 09:28:43 [scrapy.utils.log] INFO: Scrapy 1.6.0 started (bot: main_node)
+2019-06-30 09:28:43 [scrapy.utils.log] INFO: Versions: lxml 4.3.3.0, libxml2 2.9.5, cssselect 1.0.3, parsel 1.5.1, w3lib 1.20.0, Twisted 19.2.1, Python 3.6.4 (v3.6.4:d48eceb, Dec 19 2017, 06:04:45) [MSC v.1900 32 bit (Intel)], pyOpenSSL 19.0.0 (OpenSSL 1.1.1c  28 May 2019), cryptography 2.7, Platform Windows-10-10.0.17134-SP0
+2019-06-30 09:28:43 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'main_node', 'CONCURRENT_REQUESTS': 32, 'COOKIES_ENABLED': False, 'DOWNLOAD_DELAY': 1, 'DUPEFILTER_CLASS': 'scrapy_redis.dupefilter.RFPDupeFilter', 'HTTPCACHE_ENABLED': True, 'LOG_ENABLED': False, 'LOG_FILE': 'logs/scrapy.log', 'NEWSPIDER_MODULE': 'main_node.spiders', 'SCHEDULER': 'scrapy_redis.scheduler.Scheduler', 'SPIDER_MODULES': ['main_node.spiders'], 'USER_AGENT': 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:7.0.1) Gecko/20100101 Firefox/7.0.1'}
+2019-06-30 09:28:43 [scrapy.extensions.telnet] INFO: Telnet Password: d06bd1fe4e34a101
+2019-06-30 09:28:43 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2019-06-30 09:28:43 [main] INFO: Reading start URLs from redis key 'main:start_urls' (batch size: 32, encoding: utf-8
+2019-06-30 09:28:44 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'main_node.middlewares.MainNodeUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats',
+ 'scrapy.downloadermiddlewares.httpcache.HttpCacheMiddleware']
+2019-06-30 09:28:44 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2019-06-30 09:28:44 [scrapy.middleware] INFO: Enabled item pipelines:
+['scrapy_redis.pipelines.RedisPipeline']
+2019-06-30 09:28:44 [scrapy.core.engine] INFO: Spider opened
+2019-06-30 09:28:44 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2019-06-30 09:28:44 [scrapy.extensions.httpcache] DEBUG: Using filesystem cache storage in D:\ZX_workspace\distributed_crawler_for_news\main_node\.scrapy\httpcache
+2019-06-30 09:28:44 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2019-06-30 09:29:34 [main] DEBUG: Read 1 requests from 'main:start_urls'
+2019-06-30 09:29:34 [root] INFO: *********user-agent-middleware 中随机 User-Agent：Mozilla/5.0 (Windows NT 6.1; WOW64; rv:7.0.1) Gecko/20100101 Firefox/7.0.1
+2019-06-30 09:29:34 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.scio.gov.cn/37234/index.htm> (referer: None)
+2019-06-30 09:29:34 [root] INFO: 路由 routing_method url: http://www.scio.gov.cn/37234/index.htm
+2019-06-30 09:29:34 [root] INFO: *********Current Headers: {'Connection': 'Keep-Alive', 'Accept': 'text/html, application/xhtml+xml, */*', 'Accept-Language': 'en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3', 'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.7 (KHTML, like Gecko) Chrome/16.0.912.36 Safari/535.7'}
+2019-06-30 09:29:34 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.scio.gov.cn:80
+2019-06-30 09:29:34 [urllib3.connectionpool] DEBUG: http://www.scio.gov.cn:80 "GET /37234/index.htm HTTP/1.1" 200 16741
+2019-06-30 09:29:36 [root] INFO: *********Current Headers: {'Connection': 'Keep-Alive', 'Accept': 'text/html, application/xhtml+xml, */*', 'Accept-Language': 'en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3', 'User-Agent': 'Mozilla/5.0 (Windows; U; Windows NT 5.2; en-US) AppleWebKit/532.9 (KHTML, like Gecko) Chrome/5.0.310.0 Safari/532.9'}
+2019-06-30 09:29:36 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.scio.gov.cn:80
+2019-06-30 09:29:36 [urllib3.connectionpool] DEBUG: http://www.scio.gov.cn:80 "GET /37234/index_1.htm HTTP/1.1" 200 16966
+2019-06-30 09:29:37 [root] INFO: *********Current Headers: {'Connection': 'Keep-Alive', 'Accept': 'text/html, application/xhtml+xml, */*', 'Accept-Language': 'en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3', 'User-Agent': 'Mozilla/5.0 (Linux; U; Android 1.0; en-us; dream) AppleWebKit/525.10  (KHTML, like Gecko) Version/3.0.4 Mobile Safari/523.12.2'}
+2019-06-30 09:29:37 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.scio.gov.cn:80
+2019-06-30 09:29:37 [urllib3.connectionpool] DEBUG: http://www.scio.gov.cn:80 "GET /37234/Document/1656378/1656378.htm HTTP/1.1" 200 518
+2019-06-30 09:29:37 [root] INFO: *********Current Headers: {'Connection': 'Keep-Alive', 'Accept': 'text/html, application/xhtml+xml, */*', 'Accept-Language': 'en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3', 'User-Agent': 'Mozilla/5.0 (Windows NT 6.0) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.36 Safari/536.5'}
+2019-06-30 09:29:37 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.scio.gov.cn:80
+2019-06-30 09:29:37 [urllib3.connectionpool] DEBUG: http://www.scio.gov.cn:80 "GET /37234/Document/1656580/1656580.htm HTTP/1.1" 200 490
+2019-06-30 09:29:37 [root] INFO: *********Current Headers: {'Connection': 'Keep-Alive', 'Accept': 'text/html, application/xhtml+xml, */*', 'Accept-Language': 'en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3', 'User-Agent': 'Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/534.20 (KHTML, like Gecko) Chrome/11.0.672.2 Safari/534.20'}
+2019-06-30 09:29:37 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.scio.gov.cn:80
+2019-06-30 09:29:37 [urllib3.connectionpool] DEBUG: http://www.scio.gov.cn:80 "GET /37234/Document/1654521/1654521.htm HTTP/1.1" 200 540
+2019-06-30 09:29:37 [root] INFO: *********Current Headers: {'Connection': 'Keep-Alive', 'Accept': 'text/html, application/xhtml+xml, */*', 'Accept-Language': 'en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3', 'User-Agent': 'Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/534.20 (KHTML, like Gecko) Chrome/11.0.672.2 Safari/534.20'}
+2019-06-30 09:29:37 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.scio.gov.cn:80
+2019-06-30 09:29:38 [urllib3.connectionpool] DEBUG: http://www.scio.gov.cn:80 "GET /37234/Document/1658075/1658075.htm HTTP/1.1" 200 502
+2019-06-30 09:29:38 [root] INFO: *********Current Headers: {'Connection': 'Keep-Alive', 'Accept': 'text/html, application/xhtml+xml, */*', 'Accept-Language': 'en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3', 'User-Agent': 'Mozilla/5.0 (Windows NT 6.0) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.36 Safari/536.5'}
+2019-06-30 09:29:38 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.scio.gov.cn:80
+2019-06-30 09:29:38 [urllib3.connectionpool] DEBUG: http://www.scio.gov.cn:80 "GET /37234/Document/1657103/1657103.htm HTTP/1.1" 200 537
+2019-06-30 09:29:38 [root] INFO: *********Current Headers: {'Connection': 'Keep-Alive', 'Accept': 'text/html, application/xhtml+xml, */*', 'Accept-Language': 'en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_0) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1063.0 Safari/536.3'}
+2019-06-30 09:29:38 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.scio.gov.cn:80
+2019-06-30 09:29:38 [urllib3.connectionpool] DEBUG: http://www.scio.gov.cn:80 "GET /37234/Document/1655749/1655749.htm HTTP/1.1" 200 526
+2019-06-30 09:29:38 [root] INFO: *********Current Headers: {'Connection': 'Keep-Alive', 'Accept': 'text/html, application/xhtml+xml, */*', 'Accept-Language': 'en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3', 'User-Agent': 'Mozilla/5.0 (Linux; U; Android 2.3.6; en-us; Nexus S Build/GRK39F) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1'}
+2019-06-30 09:29:38 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.scio.gov.cn:80
+2019-06-30 09:29:38 [urllib3.connectionpool] DEBUG: http://www.scio.gov.cn:80 "GET /37234/Document/1654377/1654377.htm HTTP/1.1" 200 535
+2019-06-30 09:29:38 [root] INFO: *********Current Headers: {'Connection': 'Keep-Alive', 'Accept': 'text/html, application/xhtml+xml, */*', 'Accept-Language': 'en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3', 'User-Agent': 'Mozilla/3.01Gold (Win95; I)'}
+2019-06-30 09:29:38 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.scio.gov.cn:80
+2019-06-30 09:29:38 [urllib3.connectionpool] DEBUG: http://www.scio.gov.cn:80 "GET /37234/Document/1655946/1655946.htm HTTP/1.1" 200 520
+2019-06-30 09:29:38 [root] INFO: *********Current Headers: {'Connection': 'Keep-Alive', 'Accept': 'text/html, application/xhtml+xml, */*', 'Accept-Language': 'en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3', 'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.6 (KHTML, like Gecko) Chrome/20.0.1092.0 Safari/536.6'}
+2019-06-30 09:29:38 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.scio.gov.cn:80
+2019-06-30 09:29:38 [urllib3.connectionpool] DEBUG: http://www.scio.gov.cn:80 "GET /37234/Document/1657095/1657095.htm HTTP/1.1" 200 538
+2019-06-30 09:29:38 [root] INFO: *********Current Headers: {'Connection': 'Keep-Alive', 'Accept': 'text/html, application/xhtml+xml, */*', 'Accept-Language': 'en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3', 'User-Agent': 'Mozilla/4.0 (compatible; MSIE 5.5; Windows NT 5.0 )'}
+2019-06-30 09:29:38 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.scio.gov.cn:80
+2019-06-30 09:29:38 [urllib3.connectionpool] DEBUG: http://www.scio.gov.cn:80 "GET /37234/Document/1657953/1657953.htm HTTP/1.1" 200 546
+2019-06-30 09:29:38 [root] INFO: *********Current Headers: {'Connection': 'Keep-Alive', 'Accept': 'text/html, application/xhtml+xml, */*', 'Accept-Language': 'en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3', 'User-Agent': 'Mozilla/5.0 (Windows; U; Windows NT 6.0 x64; en-US; rv:1.9pre) Gecko/2008072421 Minefield/3.0.2pre'}
+2019-06-30 09:29:38 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.scio.gov.cn:80
+2019-06-30 09:29:38 [urllib3.connectionpool] DEBUG: http://www.scio.gov.cn:80 "GET /37234/Document/1656322/1656322.htm HTTP/1.1" 200 527
+2019-06-30 09:29:38 [root] INFO: *********Current Headers: {'Connection': 'Keep-Alive', 'Accept': 'text/html, application/xhtml+xml, */*', 'Accept-Language': 'en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3', 'User-Agent': 'Mozilla/5.0 (Linux; U; Android 2.0; en-us; Droid Build/ESD20) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17'}
+2019-06-30 09:29:38 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.scio.gov.cn:80
+2019-06-30 09:29:39 [urllib3.connectionpool] DEBUG: http://www.scio.gov.cn:80 "GET /37234/Document/1656126/1656126.htm HTTP/1.1" 200 17024
+2019-06-30 09:29:39 [root] INFO: *********Current Headers: {'Connection': 'Keep-Alive', 'Accept': 'text/html, application/xhtml+xml, */*', 'Accept-Language': 'en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3', 'User-Agent': 'Mozilla/5.0 (Linux; U; Android 1.6; en-us; SonyEricssonX10i Build/R1AA056) AppleWebKit/528.5  (KHTML, like Gecko) Version/3.1.2 Mobile Safari/525.20.1'}
+2019-06-30 09:29:39 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.scio.gov.cn:80
+2019-06-30 09:29:39 [urllib3.connectionpool] DEBUG: http://www.scio.gov.cn:80 "GET /37234/Document/1656420/1656420.htm HTTP/1.1" 200 518
+2019-06-30 09:29:39 [root] INFO: *********Current Headers: {'Connection': 'Keep-Alive', 'Accept': 'text/html, application/xhtml+xml, */*', 'Accept-Language': 'en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3', 'User-Agent': 'Mozilla/5.0 (Linux; U; Android 1.5; de-de; HTC Magic Build/PLAT-RC33) AppleWebKit/528.5  (KHTML, like Gecko) Version/3.1.2 Mobile Safari/525.20.1 FirePHP/0.3'}
+2019-06-30 09:29:39 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.scio.gov.cn:80
+2019-06-30 09:29:39 [urllib3.connectionpool] DEBUG: http://www.scio.gov.cn:80 "GET /37234/Document/1654152/1654152.htm HTTP/1.1" 200 521
+2019-06-30 09:29:39 [root] INFO: *********Current Headers: {'Connection': 'Keep-Alive', 'Accept': 'text/html, application/xhtml+xml, */*', 'Accept-Language': 'en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3', 'User-Agent': 'Mozilla/5.0 (Windows; U; Windows NT 6.0 x64; en-US; rv:1.9pre) Gecko/2008072421 Minefield/3.0.2pre'}
+2019-06-30 09:29:39 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.scio.gov.cn:80
+2019-06-30 09:29:39 [urllib3.connectionpool] DEBUG: http://www.scio.gov.cn:80 "GET /37234/Document/1656397/1656397.htm HTTP/1.1" 200 508
+2019-06-30 09:29:39 [root] INFO: *********Current Headers: {'Connection': 'Keep-Alive', 'Accept': 'text/html, application/xhtml+xml, */*', 'Accept-Language': 'en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3', 'User-Agent': 'Mozilla/5.0 (Linux; U; Android 1.5; en-gb; T-Mobile_G2_Touch Build/CUPCAKE) AppleWebKit/528.5  (KHTML, like Gecko) Version/3.1.2 Mobile Safari/525.20.1'}
+2019-06-30 09:29:39 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.scio.gov.cn:80
+2019-06-30 09:29:39 [urllib3.connectionpool] DEBUG: http://www.scio.gov.cn:80 "GET /37234/Document/1658335/1658335.htm HTTP/1.1" 200 507
+2019-06-30 09:29:39 [root] INFO: *********Current Headers: {'Connection': 'Keep-Alive', 'Accept': 'text/html, application/xhtml+xml, */*', 'Accept-Language': 'en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3', 'User-Agent': 'Mozilla/5.0 (Linux; U; Android 0.5; en-us) AppleWebKit/522  (KHTML, like Gecko) Safari/419.3'}
+2019-06-30 09:29:39 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.scio.gov.cn:80
+2019-06-30 09:29:39 [urllib3.connectionpool] DEBUG: http://www.scio.gov.cn:80 "GET /37234/Document/1657697/1657697.htm HTTP/1.1" 200 488
+2019-06-30 09:29:39 [root] INFO: *********Current Headers: {'Connection': 'Keep-Alive', 'Accept': 'text/html, application/xhtml+xml, */*', 'Accept-Language': 'en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3', 'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/534.27 (KHTML, like Gecko) Chrome/12.0.712.0 Safari/534.27'}
+2019-06-30 09:29:39 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.scio.gov.cn:80
+2019-06-30 09:29:40 [urllib3.connectionpool] DEBUG: http://www.scio.gov.cn:80 "GET /37234/Document/1658291/1658291.htm HTTP/1.1" 200 559
+2019-06-30 09:29:40 [root] INFO: *********Current Headers: {'Connection': 'Keep-Alive', 'Accept': 'text/html, application/xhtml+xml, */*', 'Accept-Language': 'en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3', 'User-Agent': 'Mozilla/2.02E (Win95; U)'}
+2019-06-30 09:29:40 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.scio.gov.cn:80
+2019-06-30 09:29:40 [urllib3.connectionpool] DEBUG: http://www.scio.gov.cn:80 "GET /37234/Document/1653635/1653635.htm HTTP/1.1" 200 530
+2019-06-30 09:29:40 [root] INFO: *********Current Headers: {'Connection': 'Keep-Alive', 'Accept': 'text/html, application/xhtml+xml, */*', 'Accept-Language': 'en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3', 'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:7.0.1) Gecko/20100101 Firefox/7.0.1'}
+2019-06-30 09:29:40 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.scio.gov.cn:80
+2019-06-30 09:29:40 [urllib3.connectionpool] DEBUG: http://www.scio.gov.cn:80 "GET /37234/Document/1653842/1653842.htm HTTP/1.1" 200 529
+2019-06-30 09:29:40 [root] INFO: *********Current Headers: {'Connection': 'Keep-Alive', 'Accept': 'text/html, application/xhtml+xml, */*', 'Accept-Language': 'en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3', 'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1063.0 Safari/536.3'}
+2019-06-30 09:29:40 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.scio.gov.cn:80
+2019-06-30 09:29:40 [urllib3.connectionpool] DEBUG: http://www.scio.gov.cn:80 "GET /37234/Document/1655268/1655268.htm HTTP/1.1" 200 12768
+2019-06-30 09:29:40 [root] INFO: *********Current Headers: {'Connection': 'Keep-Alive', 'Accept': 'text/html, application/xhtml+xml, */*', 'Accept-Language': 'en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3', 'User-Agent': 'Mozilla/5.0 (Linux; U; Android 1.5; en-us; htc_bahamas Build/CRB17) AppleWebKit/528.5  (KHTML, like Gecko) Version/3.1.2 Mobile Safari/525.20.1'}
+2019-06-30 09:29:40 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.scio.gov.cn:80
+2019-06-30 09:29:40 [urllib3.connectionpool] DEBUG: http://www.scio.gov.cn:80 "GET /37234/Document/1657330/1657330.htm HTTP/1.1" 200 501
+2019-06-30 09:29:40 [root] INFO: *********Current Headers: {'Connection': 'Keep-Alive', 'Accept': 'text/html, application/xhtml+xml, */*', 'Accept-Language': 'en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3', 'User-Agent': 'Mozilla/5.0 (Linux; U; Android 1.6; es-es; SonyEricssonX10i Build/R1FA016) AppleWebKit/528.5  (KHTML, like Gecko) Version/3.1.2 Mobile Safari/525.20.1'}
+2019-06-30 09:29:40 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.scio.gov.cn:80
+2019-06-30 09:29:41 [urllib3.connectionpool] DEBUG: http://www.scio.gov.cn:80 "GET /37234/Document/1654022/1654022.htm HTTP/1.1" 200 548
+2019-06-30 09:29:41 [root] INFO: *********Current Headers: {'Connection': 'Keep-Alive', 'Accept': 'text/html, application/xhtml+xml, */*', 'Accept-Language': 'en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3', 'User-Agent': 'Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/534.14 (KHTML, like Gecko) Chrome/10.0.601.0 Safari/534.14'}
+2019-06-30 09:29:41 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.scio.gov.cn:80
+2019-06-30 09:29:41 [urllib3.connectionpool] DEBUG: http://www.scio.gov.cn:80 "GET /37234/Document/1657066/1657066.htm HTTP/1.1" 200 488
+2019-06-30 09:29:41 [root] INFO: *********Current Headers: {'Connection': 'Keep-Alive', 'Accept': 'text/html, application/xhtml+xml, */*', 'Accept-Language': 'en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3', 'User-Agent': 'Mozilla/5.0 (Linux; U; Android 2.1; en-us; Nexus One Build/ERD62) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17'}
+2019-06-30 09:29:41 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.scio.gov.cn:80
+2019-06-30 09:29:41 [urllib3.connectionpool] DEBUG: http://www.scio.gov.cn:80 "GET /37234/Document/1658052/1658052.htm HTTP/1.1" 200 515
+2019-06-30 09:29:41 [root] INFO: *********Current Headers: {'Connection': 'Keep-Alive', 'Accept': 'text/html, application/xhtml+xml, */*', 'Accept-Language': 'en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3', 'User-Agent': 'Mozilla/5.0 (Linux; U; Android 2.1; en-us; HTC Legend Build/cupcake) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17'}
+2019-06-30 09:29:41 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.scio.gov.cn:80
+2019-06-30 09:29:41 [urllib3.connectionpool] DEBUG: http://www.scio.gov.cn:80 "GET /37234/Document/1654026/1654026.htm HTTP/1.1" 200 546
+2019-06-30 09:29:41 [root] INFO: *********Current Headers: {'Connection': 'Keep-Alive', 'Accept': 'text/html, application/xhtml+xml, */*', 'Accept-Language': 'en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3', 'User-Agent': 'HTC_Dream Mozilla/5.0 (Linux; U; Android 1.5; en-ca; Build/CUPCAKE) AppleWebKit/528.5  (KHTML, like Gecko) Version/3.1.2 Mobile Safari/525.20.1'}
+2019-06-30 09:29:41 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.scio.gov.cn:80
+2019-06-30 09:29:41 [urllib3.connectionpool] DEBUG: http://www.scio.gov.cn:80 "GET /37234/Document/1657923/1657923.htm HTTP/1.1" 200 537
+2019-06-30 09:29:41 [root] INFO: *********Current Headers: {'Connection': 'Keep-Alive', 'Accept': 'text/html, application/xhtml+xml, */*', 'Accept-Language': 'en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3', 'User-Agent': 'Mozilla/4.8 [en] (Windows NT 5.1; U)'}
+2019-06-30 09:29:41 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.scio.gov.cn:80
+2019-06-30 09:29:41 [urllib3.connectionpool] DEBUG: http://www.scio.gov.cn:80 "GET /37234/Document/1656147/1656147.htm HTTP/1.1" 200 528
+2019-06-30 09:29:41 [root] INFO: *********Current Headers: {'Connection': 'Keep-Alive', 'Accept': 'text/html, application/xhtml+xml, */*', 'Accept-Language': 'en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3', 'User-Agent': 'Mozilla/5.0 (Windows NT 6.0) AppleWebKit/535.2 (KHTML, like Gecko) Chrome/15.0.874.120 Safari/535.2'}
+2019-06-30 09:29:41 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.scio.gov.cn:80
+2019-06-30 09:29:41 [urllib3.connectionpool] DEBUG: http://www.scio.gov.cn:80 "GET /37234/Document/1654528/1654528.htm HTTP/1.1" 200 14889
+2019-06-30 09:29:42 [root] INFO: *********Current Headers: {'Connection': 'Keep-Alive', 'Accept': 'text/html, application/xhtml+xml, */*', 'Accept-Language': 'en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3', 'User-Agent': 'Mozilla/5.0 (Linux; U; Android 2.2; en-us; Droid Build/FRG22D) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1'}
+2019-06-30 09:29:42 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.scio.gov.cn:80
+2019-06-30 09:29:42 [urllib3.connectionpool] DEBUG: http://www.scio.gov.cn:80 "GET /37234/Document/1656879/1656879.htm HTTP/1.1" 200 520
+2019-06-30 09:29:42 [root] INFO: *********Current Headers: {'Connection': 'Keep-Alive', 'Accept': 'text/html, application/xhtml+xml, */*', 'Accept-Language': 'en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3', 'User-Agent': 'Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1062.0 Safari/536.3'}
+2019-06-30 09:29:42 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.scio.gov.cn:80
+2019-06-30 09:29:42 [urllib3.connectionpool] DEBUG: http://www.scio.gov.cn:80 "GET /37234/Document/1655367/1655367.htm HTTP/1.1" 200 536
+2019-06-30 09:29:42 [root] INFO: *********Current Headers: {'Connection': 'Keep-Alive', 'Accept': 'text/html, application/xhtml+xml, */*', 'Accept-Language': 'en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3', 'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.9 Safari/536.5'}
+2019-06-30 09:29:42 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.scio.gov.cn:80
+2019-06-30 09:29:42 [urllib3.connectionpool] DEBUG: http://www.scio.gov.cn:80 "GET /37234/Document/1654935/1654935.htm HTTP/1.1" 200 530
+2019-06-30 09:29:42 [root] INFO: *********Current Headers: {'Connection': 'Keep-Alive', 'Accept': 'text/html, application/xhtml+xml, */*', 'Accept-Language': 'en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3', 'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.7 (KHTML, like Gecko) Chrome/16.0.912.36 Safari/535.7'}
+2019-06-30 09:29:42 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.scio.gov.cn:80
+2019-06-30 09:29:42 [urllib3.connectionpool] DEBUG: http://www.scio.gov.cn:80 "GET /37234/Document/1655750/1655750.htm HTTP/1.1" 200 582
+2019-06-30 09:29:42 [root] INFO: *********Current Headers: {'Connection': 'Keep-Alive', 'Accept': 'text/html, application/xhtml+xml, */*', 'Accept-Language': 'en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3', 'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1062.0 Safari/536.3'}
+2019-06-30 09:29:42 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.scio.gov.cn:80
+2019-06-30 09:29:42 [urllib3.connectionpool] DEBUG: http://www.scio.gov.cn:80 "GET /37234/Document/1656306/1656306.htm HTTP/1.1" 200 539
+2019-06-30 09:29:42 [root] INFO: *********Current Headers: {'Connection': 'Keep-Alive', 'Accept': 'text/html, application/xhtml+xml, */*', 'Accept-Language': 'en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3', 'User-Agent': 'Avant Browser/1.2.789rel1 (http://www.avantbrowser.com)'}
+2019-06-30 09:29:42 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.scio.gov.cn:80
+2019-06-30 09:29:42 [urllib3.connectionpool] DEBUG: http://www.scio.gov.cn:80 "GET /37234/Document/1653872/1653872.htm HTTP/1.1" 200 517
+2019-06-30 09:29:42 [root] INFO: *********Current Headers: {'Connection': 'Keep-Alive', 'Accept': 'text/html, application/xhtml+xml, */*', 'Accept-Language': 'en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3', 'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.9 Safari/536.5'}
+2019-06-30 09:29:42 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.scio.gov.cn:80
+2019-06-30 09:29:43 [urllib3.connectionpool] DEBUG: http://www.scio.gov.cn:80 "GET /37234/Document/1657064/1657064.htm HTTP/1.1" 200 511
+2019-06-30 09:29:43 [root] INFO: *********Current Headers: {'Connection': 'Keep-Alive', 'Accept': 'text/html, application/xhtml+xml, */*', 'Accept-Language': 'en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3', 'User-Agent': 'Mozilla/5.0 (Linux; U; Android 1.0; en-us; dream) AppleWebKit/525.10  (KHTML, like Gecko) Version/3.0.4 Mobile Safari/523.12.2'}
+2019-06-30 09:29:43 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.scio.gov.cn:80
+2019-06-30 09:29:43 [urllib3.connectionpool] DEBUG: http://www.scio.gov.cn:80 "GET /37234/Document/1657236/1657236.htm HTTP/1.1" 200 546
+2019-06-30 09:29:43 [root] INFO: *********Current Headers: {'Connection': 'Keep-Alive', 'Accept': 'text/html, application/xhtml+xml, */*', 'Accept-Language': 'en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3', 'User-Agent': 'Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1061.1 Safari/536.3'}
+2019-06-30 09:29:43 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.scio.gov.cn:80
+2019-06-30 09:29:43 [urllib3.connectionpool] DEBUG: http://www.scio.gov.cn:80 "GET /37234/Document/1656054/1656054.htm HTTP/1.1" 200 523
+2019-06-30 09:29:43 [root] INFO: *********Current Headers: {'Connection': 'Keep-Alive', 'Accept': 'text/html, application/xhtml+xml, */*', 'Accept-Language': 'en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3', 'User-Agent': 'Mozilla/5.0 (Windows; U; Windows NT 6.0; en-US) AppleWebKit/534.14 (KHTML, like Gecko) Chrome/9.0.601.0 Safari/534.14'}
+2019-06-30 09:29:43 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.scio.gov.cn:80
+2019-06-30 09:29:43 [urllib3.connectionpool] DEBUG: http://www.scio.gov.cn:80 "GET /37234/Document/1653854/1653854.htm HTTP/1.1" 200 520
+2019-06-30 09:29:43 [root] INFO: *********Current Headers: {'Connection': 'Keep-Alive', 'Accept': 'text/html, application/xhtml+xml, */*', 'Accept-Language': 'en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3', 'User-Agent': 'Mozilla/5.0 (Windows; U; Windows NT 6.0 x64; en-US; rv:1.9pre) Gecko/2008072421 Minefield/3.0.2pre'}
+2019-06-30 09:29:43 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.scio.gov.cn:80
+2019-06-30 09:29:43 [urllib3.connectionpool] DEBUG: http://www.scio.gov.cn:80 "GET /37234/Document/1657094/1657094.htm HTTP/1.1" 200 530
+2019-06-30 09:29:43 [root] INFO: *********Current Headers: {'Connection': 'Keep-Alive', 'Accept': 'text/html, application/xhtml+xml, */*', 'Accept-Language': 'en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3', 'User-Agent': 'Mozilla/5.0 (Linux; U; Android 2.1; en-us; Nexus One Build/ERD62) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17'}
+2019-06-30 09:29:43 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.scio.gov.cn:80
+2019-06-30 09:29:43 [urllib3.connectionpool] DEBUG: http://www.scio.gov.cn:80 "GET /37234/Document/1657591/1657591.htm HTTP/1.1" 200 540
+2019-06-30 09:29:43 [root] INFO: *********Current Headers: {'Connection': 'Keep-Alive', 'Accept': 'text/html, application/xhtml+xml, */*', 'Accept-Language': 'en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3', 'User-Agent': 'Mozilla/5.0 (Linux; U; Android 2.1; en-us; HTC Legend Build/cupcake) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17'}
+2019-06-30 09:29:43 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.scio.gov.cn:80
+2019-06-30 09:29:43 [urllib3.connectionpool] DEBUG: http://www.scio.gov.cn:80 "GET /37234/Document/1652787/1652787.htm HTTP/1.1" 200 549
+2019-06-30 09:29:43 [root] INFO: *********Current Headers: {'Connection': 'Keep-Alive', 'Accept': 'text/html, application/xhtml+xml, */*', 'Accept-Language': 'en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3', 'User-Agent': 'Mozilla/5.0 (Linux; U; Android 2.3.6; en-us; Nexus S Build/GRK39F) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1'}
+2019-06-30 09:29:43 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.scio.gov.cn:80
+2019-06-30 09:29:44 [urllib3.connectionpool] DEBUG: http://www.scio.gov.cn:80 "GET /37234/Document/1655927/1655927.htm HTTP/1.1" 200 12740
+2019-06-30 09:29:44 [root] INFO: *********Current Headers: {'Connection': 'Keep-Alive', 'Accept': 'text/html, application/xhtml+xml, */*', 'Accept-Language': 'en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3', 'User-Agent': 'Mozilla/5.0 (Linux; U; Android 2.2; en-us; Droid Build/FRG22D) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1'}
+2019-06-30 09:29:44 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.scio.gov.cn:80
+2019-06-30 09:29:44 [urllib3.connectionpool] DEBUG: http://www.scio.gov.cn:80 "GET /37234/Document/1656881/1656881.htm HTTP/1.1" 200 517
+2019-06-30 09:29:44 [root] INFO: *********Current Headers: {'Connection': 'Keep-Alive', 'Accept': 'text/html, application/xhtml+xml, */*', 'Accept-Language': 'en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3', 'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:2.0.1) Gecko/20100101 Firefox/4.0.1'}
+2019-06-30 09:29:44 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.scio.gov.cn:80
+2019-06-30 09:29:44 [urllib3.connectionpool] DEBUG: http://www.scio.gov.cn:80 "GET /37234/Document/1657319/1657319.htm HTTP/1.1" 200 539
+2019-06-30 09:29:44 [root] INFO: *********Current Headers: {'Connection': 'Keep-Alive', 'Accept': 'text/html, application/xhtml+xml, */*', 'Accept-Language': 'en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3', 'User-Agent': 'Mozilla/5.0 (Linux; U; Android 2.1; en-us; Nexus One Build/ERD62) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17'}
+2019-06-30 09:29:44 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.scio.gov.cn:80
+2019-06-30 09:29:44 [urllib3.connectionpool] DEBUG: http://www.scio.gov.cn:80 "GET /37234/Document/1657629/1657629.htm HTTP/1.1" 200 549
+2019-06-30 09:29:44 [root] INFO: *********Current Headers: {'Connection': 'Keep-Alive', 'Accept': 'text/html, application/xhtml+xml, */*', 'Accept-Language': 'en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3', 'User-Agent': 'Mozilla/4.0 (compatible; MSIE 5.5; Windows 98; Win 9x 4.90)'}
+2019-06-30 09:29:44 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.scio.gov.cn:80
+2019-06-30 09:29:44 [urllib3.connectionpool] DEBUG: http://www.scio.gov.cn:80 "GET /37234/Document/1656056/1656056.htm HTTP/1.1" 200 505
+2019-06-30 09:29:44 [root] INFO: *********Current Headers: {'Connection': 'Keep-Alive', 'Accept': 'text/html, application/xhtml+xml, */*', 'Accept-Language': 'en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3', 'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:6.0a2) Gecko/20110622 Firefox/6.0a2'}
+2019-06-30 09:29:44 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.scio.gov.cn:80
+2019-06-30 09:29:44 [urllib3.connectionpool] DEBUG: http://www.scio.gov.cn:80 "GET /37234/Document/1657664/1657664.htm HTTP/1.1" 200 546
+2019-06-30 09:29:44 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 1 pages/min), scraped 0 items (at 0 items/min)
+2019-06-30 09:29:44 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.scio.gov.cn/37234/index.htm>
+{'all_real_urls': ['www.scio.gov.cn/37236/1/Document/1656371/1656371.htm',
+                   'www.scio.gov.cn/37236/37385/Document/1656577/1656577.htm',
+                   'www.scio.gov.cn/37236/37235/Document/1654518/1654518.htm',
+                   'www.scio.gov.cn/37236/37235/Document/1658071/1658071.htm',
+                   'www.scio.gov.cn/xwbjs/zygy/33093/hd33096/Document/1656021/1656021.htm',
+                   'www.scio.gov.cn/37236/37377/Document/1655746/1655746.htm',
+                   'www.scio.gov.cn/xwbjs/zygy/33093/jh33095/Document/1654350/1654350.htm',
+                   'www.scio.gov.cn/37236/37385/Document/1655945/1655945.htm',
+                   'www.scio.gov.cn/37236/37385/Document/1657091/1657091.htm',
+                   'www.scio.gov.cn/37236/1/Document/1657928/1657928.htm']}
+2019-06-30 09:30:40 [scrapy.crawler] INFO: Received SIGINT, shutting down gracefully. Send again to force 
+2019-06-30 09:30:40 [scrapy.core.engine] INFO: Closing spider (shutdown)
+2019-06-30 09:30:40 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 310,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 17004,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'finish_reason': 'shutdown',
+ 'finish_time': datetime.datetime(2019, 6, 30, 1, 30, 40, 176392),
+ 'httpcache/firsthand': 1,
+ 'httpcache/miss': 1,
+ 'httpcache/store': 1,
+ 'item_scraped_count': 1,
+ 'log_count/DEBUG': 104,
+ 'log_count/INFO': 64,
+ 'response_received_count': 1,
+ 'scheduler/dequeued/redis': 1,
+ 'scheduler/enqueued/redis': 1,
+ 'start_time': datetime.datetime(2019, 6, 30, 1, 28, 44, 137360)}
+2019-06-30 09:30:40 [scrapy.core.engine] INFO: Spider closed (shutdown)
