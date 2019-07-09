@@ -94,11 +94,13 @@ ITEM_PIPELINES = {
 
 # Enable and configure HTTP caching (disabled by default)
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html#httpcache-middleware-settings
-# HTTPCACHE_ENABLED = True
-# HTTPCACHE_EXPIRATION_SECS = 0
-# HTTPCACHE_DIR = 'httpcache'
-# HTTPCACHE_IGNORE_HTTP_CODES = []
-# HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
+# 缓存，scrapy默认已经自带了缓存，配置如下
+# 打开缓存
+HTTPCACHE_ENABLED = True
+HTTPCACHE_EXPIRATION_SECS = 0
+HTTPCACHE_DIR = 'httpcache'
+HTTPCACHE_IGNORE_HTTP_CODES = []
+HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
 
 
 
@@ -133,17 +135,6 @@ CONCURRENT_REQUESTS_PER_DOMAIN = 8
 CONCURRENT_REQUESTS_PER_IP = 0
 
 
-# 缓存，scrapy默认已经自带了缓存，配置如下
-# 打开缓存
-HTTPCACHE_ENABLED = True
-# 设置缓存过期时间（单位：秒）
-# HTTPCACHE_EXPIRATION_SECS = 0
-# 缓存路径(默认为：.scrapy/httpcache)
-HTTPCACHE_DIR = 'httpcache'
-# 忽略的状态码
-HTTPCACHE_IGNORE_HTTP_CODES = []
-# 缓存模式(文件缓存)
-HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
 
 
 # 下载文件相关配置
