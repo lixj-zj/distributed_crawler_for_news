@@ -25,7 +25,7 @@ class Scio():
 
     def scio_parse(self, response):
         """
-        解析scio网站内容
+        初步解析scio网站内容
         :param response: spider中parse解析函数入参
         :return: 提取数据后的item
         """
