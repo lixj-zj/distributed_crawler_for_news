@@ -1,3 +1,2 @@
-# distributed_crawler_for_news
-distributed crawler for news
-# 分布式爬虫
+# distribute_crawlers
+## 使用scrapy-redis、mongodb实现的分布式网络爬虫

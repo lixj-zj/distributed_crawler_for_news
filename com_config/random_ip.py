@@ -14,12 +14,13 @@
 
 import requests
 from bs4 import BeautifulSoup as bs
-from main_node.com_config.user_agent import UserAgent
+from com_config.user_agent import UserAgent
 import logging
 import os
 import random
 import traceback
 import time
+
 
 # # logging.basicConfig函数对日志的输出格式及方式做相关配置
 # logging.basicConfig(level=logging.DEBUG,
